@@ -1,0 +1,200 @@
+@startuml
+' ========== NOYAU MOTEUR / SCENES ==========
+abstract class Scene {
+}
+
+class Game {
+}
+
+class MapScene {
+}
+
+class BattleScene {
+}
+
+' ========== MONDE, CARTES ET COLLISIONS ==========
+class World {
+}
+
+class Map {
+}
+
+class Tile {
+}
+
+' ========== ENTITES, JOUEUR ET PNJ ==========
+abstract class Entity {
+- float : positionX
+- float : positionY
+- sf::Sprite : sprite 
++ update() : virtual void 
++ draw(sf::RenderWindow& window): virtual void
++ getPositionX() : float 
++ getPositionY() : float 
++ getSprite() : sf::Sprite
++ setPositionX() : void  
++ setPositionY() : void 
++ setSprite() : void  
+}
+
+class Character {
+- direction : Direction 
+- movespeed : double
++ getDirection() : Direction 
++ getMoveSpeed() : double
++ setDirection(Direction* dierection) : void 
++ setMoveSpeed(double speed) : void 
+}
+
+' Enumération Direction
+enum Direction {
+  North
+  South
+  West
+  East
+}
+
+class Player {
+- name : std::string
+- party : Party* 
+- bag : Bag* 
++ getName() : std::string 
++ setName(std::string name) : void
++ getParty() : Party* 
++ setParty(Party* party) : void 
++ getParty() : Party*   
+}
+
+class NPC {
+}
+
+class Trainer {
+}
+
+' ========== POKEMON, STATISTIQUES ET ATTAQUES ==========
+class Party {
+- pokemons : std::vector<Pokemon*>
++ getPokemons() : std::vector<Pokemon*>
+setPokemons(Pokemon* pokemon, int index) : void 
+}
+
+class Pokemon {
+}
+
+class PokemonSpecies {
+}
+
+class Stats {
+}
+
+class Move {
+}
+
+class Type {
+}
+
+class TypeChart {
+}
+
+' ========== SYSTEME DE COMBAT ==========
+class Battle {
+}
+
+abstract class BattleAction {
+}
+
+class AttackAction {
+}
+
+class SwitchAction {
+}
+
+class UseItemAction {
+}
+
+class FleeAction {
+}
+
+class DamageCalculator {
+}
+
+' ========== OBJETS ET INVENTAIRE ==========
+class Bag {
+}
+
+class Item {
+}
+
+class Pokeball {
+}
+
+class Potion {
+}
+
+class ItemStack {
+}
+
+' ========== DIALOGUE, QUETES ET SAUVEGARDE ==========
+class DialogScript {
+}
+
+class Quest {
+}
+
+class SaveManager {
+}
+
+class GameState {
+}
+
+' ========== RELATIONS ==========
+
+' Noyau moteur
+Game --> Scene : currentScene
+Scene <|-- MapScene
+Scene <|-- BattleScene
+
+' Monde
+World "1" --> "*" Map
+Map "1" --> "*" Tile
+Map "1" --> "*" Entity
+
+' Entités
+Entity <|-- Character
+Character <|-- Player
+Character <|-- NPC
+NPC <|-- Trainer
+
+Player "1" --> "1" Party : party
+Player "1" --> "1" Bag : bag
+Trainer "1" --> "1" Party : party
+
+' Pokemon
+Party "1" --> "6" Pokemon
+Pokemon "*" --> "1" PokemonSpecies : baseData
+Pokemon "1" --> "1" Stats
+Pokemon "1" --> "4" Move : moves
+Move "*" --> "1" Type
+
+' Combat
+Battle "1" --> "1" Trainer : playerTrainer
+Battle "1" --> "1" Trainer : opponent
+Battle "1" --> "1" Pokemon : activePlayerMon
+Battle "1" --> "1" Pokemon : activeOpponentMon
+Battle ..> DamageCalculator
+
+BattleAction <|-- AttackAction
+BattleAction <|-- SwitchAction
+BattleAction <|-- UseItemAction
+BattleAction <|-- FleeAction
+
+' Inventaire
+Bag "1" --> "*" ItemStack
+ItemStack "*" --> "1" Item
+Item <|-- Pokeball
+Item <|-- Potion
+
+' Dialogue et sauvegarde
+NPC "1" --> "1" DialogScript
+SaveManager ..> GameState
+@enduml
