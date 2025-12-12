@@ -2,76 +2,68 @@
 #include <iostream>
 #include <vector>
 #include "Tile.hpp"
-using namespace std ; 
+
+using namespace std;
 
 int main() {
-    // Créer une fenêtre
-    sf::RenderWindow window(sf::VideoMode(800, 600), "Test SFML - Pokemon Fangame");
-    
-    cout << "Fenêtre SFML créée avec succès !" << endl;
-    
-    const int MAP_WIDTH = 25;
+    sf::RenderWindow window(sf::VideoMode(800, 576), "Test SFML - Pokemon Fangame");
+    cout << "Fenetre SFML creee avec succes !" << endl;
+
+    const int MAP_WIDTH  = 25;
     const int MAP_HEIGHT = 18;
     const float TILE_SIZE = 32.f;
 
-    Type mapData[MAP_HEIGHT][MAP_WIDTH] = {
-        { Type::Grass, Type::Grass, Type::Path,  Type::Path,  Type::Grass },
-        { Type::Grass, Type::Wall,  Type::Wall,  Type::Path,  Type::Grass },
-        { Type::Grass, Type::Grass, Type::Path,  Type::Path,  Type::Grass },
-        { Type::Water, Type::Water, Type::Water, Type::Grass, Type::Grass },
-        { Type::Grass, Type::Grass, Type::Grass, Type::Grass, Type::Grass },
-    };
+    // 1) Structure de map logique
+    Type mapData[MAP_HEIGHT][MAP_WIDTH];
 
-    vector<Tile> tiles;
-    tiles.reserve(MAP_WIDTH * MAP_HEIGHT);
-
+    // Remplir la map avec des Types
     for (int y = 0; y < MAP_HEIGHT; ++y) {
         for (int x = 0; x < MAP_WIDTH; ++x) {
             Type type = Type::Grass;
 
-            // Exemple : faire un chemin horizontal au milieu
+            // Chemin horizontal au milieu
             if (y == MAP_HEIGHT / 2)
                 type = Type::Path;
 
-            // Exemple : de l'eau en bas
+            // Eau sur les 3 dernières lignes
             if (y >= MAP_HEIGHT - 3)
                 type = Type::Water;
 
-            float posX = x * TILE_SIZE;
-            float posY = y * TILE_SIZE;
-            tiles.emplace_back(posX, posY, type);
+            mapData[y][x] = type;
         }
     }
 
+    // 2) Générer les tiles à partir de mapData
+    std::vector<Tile> tiles;
+    tiles.reserve(MAP_WIDTH * MAP_HEIGHT);
 
+    for (int y = 0; y < MAP_HEIGHT; ++y) {
+        for (int x = 0; x < MAP_WIDTH; ++x) {
+            float posX = x * TILE_SIZE;
+            float posY = y * TILE_SIZE;
+            tiles.emplace_back(posX, posY, mapData[y][x]);
+        }
+    }
 
-    // Boucle de jeu
+    // 3) Boucle de jeu
     while (window.isOpen()) {
-        // Gérer les événements
         sf::Event event;
         while (window.pollEvent(event)) {
             if (event.type == sf::Event::Closed)
                 window.close();
-            
-            // Fermer avec ESC
             if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape)
                 window.close();
-
         }
 
-        // Effacer l'écran en noir
         window.clear(sf::Color::Black);
-        
-        
+
         for (auto& tile : tiles) {
-        tile.draw(window);
+            tile.draw(window);
         }
 
-
-        // Afficher
         window.display();
     }
-    
-    cout << "Fenêtre fermée." << endl;
+
+    cout << "Fenetre fermee." << endl;
     return 0;
 }
