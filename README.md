@@ -53,7 +53,7 @@ Je partagerai régulièrement l'avancement du projet (choix techniques, captures
 
 ## 👤 Auteur
 
-**Mathis** - Étudiant en 2ᵉ année d'école d'ingénieur en informatique (CESI)
+**Matis** - Étudiant en 2ᵉ année d'école d'ingénieur en informatique (CESI)
 
 ## 📄 Licence
 
