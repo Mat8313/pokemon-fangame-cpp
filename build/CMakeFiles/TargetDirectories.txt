@@ -1,0 +1,3 @@
+/mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/build/CMakeFiles/pokemon.dir
+/mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/build/CMakeFiles/rebuild_cache.dir
