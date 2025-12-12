@@ -129,6 +129,30 @@ pokemon/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/build
 .PHONY : pokemon/fast
 
+src/Tile.o: src/Tile.cpp.o
+.PHONY : src/Tile.o
+
+# target to build an object file
+src/Tile.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Tile.cpp.o
+.PHONY : src/Tile.cpp.o
+
+src/Tile.i: src/Tile.cpp.i
+.PHONY : src/Tile.i
+
+# target to preprocess a source file
+src/Tile.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Tile.cpp.i
+.PHONY : src/Tile.cpp.i
+
+src/Tile.s: src/Tile.cpp.s
+.PHONY : src/Tile.s
+
+# target to generate assembly for a file
+src/Tile.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Tile.cpp.s
+.PHONY : src/Tile.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -162,6 +186,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... pokemon"
+	@echo "... src/Tile.o"
+	@echo "... src/Tile.i"
+	@echo "... src/Tile.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

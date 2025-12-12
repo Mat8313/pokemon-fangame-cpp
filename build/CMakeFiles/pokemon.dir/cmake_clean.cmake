@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/pokemon.dir/src/Tile.cpp.o"
+  "CMakeFiles/pokemon.dir/src/Tile.cpp.o.d"
   "CMakeFiles/pokemon.dir/src/main.cpp.o"
   "CMakeFiles/pokemon.dir/src/main.cpp.o.d"
   "pokemon"
