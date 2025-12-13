@@ -2,20 +2,7 @@
 #define CHARACTER_HPP
 
 #include <string>
-
-
-class Character{
-private :  
-    Direction direction;
-    double moveSpeed;  
-public : 
-    Direction getDirection(); 
-    double getMoveSpeed(); 
-
-    void setDirection(std::string direction);    
-    void setMoveSpeed(double speed);        
-};
-
+#include "Entity.hpp"
 
 enum class Direction {
     North, 
@@ -23,5 +10,22 @@ enum class Direction {
     West,  
     East   
 };
+
+class Character : public Entity {
+private :
+    Direction direction;
+    double moveSpeed;  
+public : 
+    Character();
+
+    Direction getDirection(); 
+    double getMoveSpeed(); 
+
+    void setDirection(Direction direction);    
+    void setMoveSpeed(double speed);        
+};
+
+
+
 
 #endif 

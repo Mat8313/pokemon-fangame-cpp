@@ -7,6 +7,7 @@
 class Entity{
 private: 
     float positionX, positionY;
+    int positionTileX, positionTileY;
     sf::Sprite sprite;  
 public : 
     Entity();
@@ -18,11 +19,17 @@ public :
 
     float getPositionX();
     float getPositionY(); 
+
+    int getPositionTileX();
+    int getPositionTileY();
     
     sf::Sprite getSprite(); 
 
     void setPositionX(float x);
     void setPositionY(float y); 
+    
+    void setPositionTileX(int x);
+    void setPositionTileY(int y);
     
     void setSprite(sf::Sprite sprite);
 
