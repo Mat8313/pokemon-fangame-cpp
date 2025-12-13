@@ -1,4 +1,10 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/pokemon.dir/src/LoadMap.cpp.o"
+  "CMakeFiles/pokemon.dir/src/LoadMap.cpp.o.d"
+  "CMakeFiles/pokemon.dir/src/Map.cpp.o"
+  "CMakeFiles/pokemon.dir/src/Map.cpp.o.d"
+  "CMakeFiles/pokemon.dir/src/MapRenderer.cpp.o"
+  "CMakeFiles/pokemon.dir/src/MapRenderer.cpp.o.d"
   "CMakeFiles/pokemon.dir/src/Tile.cpp.o"
   "CMakeFiles/pokemon.dir/src/Tile.cpp.o.d"
   "CMakeFiles/pokemon.dir/src/main.cpp.o"
