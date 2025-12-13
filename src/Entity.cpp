@@ -39,3 +39,6 @@ void Entity::setPositionTileY(int y) {
 void Entity::setSprite(sf::Sprite spr) {
     sprite = spr;
 }
+void Entity::update() {
+    // Default implementation does nothing
+}

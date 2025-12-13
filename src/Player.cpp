@@ -37,24 +37,40 @@ void Player::handleInput(sf::Event& event) {
         
         switch (event.key.code) {
             case sf::Keyboard::Up:
-            case sf::Keyboard::W:
+                targetX = currentX;
+                targetY = currentY - tileSize;
+                setDirection(Direction::North);
+                break;
+            case sf::Keyboard::Z:
                 targetX = currentX;
                 targetY = currentY - tileSize;
                 setDirection(Direction::North);
                 break;
             case sf::Keyboard::Down:
+                targetX = currentX;
+                targetY = currentY + tileSize;
+                setDirection(Direction::South);
+                break;
             case sf::Keyboard::S:
                 targetX = currentX;
                 targetY = currentY + tileSize;
                 setDirection(Direction::South);
                 break;
             case sf::Keyboard::Left:
-            case sf::Keyboard::A:
+                targetX = currentX - tileSize;
+                targetY = currentY;
+                setDirection(Direction::West);
+                break;
+            case sf::Keyboard::Q:
                 targetX = currentX - tileSize;
                 targetY = currentY;
                 setDirection(Direction::West);
                 break;
             case sf::Keyboard::Right:
+                targetX = currentX + tileSize;
+                targetY = currentY;
+                setDirection(Direction::East);
+                break;
             case sf::Keyboard::D:
                 targetX = currentX + tileSize;
                 targetY = currentY;

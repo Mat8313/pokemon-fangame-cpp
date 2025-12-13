@@ -129,6 +129,54 @@ pokemon/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/build
 .PHONY : pokemon/fast
 
+src/Character.o: src/Character.cpp.o
+.PHONY : src/Character.o
+
+# target to build an object file
+src/Character.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Character.cpp.o
+.PHONY : src/Character.cpp.o
+
+src/Character.i: src/Character.cpp.i
+.PHONY : src/Character.i
+
+# target to preprocess a source file
+src/Character.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Character.cpp.i
+.PHONY : src/Character.cpp.i
+
+src/Character.s: src/Character.cpp.s
+.PHONY : src/Character.s
+
+# target to generate assembly for a file
+src/Character.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Character.cpp.s
+.PHONY : src/Character.cpp.s
+
+src/Entity.o: src/Entity.cpp.o
+.PHONY : src/Entity.o
+
+# target to build an object file
+src/Entity.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Entity.cpp.o
+.PHONY : src/Entity.cpp.o
+
+src/Entity.i: src/Entity.cpp.i
+.PHONY : src/Entity.i
+
+# target to preprocess a source file
+src/Entity.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Entity.cpp.i
+.PHONY : src/Entity.cpp.i
+
+src/Entity.s: src/Entity.cpp.s
+.PHONY : src/Entity.s
+
+# target to generate assembly for a file
+src/Entity.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Entity.cpp.s
+.PHONY : src/Entity.cpp.s
+
 src/LoadMap.o: src/LoadMap.cpp.o
 .PHONY : src/LoadMap.o
 
@@ -201,6 +249,30 @@ src/MapRenderer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/MapRenderer.cpp.s
 .PHONY : src/MapRenderer.cpp.s
 
+src/Player.o: src/Player.cpp.o
+.PHONY : src/Player.o
+
+# target to build an object file
+src/Player.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Player.cpp.o
+.PHONY : src/Player.cpp.o
+
+src/Player.i: src/Player.cpp.i
+.PHONY : src/Player.i
+
+# target to preprocess a source file
+src/Player.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Player.cpp.i
+.PHONY : src/Player.cpp.i
+
+src/Player.s: src/Player.cpp.s
+.PHONY : src/Player.s
+
+# target to generate assembly for a file
+src/Player.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Player.cpp.s
+.PHONY : src/Player.cpp.s
+
 src/Tile.o: src/Tile.cpp.o
 .PHONY : src/Tile.o
 
@@ -258,6 +330,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... pokemon"
+	@echo "... src/Character.o"
+	@echo "... src/Character.i"
+	@echo "... src/Character.s"
+	@echo "... src/Entity.o"
+	@echo "... src/Entity.i"
+	@echo "... src/Entity.s"
 	@echo "... src/LoadMap.o"
 	@echo "... src/LoadMap.i"
 	@echo "... src/LoadMap.s"
@@ -267,6 +345,9 @@ help:
 	@echo "... src/MapRenderer.o"
 	@echo "... src/MapRenderer.i"
 	@echo "... src/MapRenderer.s"
+	@echo "... src/Player.o"
+	@echo "... src/Player.i"
+	@echo "... src/Player.s"
 	@echo "... src/Tile.o"
 	@echo "... src/Tile.i"
 	@echo "... src/Tile.s"

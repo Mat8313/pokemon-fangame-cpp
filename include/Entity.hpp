@@ -13,7 +13,7 @@ public :
     Entity();
     Entity(float , float y, const sf::Texture texture);
 
-    virtual void update()=0; 
+    virtual void update(); 
 
     virtual void draw(sf::RenderWindow& window);
 
@@ -30,7 +30,7 @@ public :
     
     void setPositionTileX(int x);
     void setPositionTileY(int y);
-    
+
     void setSprite(sf::Sprite sprite);
 
 };

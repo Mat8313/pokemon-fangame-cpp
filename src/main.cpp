@@ -28,7 +28,7 @@ int main() {
     
     // 3) Création du joueur
     sf::Texture playerTexture;
-    if (!playerTexture.loadFromFile("../assets/player.png")) {
+    if (!playerTexture.loadFromFile("../assets/sprites/player.png")) {
         cerr << "Error loading player texture!" << endl;
         return -1;
     }
