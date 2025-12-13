@@ -1,200 +1,141 @@
 @startuml
-' ========== NOYAU MOTEUR / SCENES ==========
-abstract class Scene {
-}
-
-class Game {
-}
-
-class MapScene {
-}
-
-class BattleScene {
-}
-
-' ========== MONDE, CARTES ET COLLISIONS ==========
-class World {
-}
-
-class Map {
-}
-
-class Tile {
-}
-
-' ========== ENTITES, JOUEUR ET PNJ ==========
-abstract class Entity {
+' ========== ENTITES ET PERSONNAGES ==========
+class Entity {
 - float : positionX
 - float : positionY
 - sf::Sprite : sprite 
-+ update() : virtual void 
++ Entity()
++ Entity(float x, float y, const sf::Texture& texture)
++ update() : virtual void
 + draw(sf::RenderWindow& window): virtual void
 + getPositionX() : float 
 + getPositionY() : float 
 + getSprite() : sf::Sprite
-+ setPositionX() : void  
-+ setPositionY() : void 
-+ setSprite() : void  
++ setPositionX(float x) : void 
++ setPositionY(float y) : void 
++ setSprite(sf::Sprite sprite) : void 
 }
 
 class Character {
 - direction : Direction 
-- movespeed : double
+- moveSpeed : double
 + getDirection() : Direction 
 + getMoveSpeed() : double
-+ setDirection(Direction* dierection) : void 
++ setDirection(std::string direction) : void 
 + setMoveSpeed(double speed) : void 
 }
 
-' Enumération Direction
+' Énumération Direction
 enum Direction {
-  North
-  South
-  West
-  East
+ North
+ South
+ West
+ East
 }
 
-class Player {
+class Player : public Character {
 - name : std::string
 - party : Party* 
 - bag : Bag* 
-+ getName() : std::string 
-+ setName(std::string name) : void
-+ getParty() : Party* 
 + setParty(Party* party) : void 
-+ getParty() : Party*   
++ setBag(Bag* bag) : void 
++ setName(std::string name) : void
++ getName() : std::string 
++ getParty() : Party*
++ getBag() : Bag*
 }
 
-class NPC {
+' ========== MONDE, CARTES ET COLLISIONS ==========
+class Map {
+- mapWidth : int
+- mapHeight : int
+- tileSize : float
+- mapData : std::vector<std::vector<Type>>
++ Map(int width, int height, float tilesize)
++ getTileType(int x, int y) : Type const
++ setTileType(int x, int y, Type type) : void
++ getWidth() : int const
++ getHeight() : int const
++ getTileSize() : float const
++ setTileSize(float size) : void
++ setDimensions(int width, int height) : void
 }
 
-class Trainer {
+class Tile {
+- positionX : float
+- positionY : float
+- type : Type
+- shape : sf::RectangleShape
++ Tile()
++ Tile(float x, float y, Type type)
++ draw(sf::RenderWindow& window) : void
++ getPositionX() : float const
++ getPositionY() : float const
++ getType() : Type const
++ getShape() : sf::RectangleShape const
++ setPositionX(float x) : void
++ setPositionY(float y) : void
++ setType(Type type) : void
++ setShape(sf::RectangleShape shape) : void
+}
+
+' Énumération Type (pour Tile)
+enum Type {
+ Grass
+ Path
+ Wall
+ Water
 }
 
 ' ========== POKEMON, STATISTIQUES ET ATTAQUES ==========
 class Party {
 - pokemons : std::vector<Pokemon*>
 + getPokemons() : std::vector<Pokemon*>
-setPokemons(Pokemon* pokemon, int index) : void 
++ setPokemons(Pokemon* pokemon, int index) : void 
 }
 
 class Pokemon {
++ name : Name
++ id : int
 }
 
-class PokemonSpecies {
+' Énumération Name (pour Pokemon)
+enum Name {
+ Bulbizarre
+ Herbizarre
+ Florizarre
+ Salamèche
+ Reptincel
+ Dracaufeu
+ Carapuce
+ Carabaffe
+ Tortank
+ Chenipan
 }
 
-class Stats {
-}
-
-class Move {
-}
-
-class Type {
-}
-
-class TypeChart {
-}
-
-' ========== SYSTEME DE COMBAT ==========
-class Battle {
-}
-
-abstract class BattleAction {
-}
-
-class AttackAction {
-}
-
-class SwitchAction {
-}
-
-class UseItemAction {
-}
-
-class FleeAction {
-}
-
-class DamageCalculator {
-}
-
-' ========== OBJETS ET INVENTAIRE ==========
 class Bag {
 }
 
-class Item {
-}
-
-class Pokeball {
-}
-
-class Potion {
-}
-
-class ItemStack {
-}
-
-' ========== DIALOGUE, QUETES ET SAUVEGARDE ==========
-class DialogScript {
-}
-
-class Quest {
-}
-
-class SaveManager {
-}
-
-class GameState {
-}
-
 ' ========== RELATIONS ==========
+' Character utilise Direction
+Character --> Direction
 
-' Noyau moteur
-Game --> Scene : currentScene
-Scene <|-- MapScene
-Scene <|-- BattleScene
-
-' Monde
-World "1" --> "*" Map
-Map "1" --> "*" Tile
-Map "1" --> "*" Entity
-
-' Entités
-Entity <|-- Character
+' Player hérite de Character
 Character <|-- Player
-Character <|-- NPC
-NPC <|-- Trainer
 
+' Player possède Party et Bag
 Player "1" --> "1" Party : party
 Player "1" --> "1" Bag : bag
-Trainer "1" --> "1" Party : party
 
-' Pokemon
-Party "1" --> "6" Pokemon
-Pokemon "*" --> "1" PokemonSpecies : baseData
-Pokemon "1" --> "1" Stats
-Pokemon "1" --> "4" Move : moves
-Move "*" --> "1" Type
+' Map utilise Type pour ses données
+Map --> Type : mapData
 
-' Combat
-Battle "1" --> "1" Trainer : playerTrainer
-Battle "1" --> "1" Trainer : opponent
-Battle "1" --> "1" Pokemon : activePlayerMon
-Battle "1" --> "1" Pokemon : activeOpponentMon
-Battle ..> DamageCalculator
+' Tile utilise Type
+Tile --> Type
 
-BattleAction <|-- AttackAction
-BattleAction <|-- SwitchAction
-BattleAction <|-- UseItemAction
-BattleAction <|-- FleeAction
+' Party contient des Pokemon
+Party "1" --> "*" Pokemon
 
-' Inventaire
-Bag "1" --> "*" ItemStack
-ItemStack "*" --> "1" Item
-Item <|-- Pokeball
-Item <|-- Potion
-
-' Dialogue et sauvegarde
-NPC "1" --> "1" DialogScript
-SaveManager ..> GameState
+' Pokemon utilise Name
+Pokemon --> Name
 @enduml
