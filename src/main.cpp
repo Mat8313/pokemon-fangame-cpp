@@ -57,7 +57,7 @@ int main() {
         }
         
         // B) Update (logique du jeu)
-        player.update();
+        player.update(); // Met à jour la position du joueur
         
         // C) Rendu (affichage)
         window.clear(sf::Color::Black);

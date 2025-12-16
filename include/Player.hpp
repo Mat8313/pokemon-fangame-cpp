@@ -4,6 +4,7 @@
 #include <string>
 #include <SFML/Graphics.hpp>
 #include "Character.hpp"
+#include "Tile.hpp"
 //#include "Party.hpp"
 //#include "Bag.hpp"
 class Party; //forward declaration 

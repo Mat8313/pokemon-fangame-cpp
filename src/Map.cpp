@@ -31,3 +31,4 @@ void Map::setDimensions(int width, int height) {
         row.resize(width, Type::Grass);
     }
 }   
+

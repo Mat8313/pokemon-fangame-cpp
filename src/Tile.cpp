@@ -2,7 +2,7 @@
 #include <SFML/Graphics.hpp>
 using namespace sf; 
 
-Tile::Tile(float x, float y, Type type):positionX(x), positionY(y), type(type){
+Tile::Tile(float x, float y, Type type, bool obstacle):positionX(x), positionY(y), type(type), isObstacle(obstacle) {
     shape.setSize(Vector2f(32.f,32.f));
 
     switch(type){ 
@@ -29,6 +29,12 @@ float Tile::getPositionY()  {
 }
 Type Tile::getType()  {
     return this->type;
+}
+bool Tile::getIsObstacle() {
+    return this->isObstacle;
+}
+void Tile::setIsObstacle(bool isObs) {
+    this->isObstacle = isObs;
 }
 
 sf::RectangleShape Tile::getShape()  {

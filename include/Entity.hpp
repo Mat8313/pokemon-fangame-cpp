@@ -2,6 +2,7 @@
 #define ENTITY_HPP
 
 #include <SFML/Graphics.hpp>
+#include "Tile.hpp"
 
 
 class Entity{

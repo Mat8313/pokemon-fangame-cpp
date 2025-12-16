@@ -85,18 +85,19 @@ void Player::update() {
         moveProgress += getMoveSpeed() / 32.0f; // Vitesse normalisée
         
         if (moveProgress >= 1.0f) {
-            // Déplacement terminé
+            // Déplacement terminé 
             setPositionX(targetX);
             setPositionY(targetY);
             isMoving = false;
             moveProgress = 0.0f;
-        } else {
-            // Interpolation linéaire entre position actuelle et cible
-            float startX = targetX - (targetX - getPositionX());
-            float startY = targetY - (targetY - getPositionY());
-            
-            setPositionX(startX + (targetX - startX) * moveProgress);
-            setPositionY(startY + (targetY - startY) * moveProgress);
         }
+        else if (moveProgress < 1.0f) {
+            // Interpolation linéaire entre position actuelle et cible
+                float startX = targetX - (targetX - getPositionX());
+                float startY = targetY - (targetY - getPositionY());
+            
+                setPositionX(startX + (targetX - startX) * moveProgress);
+                setPositionY(startY + (targetY - startY) * moveProgress);
+            }
     }
 }
