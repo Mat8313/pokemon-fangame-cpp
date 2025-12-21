@@ -2,7 +2,7 @@
 #include <SFML/Graphics.hpp>
 using namespace sf; 
 
-Tile::Tile(float x, float y, TileType type, bool obstacle):positionX(x), positionY(y), type(type), isObstacle(obstacle) {
+Tile::Tile(float x, float y, TileType type, bool obstacle) : positionX(x), positionY(y), type(type), isObstacle(obstacle) {
     shape.setSize(Vector2f(32.f,32.f));
 
     switch(type){ 
@@ -27,14 +27,8 @@ float Tile::getPositionX()  {
 float Tile::getPositionY()  {
     return this->positionY; 
 }
-TileType Tile::getType()  {
+TileType Tile::getType() const{
     return this->type;
-}
-bool Tile::getIsObstacle() {
-    return this->isObstacle;
-}
-void Tile::setIsObstacle(bool isObs) {
-    this->isObstacle = isObs;
 }
 RectangleShape Tile::getShape()  {
     return this->shape;
@@ -55,4 +49,11 @@ void Tile::setShape(const RectangleShape& s) {
 void Tile::draw(RenderWindow& window) {
     shape.setPosition(positionX, positionY);
     window.draw(shape);
+}
+
+bool Tile::getIsObstacle()const{
+    return isObstacle;
+}
+void Tile::setIsObstacle(bool o){
+    isObstacle = o; 
 }

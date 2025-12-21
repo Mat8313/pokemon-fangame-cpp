@@ -21,7 +21,7 @@ public :
 
     float getPositionX() ;
     float getPositionY() ; 
-    TileType getType() ;
+    TileType getType() const;
     sf::RectangleShape getShape();
 
     void setPositionX(float x);
@@ -29,11 +29,12 @@ public :
     void setType(TileType type);
     void setShape(const sf::RectangleShape& shape);
 
-    bool getIsObstacle();
-    void setIsObstacle(bool isObstacle);
+    bool getIsObstacle()const;
+    void setIsObstacle(bool o);
 
 
 };
+
 
 
 

@@ -1,14 +1,28 @@
 #include "Map.hpp"
 
 Map::Map(int width, int height, float tileSize)
-    : mapWidth(width), mapHeight(height), tileSize(tileSize),
-        mapData(height, std::vector<Type>(width, Type::Grass)) {}
+    : mapWidth(width), mapHeight(height), tileSize(tileSize)
+    {
+            mapData.resize(height);
+    for (int y = 0; y < height; y++) {
+        mapData[y].reserve(width);
+        for (int x = 0; x < width; x++) {
+            float posX = x * tileSize;
+            float posY = y * tileSize;
+            bool isObstacle = false; // Par défaut
+            mapData[y].emplace_back(posX, posY, TileType::GRASS, isObstacle);
+         }
+    }
+    }
 
-Type Map::getTileType(int x, int y) const {
-    return mapData[y][x];
+TileType Map::getTileType(int x, int y)  {
+    return mapData[y][x].getType();
 }   
-void Map::setTileType(int x, int y, Type type) {
-    mapData[y][x] = type;
+void Map::setTileType(int x, int y, TileType type) {
+    mapData[y][x].setType(type);
+    if(TileTypeUtils::isObstacle(type)){
+        mapData[y][x].setIsObstacle(true);
+    }
 } 
 
 int Map::getWidth() const {
@@ -27,8 +41,18 @@ void Map::setDimensions(int width, int height) {
     mapWidth = width;
     mapHeight = height;
     mapData.resize(height);
-    for (auto& row : mapData) {
-        row.resize(width, Type::Grass);
+    for (int y = 0; y < height; y++) {
+        mapData[y].clear();
+        mapData[y].reserve(width);
+        for (int x = 0; x < width; x++) {
+            float posX = x * tileSize;
+            float posY = y * tileSize;
+            mapData[y].emplace_back(posX, posY, TileType::GRASS, false);
+        }
     }
-}   
+}  
+
+const Tile& Map::getTile(int tileX, int tileY)const{
+    return mapData[tileX][tileY];
+}
 

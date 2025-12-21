@@ -5,6 +5,7 @@
 #include <SFML/Graphics.hpp>
 #include "Character.hpp"
 #include "Tile.hpp"
+#include "Map.hpp"
 //#include "Party.hpp"
 //#include "Bag.hpp"
 class Party; //forward declaration 
@@ -18,6 +19,7 @@ private :
     bool isMoving;
     float targetX, targetY;
     float moveProgress;
+    Map* currentMap; // référence à la map actuel. 
 public : 
     Player();
 
@@ -31,6 +33,8 @@ public :
 
     void handleInput(sf::Event& event);
     void update() override;
+    bool canMove(float newX, float newY);
+    void setMap(Map* map); 
     
 };
 #endif 

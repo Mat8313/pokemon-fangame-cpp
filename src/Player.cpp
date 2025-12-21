@@ -25,6 +25,34 @@ Party* Player::getParty() {
 Bag* Player::getBag() {
     return this->bag;
 }
+bool Player::canMove(float newX, float newY){
+    if (!currentMap) return false;
+    
+    // Convertir les coordonnées pixel en indices de tuile
+    int tileX = static_cast<int>(newX / 32.0f);
+    int tileY = static_cast<int>(newY / 32.0f);
+    
+    // Vérifier les limites de la map
+    if (tileX < 0 || tileY < 0 || 
+        tileX >= currentMap->getWidth() || 
+        tileY >= currentMap->getHeight()) {
+        return false;
+    }
+    
+    // Récupérer la tuile de destination
+    const Tile& tile = currentMap->getTile(tileX, tileY);
+    
+    // Vérifier si c'est un obstacle
+    if (tile.getIsObstacle()) {
+        return false;
+    }
+    
+    // Vérifier la direction pour les rebords
+    int dirX = (newX > getPositionX()) ? 1 : (newX < getPositionX()) ? -1 : 0;
+    int dirY = (newY > getPositionY()) ? 1 : (newY < getPositionY()) ? -1 : 0;
+    
+    return TileTypeUtils::canPassDirection(tile.getType(), dirX, dirY);
+}
 
 void Player::handleInput(sf::Event& event) {
     if (event.type == sf::Event::KeyPressed && !isMoving) {
