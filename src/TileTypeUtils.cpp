@@ -43,9 +43,11 @@ bool TileTypeUtils::triggersBattle(TileType type){
 float TileTypeUtils::getSpeedModifier(TileType type){
     //fonction à coder
 }
-bool TileTypeUtils::canPassDirection(TileType type, int dirX, int dirY){
-    //fonction à coder 
+bool TileTypeUtils::canPassDirection(TileType type, int dirX, int dirY) {
+    // Pour l'instant, autorise toutes les directions
+    return true;
 }
+
 string TileTypeUtils::toString(TileType type){
     //fonction à coder 
 }
