@@ -297,6 +297,30 @@ src/Tile.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Tile.cpp.s
 .PHONY : src/Tile.cpp.s
 
+src/TileTypeUtils.o: src/TileTypeUtils.cpp.o
+.PHONY : src/TileTypeUtils.o
+
+# target to build an object file
+src/TileTypeUtils.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/TileTypeUtils.cpp.o
+.PHONY : src/TileTypeUtils.cpp.o
+
+src/TileTypeUtils.i: src/TileTypeUtils.cpp.i
+.PHONY : src/TileTypeUtils.i
+
+# target to preprocess a source file
+src/TileTypeUtils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/TileTypeUtils.cpp.i
+.PHONY : src/TileTypeUtils.cpp.i
+
+src/TileTypeUtils.s: src/TileTypeUtils.cpp.s
+.PHONY : src/TileTypeUtils.s
+
+# target to generate assembly for a file
+src/TileTypeUtils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/TileTypeUtils.cpp.s
+.PHONY : src/TileTypeUtils.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -351,6 +375,9 @@ help:
 	@echo "... src/Tile.o"
 	@echo "... src/Tile.i"
 	@echo "... src/Tile.s"
+	@echo "... src/TileTypeUtils.o"
+	@echo "... src/TileTypeUtils.i"
+	@echo "... src/TileTypeUtils.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
