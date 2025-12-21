@@ -10,14 +10,14 @@ class Tile{
 private : 
     float positionX, positionY; 
     TileType type;
-    sf::RectangleShape shape;
+    mutable sf::RectangleShape shape;
     bool isObstacle;
 
 public : 
     Tile();
     Tile(float x, float y, TileType type, bool obstacle); 
 
-    void draw(sf::RenderWindow& window);
+    void draw(sf::RenderWindow& window)const;
 
     float getPositionX() ;
     float getPositionY() ; 

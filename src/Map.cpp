@@ -53,6 +53,9 @@ void Map::setDimensions(int width, int height) {
 }  
 
 const Tile& Map::getTile(int tileX, int tileY)const{
-    return mapData[tileX][tileY];
+    return mapData[tileY][tileX];
+}
+Tile& Map::getTile(int tileX, int tileY) {
+    return mapData[tileY][tileX];
 }
 

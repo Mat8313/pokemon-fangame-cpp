@@ -46,7 +46,7 @@ void Tile::setShape(const RectangleShape& s) {
     this->shape = s;
 }  
 
-void Tile::draw(RenderWindow& window) {
+void Tile::draw(RenderWindow& window)const {
     shape.setPosition(positionX, positionY);
     window.draw(shape);
 }

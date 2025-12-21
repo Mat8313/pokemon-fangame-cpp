@@ -1,4 +1,5 @@
 #include "TileTypeUtils.hpp"
+#include <iostream>
 using namespace std; 
 
 bool TileTypeUtils::isObstacle(TileType type){
@@ -35,3 +36,28 @@ string TileTypeUtils::getRequiredHM(TileType type){
             return "surf";
     }
 }
+
+bool TileTypeUtils::triggersBattle(TileType type){
+    //fonction à coder 
+}
+float TileTypeUtils::getSpeedModifier(TileType type){
+    //fonction à coder
+}
+bool TileTypeUtils::canPassDirection(TileType type, int dirX, int dirY){
+    //fonction à coder 
+}
+string TileTypeUtils::toString(TileType type){
+    //fonction à coder 
+}
+TileType TileTypeUtils::charToType(char c){
+switch (c) {
+    case 'G': return TileType::GRASS;
+    case 'P': return TileType::PATH;
+    case 'W': return TileType::WALL;
+    case 'A': return TileType::WATER;
+    default: throw runtime_error("Unknown tile type character");
+}
+
+}
+
+

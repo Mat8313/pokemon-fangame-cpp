@@ -22,7 +22,8 @@ public :
     float getTileSize() const;
     void setTileSize(float size);
 
-    const Tile& getTile(int tileX, int tileY)const;
+    const Tile& getTile(int tileX, int tileY)const; // modif interdite 
+    Tile& getTile(int tileX, int tileY);            // modif autorisée 
 
     void setDimensions(int width, int height);
 
