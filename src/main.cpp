@@ -34,6 +34,7 @@ int main() {
     }
     
     Player player;
+    player.setMap(&map);
     player.setPositionX(100.f);  // Position initiale X (en pixels)
     player.setPositionY(100.f);  // Position initiale Y (en pixels)
     player.setSprite(sf::Sprite(playerTexture));

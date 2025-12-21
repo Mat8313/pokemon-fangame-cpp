@@ -41,6 +41,22 @@ void Tile::setPositionY(float y) {
 }
 void Tile::setType(TileType t) {
     this->type = t;
+    
+    // Mettre à jour la couleur du shape selon le nouveau type
+    switch(t) { 
+        case TileType::GRASS : 
+            shape.setFillColor(Color::Green);
+            break; 
+        case TileType::PATH : 
+            shape.setFillColor(Color(150, 75, 0));
+            break;
+        case TileType::WALL : 
+            shape.setFillColor(Color(64, 64, 64));
+            break; 
+        case TileType::WATER : 
+            shape.setFillColor(Color::Cyan);
+            break; 
+    }
 }
 void Tile::setShape(const RectangleShape& s) {
     this->shape = s;

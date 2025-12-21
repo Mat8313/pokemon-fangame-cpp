@@ -60,53 +60,45 @@ void Player::handleInput(sf::Event& event) {
         float currentY = getPositionY();
         float tileSize = 32.0f; // Taille d'une tile
         
-        isMoving = true;
-        moveProgress = 0.0f;
+        float newTargetX = currentX;
+        float newTargetY = currentY;
         
         switch (event.key.code) {
             case sf::Keyboard::Up:
-                targetX = currentX;
-                targetY = currentY - tileSize;
-                setDirection(Direction::North);
-                break;
             case sf::Keyboard::Z:
-                targetX = currentX;
-                targetY = currentY - tileSize;
+                newTargetY = currentY - tileSize;
                 setDirection(Direction::North);
                 break;
             case sf::Keyboard::Down:
-                targetX = currentX;
-                targetY = currentY + tileSize;
-                setDirection(Direction::South);
-                break;
             case sf::Keyboard::S:
-                targetX = currentX;
-                targetY = currentY + tileSize;
+                newTargetY = currentY + tileSize;
                 setDirection(Direction::South);
                 break;
             case sf::Keyboard::Left:
-                targetX = currentX - tileSize;
-                targetY = currentY;
-                setDirection(Direction::West);
-                break;
             case sf::Keyboard::Q:
-                targetX = currentX - tileSize;
-                targetY = currentY;
+                newTargetX = currentX - tileSize;
                 setDirection(Direction::West);
                 break;
             case sf::Keyboard::Right:
-                targetX = currentX + tileSize;
-                targetY = currentY;
-                setDirection(Direction::East);
-                break;
             case sf::Keyboard::D:
-                targetX = currentX + tileSize;
-                targetY = currentY;
+                newTargetX = currentX + tileSize;
                 setDirection(Direction::East);
                 break;
+            default:
+                return;  // Touche non gérée
         }
+        
+        // Vérifier si le déplacement est possible
+        if (canMove(newTargetX, newTargetY)) {
+            targetX = newTargetX;
+            targetY = newTargetY;
+            isMoving = true;
+            moveProgress = 0.0f;
+        }
+        // Sinon, ne rien faire (le joueur reste en place)
     }
 }
+
 
 void Player::update() {
     if (isMoving) {
@@ -123,9 +115,15 @@ void Player::update() {
             // Interpolation linéaire entre position actuelle et cible
                 float startX = targetX - (targetX - getPositionX());
                 float startY = targetY - (targetY - getPositionY());
-            
+                
                 setPositionX(startX + (targetX - startX) * moveProgress);
                 setPositionY(startY + (targetY - startY) * moveProgress);
             }
     }
 }
+
+void Player::setMap(Map* map) {
+    this->currentMap = map;
+}
+
+
