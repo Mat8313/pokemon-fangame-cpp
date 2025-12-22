@@ -16,7 +16,8 @@ int main() {
     cout << "Fenetre SFML creee avec succes !" << endl;
     
     // 2) Chargement de la map
-    Map map(0, 0, 32.f);
+    Map map(0, 0, 16.f);
+    map.init();
     LoadMap loader;
     try {
         loader.loadFromFileTxt("../assets/map/map1.txt", map);

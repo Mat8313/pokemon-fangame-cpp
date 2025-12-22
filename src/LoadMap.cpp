@@ -18,6 +18,7 @@ void LoadMap::loadFromFileTxt(const std::string& filename, Map& map) {
             char typeChar;
             file >> typeChar;
             map.setTileType(x, y, TileTypeUtils::charToType(typeChar));
+            
         }
     }
 }

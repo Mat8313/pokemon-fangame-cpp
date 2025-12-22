@@ -3,6 +3,7 @@
 
 #include "TileTypeUtils.hpp"
 #include "Tile.hpp"
+#include "TileSetManager.hpp"
 #include <vector>
 
 class Map {
@@ -10,8 +11,11 @@ private :
     int mapWidth, mapHeight;
     float tileSize;
     std::vector<std::vector<Tile>> mapData; 
+    TilesetManager tilesetManager;
 public : 
     Map(int width, int height, float tileSize);
+
+    bool init();
     
     TileType getTileType(int x, int y) ;
     void setTileType(int x, int y, TileType type);

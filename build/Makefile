@@ -297,6 +297,30 @@ src/Tile.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Tile.cpp.s
 .PHONY : src/Tile.cpp.s
 
+src/TileSetManager.o: src/TileSetManager.cpp.o
+.PHONY : src/TileSetManager.o
+
+# target to build an object file
+src/TileSetManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/TileSetManager.cpp.o
+.PHONY : src/TileSetManager.cpp.o
+
+src/TileSetManager.i: src/TileSetManager.cpp.i
+.PHONY : src/TileSetManager.i
+
+# target to preprocess a source file
+src/TileSetManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/TileSetManager.cpp.i
+.PHONY : src/TileSetManager.cpp.i
+
+src/TileSetManager.s: src/TileSetManager.cpp.s
+.PHONY : src/TileSetManager.s
+
+# target to generate assembly for a file
+src/TileSetManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/TileSetManager.cpp.s
+.PHONY : src/TileSetManager.cpp.s
+
 src/TileTypeUtils.o: src/TileTypeUtils.cpp.o
 .PHONY : src/TileTypeUtils.o
 
@@ -375,6 +399,9 @@ help:
 	@echo "... src/Tile.o"
 	@echo "... src/Tile.i"
 	@echo "... src/Tile.s"
+	@echo "... src/TileSetManager.o"
+	@echo "... src/TileSetManager.i"
+	@echo "... src/TileSetManager.s"
 	@echo "... src/TileTypeUtils.o"
 	@echo "... src/TileTypeUtils.i"
 	@echo "... src/TileTypeUtils.s"

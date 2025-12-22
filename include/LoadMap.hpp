@@ -4,6 +4,7 @@
 #include <string>
 #include <fstream>
 #include "Map.hpp"
+#include "TileSetManager.hpp"
 
 class LoadMap {
 public:

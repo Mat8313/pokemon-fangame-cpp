@@ -17,13 +17,19 @@ Map::Map(int width, int height, float tileSize)
 
 TileType Map::getTileType(int x, int y)  {
     return mapData[y][x].getType();
+    
 }   
 void Map::setTileType(int x, int y, TileType type) {
     mapData[y][x].setType(type);
+    mapData[y][x].setTexture(tilesetManager.getTexture(),tilesetManager.getTileRect(type));
     if(TileTypeUtils::isObstacle(type)){
         mapData[y][x].setIsObstacle(true);
     }
 } 
+
+bool Map::init() {
+    return tilesetManager.loadTileset("assets/sprites/tiles.png");
+}
 
 int Map::getWidth() const {
     return mapWidth;
