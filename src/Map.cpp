@@ -28,7 +28,7 @@ void Map::setTileType(int x, int y, TileType type) {
 } 
 
 bool Map::init() {
-    return tilesetManager.loadTileset("assets/sprites/tiles.png");
+    return tilesetManager.loadTileset("../assets/sprites/tiles.png", tileSize);
 }
 
 int Map::getWidth() const {

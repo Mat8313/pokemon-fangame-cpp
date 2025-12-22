@@ -8,7 +8,7 @@
 
 class Tile{
 private : 
-    float positionX, positionY; 
+    int positionX, positionY; 
     TileType type;
     //mutable sf::RectangleShape shape; old version 
     mutable sf::Sprite sprite;
@@ -16,17 +16,17 @@ private :
 
 public : 
     Tile();
-    Tile(float x, float y, TileType type, bool obstacle); 
+    Tile(int x, int y, TileType type, bool obstacle); 
 
     void draw(sf::RenderWindow& window)const;
 
-    float getPositionX() ;
-    float getPositionY() ; 
+    int getPositionX() ;
+    int getPositionY() ; 
     TileType getType() const;
     //sf::RectangleShape getShape(); // old version 
 
-    void setPositionX(float x);
-    void setPositionY(float y);
+    void setPositionX(int x);
+    void setPositionY(int y);
     void setType(TileType type);
     //void setShape(const sf::RectangleShape& shape); //old version 
     bool getIsObstacle()const;

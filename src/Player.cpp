@@ -58,7 +58,7 @@ void Player::handleInput(sf::Event& event) {
     if (event.type == sf::Event::KeyPressed && !isMoving) {
         float currentX = getPositionX();
         float currentY = getPositionY();
-        float tileSize = 32.0f; // Taille d'une tile
+        float tileSize = currentMap->getTileSize(); // Taille d'une tile
         
         float newTargetX = currentX;
         float newTargetY = currentY;
@@ -102,7 +102,7 @@ void Player::handleInput(sf::Event& event) {
 
 void Player::update() {
     if (isMoving) {
-        moveProgress += getMoveSpeed() / 32.0f; // Vitesse normalisée
+        moveProgress += getMoveSpeed() / currentMap->getTileSize(); // Vitesse normalisée
         
         if (moveProgress >= 1.0f) {
             // Déplacement terminé 

@@ -19,7 +19,7 @@ public:
     TilesetManager();
     
     // Charge le megatileset depuis un fichier
-    bool loadTileset(const std::string& filepath);
+    bool loadTileset(const std::string& filepath, int tileSize_);
     
     // Récupère le IntRect pour un TileType donné
     sf::IntRect getTileRect(TileType type) const;

@@ -1,25 +1,26 @@
 #include "Tile.hpp"
 #include <SFML/Graphics.hpp>
+#include <iostream>
 using namespace sf; 
 
-Tile::Tile(float x, float y, TileType type, bool obstacle) 
+Tile::Tile(int x, int y, TileType type, bool obstacle) 
     : positionX(x), positionY(y), type(type), isObstacle(obstacle) {
     sprite.setPosition(positionX, positionY);
 }
 
-float Tile::getPositionX()  {
+int Tile::getPositionX()  {
     return this->positionX; 
 }
-float Tile::getPositionY()  {
+int Tile::getPositionY()  {
     return this->positionY; 
 }
 TileType Tile::getType() const{
     return this->type;
 }     
-void Tile::setPositionX(float x) {
+void Tile::setPositionX(int x) {
     this->positionX = x; 
 }
-void Tile::setPositionY(float y) {
+void Tile::setPositionY(int y) {
     this->positionY = y; 
 }
 void Tile::setType(TileType t) {

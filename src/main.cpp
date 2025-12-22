@@ -57,6 +57,10 @@ int main() {
             // Gestion des inputs du joueur
             player.handleInput(event);
         }
+
+        sf::View view = window.getDefaultView();
+        view.setCenter(player.getPositionX(), player.getPositionY());
+        window.setView(view);
         
         // B) Update (logique du jeu)
         player.update(); // Met à jour la position du joueur
