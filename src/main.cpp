@@ -11,7 +11,7 @@ using namespace std;
 
 int main() {
     // 1) Création de la fenêtre
-    sf::RenderWindow window(sf::VideoMode(800, 576), "Test SFML - Pokemon Fangame");
+    sf::RenderWindow window(sf::VideoMode(400, 288), "Test SFML - Pokemon Fangame");
     window.setFramerateLimit(60); // Limite à 60 FPS
     cout << "Fenetre SFML creee avec succes !" << endl;
     
@@ -36,8 +36,8 @@ int main() {
     
     Player player;
     player.setMap(&map);
-    player.setPositionX(100.f);  // Position initiale X (en pixels)
-    player.setPositionY(100.f);  // Position initiale Y (en pixels)
+    player.setPositionX(48.f);  // Position initiale X (en pixels)
+    player.setPositionY(48.f);  // Position initiale Y (en pixels)
     player.setSprite(sf::Sprite(playerTexture));
     player.setMoveSpeed(2.0);    // Vitesse de déplacement (pixels par frame)
     cout << "Player created at position (" << player.getPositionX() 

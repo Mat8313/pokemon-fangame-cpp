@@ -10,7 +10,7 @@ Map::Map(int width, int height, float tileSize)
             float posX = x * tileSize;
             float posY = y * tileSize;
             bool isObstacle = false; // Par défaut
-            mapData[y].emplace_back(posX, posY, TileType::GRASS, isObstacle);
+            mapData[y].emplace_back(y, x, TileType::GRASS, isObstacle);
          }
     }
     }
@@ -22,9 +22,7 @@ TileType Map::getTileType(int x, int y)  {
 void Map::setTileType(int x, int y, TileType type) {
     mapData[y][x].setType(type);
     mapData[y][x].setTexture(tilesetManager.getTexture(),tilesetManager.getTileRect(type));
-    if(TileTypeUtils::isObstacle(type)){
-        mapData[y][x].setIsObstacle(true);
-    }
+    mapData[y][x].setIsObstacle(TileTypeUtils::isObstacle(type));
 } 
 
 bool Map::init() {
