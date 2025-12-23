@@ -29,9 +29,9 @@ bool Player::canMove(float newX, float newY){
     if (!currentMap) return false;
     
     // Convertir les coordonnées pixel en indices de tuile
-    // Calculer le centre du joueur (ou le point de collision, généralement les pieds)
-    float checkX = newX + (currentMap->getTileSize() / 2.0f);  // Centre horizontal
-    float checkY = newY + currentMap->getTileSize() - 1;       // Bas du sprite (pieds)
+    // Calculer le centre du joueur 
+    float checkX = newX + (currentMap->getTileSize());  // Centre horizontal
+    float checkY = newY + (currentMap->getTileSize());  // centre vertical 
 
     int tileX = static_cast<int>(checkX / currentMap->getTileSize());
     int tileY = static_cast<int>(checkY / currentMap->getTileSize());

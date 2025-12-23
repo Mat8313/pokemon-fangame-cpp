@@ -36,8 +36,8 @@ int main() {
     
     Player player;
     player.setMap(&map);
-    player.setPositionX(48.f);  // Position initiale X (en pixels)
-    player.setPositionY(48.f);  // Position initiale Y (en pixels)
+    player.setPositionX(57.f);  // Position initiale X (en pixels)
+    player.setPositionY(64.f);  // Position initiale Y (en pixels)
     player.setSprite(sf::Sprite(playerTexture));
     player.setMoveSpeed(2.0);    // Vitesse de déplacement (pixels par frame)
     cout << "Player created at position (" << player.getPositionX() 
