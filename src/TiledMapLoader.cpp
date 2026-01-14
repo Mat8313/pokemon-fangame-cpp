@@ -90,12 +90,6 @@ void TiledMapLoader::loadFromTiledTmx(const std::string& filepath, Map& map) {
                 Tile& tile = map.getTile(x, y);
                 tile.setGid(gid);
                 
-                // Si c'est le premier layer (Ground) ou si la tile est vide, on définit le type
-                if (layerName == "Ground" || tile.getType() == TileType::NONE) {
-                    TileType type = gidToTileType(gid);
-                    map.setTileType(x, y, type);
-                }
-                
                 // Applique la propriété isObstacle depuis le .tsx
                 if (obstacleMap.find(gid) != obstacleMap.end()) {
                     tile.setIsObstacle(obstacleMap[gid]);
@@ -197,15 +191,3 @@ std::vector<int> TiledMapLoader::parseCSV(const std::string& csv) {
     return result;
 }
 
-TileType TiledMapLoader::gidToTileType(int gid) {
-    // ADAPTATION : Mappe tes GID vers tes TileType
-    // Regarde ton enum TileType et ajuste
-    
-    // Exemples basés sur ton tileset
-    if (gid >= 1 && gid <= 10) return TileType::GRASS;
-    if (gid >= 206 && gid <= 265) return TileType::WATER;
-    if (gid >= 952 && gid <= 1041) return TileType::TREE;
-    
-    // Par défaut
-    return TileType::GRASS;
-}

@@ -7,6 +7,9 @@
 
 
 class MapRenderer{ 
+private : 
+    sf::Texture tilesetTexture;
+    bool textureLoaded = false; 
 public : 
     void render(sf::RenderWindow& window, const Map& map);  
 };

@@ -2,7 +2,6 @@
 #define TILEDMAPLOADER_HPP
 
 #include "Map.hpp"
-#include "TileTypeUtils.hpp"
 #include <string>
 #include <vector>
 #include <map>
@@ -22,9 +21,7 @@ private:
     std::string extractStringAttribute(const std::string& xml, const std::string& tag, const std::string& attr);
     
     std::vector<int> parseCSV(const std::string& csv);
-    
-    // Convertit GID → TileType
-    TileType gidToTileType(int gid);
+     
 };
 
 #endif

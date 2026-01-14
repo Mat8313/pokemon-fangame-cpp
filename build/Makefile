@@ -177,30 +177,6 @@ src/Entity.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Entity.cpp.s
 .PHONY : src/Entity.cpp.s
 
-src/LoadMap.o: src/LoadMap.cpp.o
-.PHONY : src/LoadMap.o
-
-# target to build an object file
-src/LoadMap.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/LoadMap.cpp.o
-.PHONY : src/LoadMap.cpp.o
-
-src/LoadMap.i: src/LoadMap.cpp.i
-.PHONY : src/LoadMap.i
-
-# target to preprocess a source file
-src/LoadMap.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/LoadMap.cpp.i
-.PHONY : src/LoadMap.cpp.i
-
-src/LoadMap.s: src/LoadMap.cpp.s
-.PHONY : src/LoadMap.s
-
-# target to generate assembly for a file
-src/LoadMap.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/LoadMap.cpp.s
-.PHONY : src/LoadMap.cpp.s
-
 src/Map.o: src/Map.cpp.o
 .PHONY : src/Map.o
 
@@ -297,54 +273,6 @@ src/Tile.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Tile.cpp.s
 .PHONY : src/Tile.cpp.s
 
-src/TileSetManager.o: src/TileSetManager.cpp.o
-.PHONY : src/TileSetManager.o
-
-# target to build an object file
-src/TileSetManager.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/TileSetManager.cpp.o
-.PHONY : src/TileSetManager.cpp.o
-
-src/TileSetManager.i: src/TileSetManager.cpp.i
-.PHONY : src/TileSetManager.i
-
-# target to preprocess a source file
-src/TileSetManager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/TileSetManager.cpp.i
-.PHONY : src/TileSetManager.cpp.i
-
-src/TileSetManager.s: src/TileSetManager.cpp.s
-.PHONY : src/TileSetManager.s
-
-# target to generate assembly for a file
-src/TileSetManager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/TileSetManager.cpp.s
-.PHONY : src/TileSetManager.cpp.s
-
-src/TileTypeUtils.o: src/TileTypeUtils.cpp.o
-.PHONY : src/TileTypeUtils.o
-
-# target to build an object file
-src/TileTypeUtils.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/TileTypeUtils.cpp.o
-.PHONY : src/TileTypeUtils.cpp.o
-
-src/TileTypeUtils.i: src/TileTypeUtils.cpp.i
-.PHONY : src/TileTypeUtils.i
-
-# target to preprocess a source file
-src/TileTypeUtils.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/TileTypeUtils.cpp.i
-.PHONY : src/TileTypeUtils.cpp.i
-
-src/TileTypeUtils.s: src/TileTypeUtils.cpp.s
-.PHONY : src/TileTypeUtils.s
-
-# target to generate assembly for a file
-src/TileTypeUtils.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/TileTypeUtils.cpp.s
-.PHONY : src/TileTypeUtils.cpp.s
-
 src/TiledMapLoader.o: src/TiledMapLoader.cpp.o
 .PHONY : src/TiledMapLoader.o
 
@@ -408,9 +336,6 @@ help:
 	@echo "... src/Entity.o"
 	@echo "... src/Entity.i"
 	@echo "... src/Entity.s"
-	@echo "... src/LoadMap.o"
-	@echo "... src/LoadMap.i"
-	@echo "... src/LoadMap.s"
 	@echo "... src/Map.o"
 	@echo "... src/Map.i"
 	@echo "... src/Map.s"
@@ -423,12 +348,6 @@ help:
 	@echo "... src/Tile.o"
 	@echo "... src/Tile.i"
 	@echo "... src/Tile.s"
-	@echo "... src/TileSetManager.o"
-	@echo "... src/TileSetManager.i"
-	@echo "... src/TileSetManager.s"
-	@echo "... src/TileTypeUtils.o"
-	@echo "... src/TileTypeUtils.i"
-	@echo "... src/TileTypeUtils.s"
 	@echo "... src/TiledMapLoader.o"
 	@echo "... src/TiledMapLoader.i"
 	@echo "... src/TiledMapLoader.s"

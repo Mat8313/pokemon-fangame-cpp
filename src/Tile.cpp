@@ -3,8 +3,8 @@
 #include <iostream>
 using namespace sf; 
 
-Tile::Tile(int x, int y, TileType type, bool obstacle) 
-    : positionX(x), positionY(y), type(type), isObstacle(obstacle) {
+Tile::Tile(int x, int y, bool obstacle) 
+    : positionX(x), positionY(y), isObstacle(obstacle) {
     sprite.setPosition(positionX, positionY);
 }
 
@@ -14,18 +14,14 @@ int Tile::getPositionX()  {
 int Tile::getPositionY()  {
     return this->positionY; 
 }
-TileType Tile::getType() const{
-    return this->type;
-}     
+     
 void Tile::setPositionX(int x) {
     this->positionX = x; 
 }
 void Tile::setPositionY(int y) {
     this->positionY = y; 
 }
-void Tile::setType(TileType t) {
-    this->type = t;
-}
+
 
 void Tile::setTexture(const sf::Texture& texture, const sf::IntRect& rect) {
     sprite.setTexture(texture);

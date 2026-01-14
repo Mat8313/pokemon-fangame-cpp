@@ -1,4 +1,5 @@
 #include "Map.hpp"
+using namespace std;
 
 Map::Map(int width, int height, float tileSize)
     : mapWidth(width), mapHeight(height), tileSize(tileSize)
@@ -10,24 +11,13 @@ Map::Map(int width, int height, float tileSize)
             float posX = x * tileSize;
             float posY = y * tileSize;
             bool isObstacle = false; // Par défaut
-            mapData[y].emplace_back(y, x, TileType::NONE, isObstacle);
+            mapData[y].emplace_back(y, x, isObstacle);
          }
     }
     }
 
-TileType Map::getTileType(int x, int y)  {
-    return mapData[y][x].getType();
-    
-}   
-void Map::setTileType(int x, int y, TileType type) {
-    mapData[y][x].setType(type);
-    mapData[y][x].setTexture(tilesetManager.getTexture(),tilesetManager.getTileRect(type));
-    mapData[y][x].setIsObstacle(TileTypeUtils::isObstacle(type));
-} 
+  
 
-bool Map::init() {
-    return tilesetManager.loadTileset("../assets/sprites/tiles.png", tileSize);
-}
 
 int Map::getWidth() const {
     return mapWidth;
@@ -51,7 +41,7 @@ void Map::setDimensions(int width, int height) {
         for (int x = 0; x < width; x++) {
             float posX = x * tileSize;
             float posY = y * tileSize;
-            mapData[y].emplace_back(posX, posY, TileType::GRASS, false);
+            mapData[y].emplace_back(posX, posY, false);
         }
     }
 }  

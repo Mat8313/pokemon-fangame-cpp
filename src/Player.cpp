@@ -56,7 +56,7 @@ bool Player::canMove(float newX, float newY){
     int dirX = (newX > getPositionX()) ? 1 : (newX < getPositionX()) ? -1 : 0;
     int dirY = (newY > getPositionY()) ? 1 : (newY < getPositionY()) ? -1 : 0;
     
-    return TileTypeUtils::canPassDirection(tile.getType(), dirX, dirY);
+    return true;
 }
 
 void Player::handleInput(sf::Event& event) {

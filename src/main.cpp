@@ -3,10 +3,10 @@
 #include <vector>
 #include "Tile.hpp"
 #include "Map.hpp"
-#include "LoadMap.hpp"          // Ancien loader (garde-le pour compatibilité)
 #include "TiledMapLoader.hpp"   // ← NOUVEAU : Loader Tiled
 #include "MapRenderer.hpp"
 #include "Player.hpp"
+#include <cmath>
 
 using namespace std;
 
@@ -18,7 +18,7 @@ int main() {
     
     // 2) Chargement de la map avec Tiled
     Map map(0, 0, 16.f);
-    map.init();
+    
     
     TiledMapLoader tiledLoader;
     try {
@@ -60,7 +60,8 @@ int main() {
         }
         
         sf::View view = window.getDefaultView();
-        view.setCenter(player.getPositionX(), player.getPositionY());
+        view.setCenter(round(player.getPositionX()), round(player.getPositionY())
+);
         window.setView(view);
         
         player.update();
