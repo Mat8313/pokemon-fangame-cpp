@@ -345,6 +345,30 @@ src/TileTypeUtils.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/TileTypeUtils.cpp.s
 .PHONY : src/TileTypeUtils.cpp.s
 
+src/TiledMapLoader.o: src/TiledMapLoader.cpp.o
+.PHONY : src/TiledMapLoader.o
+
+# target to build an object file
+src/TiledMapLoader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/TiledMapLoader.cpp.o
+.PHONY : src/TiledMapLoader.cpp.o
+
+src/TiledMapLoader.i: src/TiledMapLoader.cpp.i
+.PHONY : src/TiledMapLoader.i
+
+# target to preprocess a source file
+src/TiledMapLoader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/TiledMapLoader.cpp.i
+.PHONY : src/TiledMapLoader.cpp.i
+
+src/TiledMapLoader.s: src/TiledMapLoader.cpp.s
+.PHONY : src/TiledMapLoader.s
+
+# target to generate assembly for a file
+src/TiledMapLoader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/TiledMapLoader.cpp.s
+.PHONY : src/TiledMapLoader.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -405,6 +429,9 @@ help:
 	@echo "... src/TileTypeUtils.o"
 	@echo "... src/TileTypeUtils.i"
 	@echo "... src/TileTypeUtils.s"
+	@echo "... src/TiledMapLoader.o"
+	@echo "... src/TiledMapLoader.i"
+	@echo "... src/TiledMapLoader.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

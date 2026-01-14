@@ -57,7 +57,7 @@ switch (c) {
     case 'P': return TileType::PATH;
     case 'W': return TileType::WALL;
     case 'A': return TileType::WATER;
-    default: throw runtime_error("Unknown tile type character");
+    default: return TileType::NONE;
 }
 
 }

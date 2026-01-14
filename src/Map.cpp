@@ -10,7 +10,7 @@ Map::Map(int width, int height, float tileSize)
             float posX = x * tileSize;
             float posY = y * tileSize;
             bool isObstacle = false; // Par défaut
-            mapData[y].emplace_back(y, x, TileType::GRASS, isObstacle);
+            mapData[y].emplace_back(y, x, TileType::NONE, isObstacle);
          }
     }
     }

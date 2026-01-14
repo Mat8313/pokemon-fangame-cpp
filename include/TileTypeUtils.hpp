@@ -4,6 +4,7 @@
 #include <string>
 
 enum class TileType {
+    NONE,
     GRASS,          // Herbe normale
     TALL_GRASS,     // Hautes herbes (combats sauvages)
     PATH,           // Chemin/piéton

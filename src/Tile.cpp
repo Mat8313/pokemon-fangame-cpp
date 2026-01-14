@@ -43,3 +43,7 @@ bool Tile::getIsObstacle()const{
 void Tile::setIsObstacle(bool o){
     isObstacle = o; 
 }
+
+void Tile::setGid(int g){this->gid = g;}
+
+int Tile::getGid()const{return this->gid;}

@@ -17,6 +17,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/pokemon.dir/src/TileSetManager.cpp.o.d"
   "CMakeFiles/pokemon.dir/src/TileTypeUtils.cpp.o"
   "CMakeFiles/pokemon.dir/src/TileTypeUtils.cpp.o.d"
+  "CMakeFiles/pokemon.dir/src/TiledMapLoader.cpp.o"
+  "CMakeFiles/pokemon.dir/src/TiledMapLoader.cpp.o.d"
   "CMakeFiles/pokemon.dir/src/main.cpp.o"
   "CMakeFiles/pokemon.dir/src/main.cpp.o.d"
   "pokemon"

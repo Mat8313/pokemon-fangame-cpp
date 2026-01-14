@@ -13,6 +13,7 @@ private :
     //mutable sf::RectangleShape shape; old version 
     mutable sf::Sprite sprite;
     bool isObstacle;
+    int gid; 
 
 public : 
     Tile();
@@ -33,6 +34,8 @@ public :
     void setIsObstacle(bool o);
     void setTexture(const sf::Texture& texture, const sf::IntRect& rect);
 
+    void setGid(int g);
+    int getGid() const;
 
 };
 

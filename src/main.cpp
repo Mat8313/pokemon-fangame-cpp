@@ -3,7 +3,8 @@
 #include <vector>
 #include "Tile.hpp"
 #include "Map.hpp"
-#include "LoadMap.hpp" 
+#include "LoadMap.hpp"          // Ancien loader (garde-le pour compatibilité)
+#include "TiledMapLoader.hpp"   // ← NOUVEAU : Loader Tiled
 #include "MapRenderer.hpp"
 #include "Player.hpp"
 
@@ -12,22 +13,24 @@ using namespace std;
 int main() {
     // 1) Création de la fenêtre
     sf::RenderWindow window(sf::VideoMode(400, 288), "Test SFML - Pokemon Fangame");
-    window.setFramerateLimit(60); // Limite à 60 FPS
+    window.setFramerateLimit(60);
     cout << "Fenetre SFML creee avec succes !" << endl;
     
-    // 2) Chargement de la map
+    // 2) Chargement de la map avec Tiled
     Map map(0, 0, 16.f);
     map.init();
-    LoadMap loader;
+    
+    TiledMapLoader tiledLoader;
     try {
-        loader.loadFromFileTxt("../assets/map/map1.txt", map);
+        tiledLoader.loadFromTiledTmx("../assets/map/map-test.tmx", map);
         cout << "Map loaded: " << map.getWidth() << "x" << map.getHeight() << endl;
     } catch (const std::exception& e) {
         cerr << "Error loading map: " << e.what() << endl;
         return -1;
     }
+
     
-    // 3) Création du joueur
+    // 3) Création du joueur 
     sf::Texture playerTexture;
     if (!playerTexture.loadFromFile("../assets/sprites/player.png")) {
         cerr << "Error loading player texture!" << endl;
@@ -36,43 +39,37 @@ int main() {
     
     Player player;
     player.setMap(&map);
-    player.setPositionX(57.f);  // Position initiale X (en pixels)
-    player.setPositionY(64.f);  // Position initiale Y (en pixels)
+    player.setPositionX(57.f);
+    player.setPositionY(64.f);
     player.setSprite(sf::Sprite(playerTexture));
-    player.setMoveSpeed(2.0);    // Vitesse de déplacement (pixels par frame)
+    player.setMoveSpeed(2.0);
     cout << "Player created at position (" << player.getPositionX() 
          << ", " << player.getPositionY() << ")" << endl;
     
-    // 4) Boucle de jeu
+    // 4) Boucle de jeu 
     while (window.isOpen()) {
-        // A) Gestion des événements
         sf::Event event;
         while (window.pollEvent(event)) {
             if (event.type == sf::Event::Closed)
                 window.close();
-                
+            
             if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape)
                 window.close();
             
-            // Gestion des inputs du joueur
             player.handleInput(event);
         }
-
+        
         sf::View view = window.getDefaultView();
         view.setCenter(player.getPositionX(), player.getPositionY());
         window.setView(view);
         
-        // B) Update (logique du jeu)
-        player.update(); // Met à jour la position du joueur
+        player.update();
         
-        // C) Rendu (affichage)
         window.clear(sf::Color::Black);
         
-        // Affichage de la map
         MapRenderer renderer;
         renderer.render(window, map);
         
-        // Affichage du joueur
         player.draw(window);
         
         window.display();

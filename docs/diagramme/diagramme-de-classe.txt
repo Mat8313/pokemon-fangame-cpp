@@ -20,10 +20,14 @@ class Map {
 - mapWidth : int
 - mapHeight : int
 - tileSize : float
-- mapData : std::vector<std::vector<Type>>
+- mapData : std::vector<std::vector<Tile>>
+- tilesetManager : TilesetManager
 + Map(int width, int height, float tilesize)
-+ getTileType(int x, int y) : Type const
-+ setTileType(int x, int y, Type type) : void
++ init() : bool
++ getTileType(int x, int y) : TileType const
++ setTileType(int x, int y, TileType type) : void
++ getTile(int tileX, int tileY) : Tile const&
++ getTile(int tileX, int tileY) : Tile&
 + getWidth() : int const
 + getHeight() : int const
 + getTileSize() : float const
@@ -32,55 +36,79 @@ class Map {
 }
 
 class Tile {
-- positionX : float
-- positionY : float
-- type : Type
-- shape : sf::RectangleShape
+- positionX : int
+- positionY : int
+- type : TileType
+- sprite : sf::Sprite
+- isObstacle : bool
 + Tile()
-+ Tile(float x, float y, Type type)
-+ draw(sf::RenderWindow& window) : void
-+ getPositionX() : float const
-+ getPositionY() : float const
-+ getType() : Type const
-+ getShape() : sf::RectangleShape const
-+ setPositionX(float x) : void
-+ setPositionY(float y) : void
-+ setType(Type type) : void
-+ setShape(sf::RectangleShape shape) : void
++ Tile(int x, int y, TileType type, bool obstacle)
++ draw(sf::RenderWindow& window) : void const
++ getPositionX() : int
++ getPositionY() : int
++ getType() : TileType const
++ getIsObstacle() : bool const
++ setPositionX(int x) : void
++ setPositionY(int y) : void
++ setType(TileType type) : void
++ setIsObstacle(bool o) : void
++ setTexture(const sf::Texture& texture, const sf::IntRect& rect) : void
 }
 
-' Énumération Type (pour Tile)
-enum Type {
- Grass
- Path
- Wall
- Water
+' Énumération TileType
+enum TileType {
+ GRASS
+ PATH
+ WALL
+ WATER
+ TREE
+ ROCK
+ FLOWER
+ DIRT
+}
+
+class TileSetManager {
+- tileset : sf::Texture
+- tileSize : float
++ loadTileset(const std::string& path, float tileSize) : bool
++ getTexture() : const sf::Texture&
++ getTileRect(TileType type) : sf::IntRect
+}
+
+class TileTypeUtils <<utility>> {
++ {static} isObstacle(TileType type) : bool
++ {static} getTileColor(TileType type) : sf::Color
+}
+
+class MapRenderer {
++ render(sf::RenderWindow& window, const Map& map) : void
+}
+
+class LoadMap {
++ loadFromFile(const std::string& filepath, Map& map) : bool
 }
 
 ' ========== ENTITES, JOUEUR ET PNJ ==========
-abstract class Entity {
-- float : positionX
-- float : positionY
-- sf::Sprite : sprite 
+class Entity {
+- positionX : float
+- positionY : float
+- positionTileX : int
+- positionTileY : int
+- sprite : sf::Sprite
 + Entity()
 + Entity(float x, float y, const sf::Texture& texture)
-+ update() : virtual void 
-+ draw(sf::RenderWindow& window): virtual void
-+ getPositionX() : float 
-+ getPositionY() : float 
++ {abstract} update() : void
++ {abstract} draw(sf::RenderWindow& window) : void
++ getPositionX() : float
++ getPositionY() : float
++ getPositionTileX() : int
++ getPositionTileY() : int
 + getSprite() : sf::Sprite
-+ setPositionX(float x) : void 
-+ setPositionY(float y) : void 
-+ setSprite(sf::Sprite sprite) : void 
-}
-
-class Character {
-- direction : Direction 
-- moveSpeed : double
-+ getDirection() : Direction 
-+ getMoveSpeed() : double
-+ setDirection(std::string direction) : void 
-+ setMoveSpeed(double speed) : void 
++ setPositionX(float x) : void
++ setPositionY(float y) : void
++ setPositionTileX(int x) : void
++ setPositionTileY(int y) : void
++ setSprite(sf::Sprite sprite) : void
 }
 
 ' Énumération Direction
@@ -91,16 +119,36 @@ enum Direction {
  East
 }
 
-class Player : public Character {
+class Character {
+- direction : Direction
+- moveSpeed : double
++ Character()
++ getDirection() : Direction
++ getMoveSpeed() : double
++ setDirection(Direction direction) : void
++ setMoveSpeed(double speed) : void
+}
+
+class Player {
 - name : std::string
-- party : Party* 
-- bag : Bag* 
-+ getName() : std::string 
+- party : Party*
+- bag : Bag*
+- isMoving : bool
+- targetX : float
+- targetY : float
+- moveProgress : float
+- currentMap : Map*
++ Player()
++ getName() : std::string
 + setName(std::string name) : void
-+ getParty() : Party* 
-+ setParty(Party* party) : void 
++ getParty() : Party*
++ setParty(Party* party) : void
 + getBag() : Bag*
 + setBag(Bag* bag) : void
++ handleInput(sf::Event& event) : void
++ update() : void override
++ canMove(float newX, float newY) : bool
++ setMap(Map* map) : void
 }
 
 class NPC {
@@ -113,7 +161,7 @@ class Trainer {
 class Party {
 - pokemons : std::vector<Pokemon*>
 + getPokemons() : std::vector<Pokemon*>
-+ setPokemons(Pokemon* pokemon, int index) : void 
++ setPokemons(Pokemon* pokemon, int index) : void
 }
 
 class Pokemon {
@@ -209,15 +257,20 @@ Scene <|-- BattleScene
 
 ' Monde
 World "1" --> "*" Map
-Map "1" --> "*" Tile
-Map "1" --> "*" Entity
+Map "1" --> "*" Tile : mapData
+Map "1" --> "1" TilesetManager
+MapRenderer ..> Map : uses
+LoadMap ..> Map : loads
 
-' Tile utilise Type
-Tile --> Type
+' Tile utilise TileType
+Tile --> TileType
+TileTypeUtils ..> TileType : uses
 
-' Entités - IMPORTANT: Character n'hérite PAS de Entity dans le code actuel
-' Entity et Character sont indépendants
+' Entités - Character hérite de Entity
+Entity <|-- Character
 Character --> Direction
+
+' Player hérite de Character
 Character <|-- Player
 Character <|-- NPC
 NPC <|-- Trainer
@@ -225,6 +278,7 @@ NPC <|-- Trainer
 ' Player et relations
 Player "1" --> "1" Party : party
 Player "1" --> "1" Bag : bag
+Player "1" --> "1" Map : currentMap
 Trainer "1" --> "1" Party : party
 
 ' Pokemon
