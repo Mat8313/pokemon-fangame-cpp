@@ -32,27 +32,24 @@ void TiledMapLoader::loadFromTiledTmx(const std::string& filepath, Map& map) {
     size_t tilesetPos = content.find("<tileset");
     if (tilesetPos != std::string::npos) {
         int firstgid = extractIntAttribute(content.substr(tilesetPos), "tileset", "firstgid");
-        std::string tsxSource = extractStringAttribute(content.substr(tilesetPos), "tileset", "source");
         
-        std::cout << "Found external tileset: " << tsxSource << " (firstgid=" << firstgid << ")" << std::endl;
+        std::cout << "Found external tileset (firstgid=" << firstgid << ")" << std::endl;
         
-        // Construit le chemin vers le .tsx
-        std::filesystem::path mapPath(filepath);
-        std::filesystem::path tsxPath = mapPath.parent_path() / tsxSource;
+        // Chemin vers le tileset
+        std::string tsxPath = "../assets/map/sprites/pokemon-red.tsx";
         
         std::cout << "Loading tileset from: " << tsxPath << std::endl;
         
         // Charge les propriétés isObstacle depuis le .tsx
-        std::map<int, bool> localObstacles = loadTilesetObstacles(tsxPath.string());
+        std::map<int, bool> localObstacles = loadTilesetObstacles(tsxPath);
         
         // Ajuste avec le firstgid
         for (const auto& [localId, isObstacle] : localObstacles) {
             int gid = firstgid + localId;
             obstacleMap[gid] = isObstacle;
-            if (isObstacle) {
-                std::cout << "  GID " << gid << " is obstacle" << std::endl;
-            }
         }
+        
+        std::cout << "Loaded " << localObstacles.size() << " tile properties" << std::endl;
     }
     
     // Parse les layers
@@ -103,6 +100,9 @@ void TiledMapLoader::loadFromTiledTmx(const std::string& filepath, Map& map) {
     std::cout << "Loaded " << layerCount << " layers successfully!" << std::endl;
 }
 
+
+
+
 std::map<int, bool> TiledMapLoader::loadTilesetObstacles(const std::string& tsxPath) {
     std::map<int, bool> obstacles;
     
@@ -116,36 +116,46 @@ std::map<int, bool> TiledMapLoader::loadTilesetObstacles(const std::string& tsxP
                         std::istreambuf_iterator<char>());
     file.close();
     
-    std::cout << "Parsing tileset properties..." << std::endl;
-    
     // Parse chaque <tile id="X">
     size_t tilePos = 0;
+    
     while ((tilePos = content.find("<tile id=\"", tilePos)) != std::string::npos) {
         // Extrait l'ID de la tile
-        size_t idStart = tilePos + 10; // longueur de "<tile id=\""
+        size_t idStart = tilePos + 10;
         size_t idEnd = content.find("\"", idStart);
         int tileId = std::stoi(content.substr(idStart, idEnd - idStart));
         
-        // Cherche la propriété isObstacle
-        size_t propStart = content.find("<property name=\"isObstacle\"", tilePos);
-        size_t nextTile = content.find("<tile", tilePos + 1);
+        // Trouve la fin de cette tile
+        size_t tileEndPos = content.find("</tile>", tilePos);
+        size_t searchEnd = (tileEndPos != std::string::npos) ? tileEndPos : content.size();
         
-        // Vérifie que la propriété est dans cette tile
-        if (propStart != std::string::npos && (nextTile == std::string::npos || propStart < nextTile)) {
-            size_t valueStart = content.find("value=\"", propStart) + 7;
-            size_t valueEnd = content.find("\"", valueStart);
-            std::string value = content.substr(valueStart, valueEnd - valueStart);
+        // Extrait le contenu de cette tile
+        std::string tileContent = content.substr(tilePos, searchEnd - tilePos + 7);
+        
+        // Cherche isObstacle
+        size_t propStart = tileContent.find("name=\"isObstacle\"");
+        
+        if (propStart != std::string::npos) {
+            // Trouve value=" après isObstacle
+            size_t valueStart = tileContent.find("value=\"", propStart);
             
-            obstacles[tileId] = (value == "true");
+            if (valueStart != std::string::npos) {
+                valueStart += 7;
+                size_t valueEnd = tileContent.find("\"", valueStart);
+                std::string value = tileContent.substr(valueStart, valueEnd - valueStart);
+                
+                obstacles[tileId] = (value == "true");
+            }
         }
         
-        tilePos = idEnd;
+        tilePos = searchEnd;
     }
-    
-    std::cout << "Found " << obstacles.size() << " tiles with obstacle properties" << std::endl;
     
     return obstacles;
 }
+
+
+
 
 int TiledMapLoader::extractIntAttribute(const std::string& xml, const std::string& tag, const std::string& attr) {
     size_t tagPos = xml.find("<" + tag);

@@ -20,6 +20,15 @@ private :
     float targetX, targetY;
     float moveProgress;
     Map* currentMap; // référence à la map actuel. 
+    
+    // Animation
+    int currentFrame;           // Frame actuelle (0, 1, 2...)
+    float animationTime;        // Temps écoulé pour changer de frame
+    const float frameTime = 0.15f;  // Durée d'une frame en secondes
+    const int framesPerDirection = 3;  // Nombre de frames par direction
+    const int spriteWidth = 32;        // Largeur d'une frame
+    const int spriteHeight = 32;       // Hauteur d'une frame
+
 public : 
     Player();
 
@@ -35,6 +44,8 @@ public :
     void update() override;
     bool canMove(float newX, float newY);
     void setMap(Map* map); 
+
+    void updateSpriteRect();
     
 };
 #endif 
