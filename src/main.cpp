@@ -3,7 +3,7 @@
 #include <vector>
 #include "Tile.hpp"
 #include "Map.hpp"
-#include "TiledMapLoader.hpp"   // ← NOUVEAU : Loader Tiled
+#include "TiledMapLoader.hpp"  
 #include "MapRenderer.hpp"
 #include "Player.hpp"
 #include <cmath>
@@ -11,15 +11,17 @@
 using namespace std;
 
 int main() {
-    // 1) Création de la fenêtre
-    sf::RenderWindow window(sf::VideoMode(400, 288), "Test SFML - Pokemon Fangame");
+    // Création de la fenêtre
+    int windowWidth = 800;   
+    int windowHeight = 576;  
+    float zoomFactor = 2.0f; // Zoom ×2 (ou 3.0f pour ×3)
+    sf::RenderWindow window(sf::VideoMode(windowWidth, windowHeight), "Pokemon Fangame");
+
     window.setFramerateLimit(60);
     cout << "Fenetre SFML creee avec succes !" << endl;
     
-    // 2) Chargement de la map avec Tiled
+    // Chargement de la map
     Map map(0, 0, 16.f);
-    
-    
     TiledMapLoader tiledLoader;
     try {
         tiledLoader.loadFromTiledTmx("../assets/map/map-test.tmx", map);
@@ -28,43 +30,40 @@ int main() {
         cerr << "Error loading map: " << e.what() << endl;
         return -1;
     }
-
     
-    // 3) Création du joueur 
-    sf::Texture playerTexture;
-    if (!playerTexture.loadFromFile("../assets/sprites/player.png")) {
-        cerr << "Error loading player texture!" << endl;
-        return -1;
-    }
-    
+    // Création du joueur
     Player player;
     player.setMap(&map);
     player.setPositionX(57.f);
     player.setPositionY(64.f);
-    player.setSprite(sf::Sprite(playerTexture));
-    player.setMoveSpeed(2.0);
-    cout << "Player created at position (" << player.getPositionX() 
-         << ", " << player.getPositionY() << ")" << endl;
+    player.setMoveSpeed(64.0);  // 64 pixels par seconde
+    cout << "Player created" << endl;
     
-    // 4) Boucle de jeu 
+    sf::Clock clock;  // ← AJOUTE ÇA
+    
+    // Boucle de jeu 
     while (window.isOpen()) {
+        float deltaTime = clock.restart().asSeconds();  // ← AJOUTE ÇA
+        
         sf::Event event;
         while (window.pollEvent(event)) {
             if (event.type == sf::Event::Closed)
                 window.close();
             
-            if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape)
+            if (event.type == sf::Event::KeyPressed && 
+                event.key.code == sf::Keyboard::Escape)
                 window.close();
             
             player.handleInput(event);
         }
         
         sf::View view = window.getDefaultView();
-        view.setCenter(round(player.getPositionX()), round(player.getPositionY())
-);
+        view.setCenter(round(player.getPositionX()), 
+                      round(player.getPositionY()));
+        view.zoom(1.0f / zoomFactor);
         window.setView(view);
         
-        player.update();
+        player.update(deltaTime);  // ← PASSE deltaTime
         
         window.clear(sf::Color::Black);
         
@@ -79,3 +78,4 @@ int main() {
     cout << "Fenetre fermee." << endl;
     return 0;
 }
+

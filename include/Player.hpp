@@ -2,6 +2,7 @@
 #define PLAYER_HPP
 
 #include <string>
+#include <iostream>
 #include <SFML/Graphics.hpp>
 #include "Character.hpp"
 #include "Tile.hpp"
@@ -22,13 +23,18 @@ private :
     Map* currentMap; // référence à la map actuel. 
     
     // Animation
-    int currentFrame;           // Frame actuelle (0, 1, 2...)
-    float animationTime;        // Temps écoulé pour changer de frame
-    const float frameTime = 0.15f;  // Durée d'une frame en secondes
-    const int framesPerDirection = 3;  // Nombre de frames par direction
-    const int spriteWidth = 32;        // Largeur d'une frame
-    const int spriteHeight = 32;       // Hauteur d'une frame
+    int currentFrame;
+    float animationTime;
+    sf::Clock animationClock;  // Pour un deltaTime précis
+    sf::Texture playerTexture;  // Texture du sprite sheet
+    const float frameTime = 0.30f;
+    const int framesPerDirection = 2;
+    const int spriteWidth = 32;
+    const int spriteHeight = 32;
+    bool leftFootNext; 
 
+    Direction nextDirection;
+    bool hasNextMove;
 public : 
     Player();
 
@@ -36,16 +42,19 @@ public :
     void setBag(Bag* bag); 
     void setName(std::string name);
 
+    void loadPlayerTexture();
+
     std::string getName();
     Party* getParty(); 
     Bag* getBag(); 
 
     void handleInput(sf::Event& event);
-    void update() override;
+    void update(float detlaTime) override;
     bool canMove(float newX, float newY);
     void setMap(Map* map); 
 
     void updateSpriteRect();
+    void startMovement(Direction dir);
     
 };
 #endif 

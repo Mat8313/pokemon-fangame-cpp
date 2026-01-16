@@ -6,38 +6,44 @@ using namespace sf;
 Player::Player() 
     : Character(), name("Player"), party(nullptr), bag(nullptr), 
       isMoving(false), targetX(0.0f), targetY(0.0f), moveProgress(0.0f),
-      currentFrame(0),
-      animationTime(0.0f)
-{}
+      currentFrame(0), animationTime(0.0f), leftFootNext(false), hasNextMove(false)
+{
+    loadPlayerTexture();
+}
+
 void Player::setParty(Party* party) {
     this->party = party;
 }
+
 void Player::setBag(Bag* bag) {
     this->bag = bag;
 }
+
 void Player::setName(string name) {
     this->name = name;
 }
+
 string Player::getName() {
     return this->name;
 }
+
 Party* Player::getParty() {
     return this->party;
 }
+
 Bag* Player::getBag() {
     return this->bag;
 }
+
 bool Player::canMove(float newX, float newY){
     if (!currentMap) return false;
     
     // Convertir les coordonnées pixel en indices de tuile
-    // Calculer le centre du joueur 
-    float checkX = newX + (currentMap->getTileSize());  // Centre horizontal
-    float checkY = newY + (currentMap->getTileSize());  // centre vertical 
+    float checkX = newX + (currentMap->getTileSize());
+    float checkY = newY + (currentMap->getTileSize());
 
     int tileX = static_cast<int>(checkX / currentMap->getTileSize());
     int tileY = static_cast<int>(checkY / currentMap->getTileSize());
-
     
     // Vérifier les limites de la map
     if (tileX < 0 || tileY < 0 || 
@@ -53,102 +59,171 @@ bool Player::canMove(float newX, float newY){
     if (tile.getIsObstacle()) {
         return false;
     }
-    else return true; 
     
-    // Vérifier la direction pour les rebords
-    //int dirX = (newX > getPositionX()) ? 1 : (newX < getPositionX()) ? -1 : 0;
-    //int dirY = (newY > getPositionY()) ? 1 : (newY < getPositionY()) ? -1 : 0;
+    return true;
+}
+
+void Player::startMovement(Direction dir) {
+    float currentX = getPositionX();
+    float currentY = getPositionY();
+    float tileSize = currentMap->getTileSize();
     
+    // Si on change de direction, on se tourne SANS bouger
+    if (getDirection() != dir) {
+        setDirection(dir);
+        updateSpriteRect();
+        return;
+    }
+    
+    float newTargetX = currentX;
+    float newTargetY = currentY;
+    
+    // Si on regarde déjà dans cette direction, on avance
+    switch (dir) {
+        case Direction::North:
+            newTargetY = currentY - tileSize;
+            break;
+        case Direction::South:
+            newTargetY = currentY + tileSize;
+            break;
+        case Direction::West:
+            newTargetX = currentX - tileSize;
+            break;
+        case Direction::East:
+            newTargetX = currentX + tileSize;
+            break;
+    }
+    
+    if (canMove(newTargetX, newTargetY)) {
+        targetX = newTargetX;
+        targetY = newTargetY;
+        isMoving = true;
+        moveProgress = 0.0f;
+        currentFrame = 1;
+        animationTime = 0.0f;
+        updateSpriteRect();
+    } else {
+        updateSpriteRect();
+    }
 }
 
 void Player::handleInput(sf::Event& event) {
-    if (event.type == sf::Event::KeyPressed && !isMoving) {
-        float currentX = getPositionX();
-        float currentY = getPositionY();
-        float tileSize = currentMap->getTileSize(); // Taille d'une tile
-        
-        float newTargetX = currentX;
-        float newTargetY = currentY;
+    if (event.type == sf::Event::KeyPressed) {
+        Direction requestedDirection;
+        bool validInput = false;
         
         switch (event.key.code) {
             case sf::Keyboard::Up:
             case sf::Keyboard::Z:
-                newTargetY = currentY - tileSize;
-                setDirection(Direction::North);
+                requestedDirection = Direction::North;
+                validInput = true;
                 break;
             case sf::Keyboard::Down:
             case sf::Keyboard::S:
-                newTargetY = currentY + tileSize;
-                setDirection(Direction::South);
+                requestedDirection = Direction::South;
+                validInput = true;
                 break;
             case sf::Keyboard::Left:
             case sf::Keyboard::Q:
-                newTargetX = currentX - tileSize;
-                setDirection(Direction::West);
+                requestedDirection = Direction::West;
+                validInput = true;
                 break;
             case sf::Keyboard::Right:
             case sf::Keyboard::D:
-                newTargetX = currentX + tileSize;
-                setDirection(Direction::East);
+                requestedDirection = Direction::East;
+                validInput = true;
                 break;
             default:
-                return; // Touche non gérée
+                return;
         }
         
-        // Vérifier si le déplacement est possible
-        if (canMove(newTargetX, newTargetY)) {
-            targetX = newTargetX;
-            targetY = newTargetY;
-            isMoving = true;
-            moveProgress = 0.0f;
-            currentFrame = 0;  // Reset l'animation au début
-            animationTime = 0.0f;
-        }
+        if (!validInput) return;
         
-        // Met à jour le sprite rect même si le mouvement n'est pas possible
-        // (pour que le joueur se tourne vers la direction voulue)
-        updateSpriteRect();
+        // Si déjà en mouvement, enregistre le prochain mouvement
+        if (isMoving) {
+            nextDirection = requestedDirection;
+            hasNextMove = true;
+        } 
+        // Sinon, démarre le mouvement immédiatement
+        else {
+            startMovement(requestedDirection);
+        }
     }
 }
 
-
-
-void Player::update() {
+void Player::update(float deltaTime) {
     if (isMoving) {
-        // Progression du déplacement
-        moveProgress += getMoveSpeed() / currentMap->getTileSize(); // Vitesse normalisée
+        // Progression basée sur le TEMPS réel
+        float pixelsPerSecond = getMoveSpeed();
+        float tileSize = currentMap->getTileSize();
+        float progression = (pixelsPerSecond * deltaTime) / tileSize;
+        moveProgress += progression;
         
-        // Animation des frames
-        animationTime += 1.0f / 60.0f;  // Assume 60 FPS (ajuste selon ton deltaTime si tu en as un)
-        
-        if (animationTime >= frameTime) {
-            animationTime = 0.0f;
-            currentFrame = (currentFrame + 1) % framesPerDirection;
+        // Clamp pour ne pas dépasser
+        if (moveProgress > 1.0f) {
+            moveProgress = 1.0f;
         }
         
-        // Mise à jour du sprite rect selon la direction et la frame
+        // Animation en 3 phases
+        if (moveProgress < 0.33f) {
+            currentFrame = 1;  // Statique
+        }
+        else if (moveProgress < 0.66f) {
+            currentFrame = leftFootNext ? 0 : 2;  // Pied levé
+        }
+        else {
+            currentFrame = 1;  // Retour statique
+        }
+        
         updateSpriteRect();
         
         if (moveProgress >= 1.0f) {
-            // Déplacement terminé 
+            // Déplacement terminé
             setPositionX(targetX);
             setPositionY(targetY);
             isMoving = false;
             moveProgress = 0.0f;
-            currentFrame = 0;  // Reset à la frame de repos
-            updateSpriteRect();  // Applique la frame de repos
-        }
-        else if (moveProgress < 1.0f) {
-            // Interpolation linéaire entre position actuelle et cible
-            float startX = targetX - (targetX - getPositionX());
-            float startY = targetY - (targetY - getPositionY());
+            currentFrame = 1;
+            leftFootNext = !leftFootNext;
+            updateSpriteRect();
             
-            setPositionX(startX + (targetX - startX) * moveProgress);
-            setPositionY(startY + (targetY - startY) * moveProgress);
+            // Enchaîne le prochain mouvement
+            if (hasNextMove) {
+                hasNextMove = false;
+                startMovement(nextDirection);
+            }
+        }
+        else {
+            // Interpolation linéaire
+            float startX, startY;
+            
+            switch (getDirection()) {
+                case Direction::North:
+                    startX = targetX;
+                    startY = targetY + tileSize;
+                    break;
+                case Direction::South:
+                    startX = targetX;
+                    startY = targetY - tileSize;
+                    break;
+                case Direction::West:
+                    startX = targetX + tileSize;
+                    startY = targetY;
+                    break;
+                case Direction::East:
+                    startX = targetX - tileSize;
+                    startY = targetY;
+                    break;
+            }
+            
+            float currentX = startX + (targetX - startX) * moveProgress;
+            float currentY = startY + (targetY - startY) * moveProgress;
+            
+            setPositionX(currentX);
+            setPositionY(currentY);
         }
     }
 }
-
 
 void Player::setMap(Map* map) {
     this->currentMap = map;
@@ -157,16 +232,14 @@ void Player::setMap(Map* map) {
 void Player::updateSpriteRect() {
     int row = 0;
     
-    // Détermine la ligne selon la direction
     switch (getDirection()) {
         case Direction::South: row = 0; break;
         case Direction::North: row = 1; break;
-        case Direction::West:  row = 2; break;
-        case Direction::East:  row = 3; break;
+        case Direction::West: row = 2; break;
+        case Direction::East: row = 3; break;
     }
     
-    // Calcule le rectangle pour la frame actuelle
-    int col = isMoving ? currentFrame : 1;  // Frame du milieu quand statique
+    int col = isMoving ? currentFrame : 1;
     sf::IntRect rect(
         col * spriteWidth, 
         row * spriteHeight, 
@@ -174,7 +247,15 @@ void Player::updateSpriteRect() {
         spriteHeight
     );
     
-    getSprite().setTextureRect(rect);
+    getSpriteRef().setTextureRect(rect);
 }
 
-
+void Player::loadPlayerTexture() {
+    if (!playerTexture.loadFromFile("../assets/sprites/player.png")) {
+        std::cerr << "ERROR: Cannot load player sprite sheet!" << std::endl;
+        return;
+    }
+    
+    getSpriteRef().setTexture(playerTexture);
+    getSpriteRef().setTextureRect(sf::IntRect(spriteWidth, 0, spriteWidth, spriteHeight));
+}

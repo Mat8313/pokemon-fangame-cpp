@@ -14,7 +14,7 @@ public :
     Entity();
     Entity(float , float y, const sf::Texture texture);
 
-    virtual void update(); 
+    virtual void update(float deltaTime); 
 
     virtual void draw(sf::RenderWindow& window);
 
@@ -25,6 +25,7 @@ public :
     int getPositionTileY();
     
     sf::Sprite getSprite(); 
+    sf::Sprite& getSpriteRef();
 
     void setPositionX(float x);
     void setPositionY(float y); 

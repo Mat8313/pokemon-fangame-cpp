@@ -23,6 +23,9 @@ int Entity::getPositionTileY() {
 sf::Sprite Entity::getSprite() {
     return sprite;
 }
+sf::Sprite& Entity::getSpriteRef() {
+    return sprite;
+}
 
 void Entity::setPositionX(float x) {
     positionX = x;
@@ -39,6 +42,6 @@ void Entity::setPositionTileY(int y) {
 void Entity::setSprite(sf::Sprite spr) {
     sprite = spr;
 }
-void Entity::update() {
+void Entity::update(float deltaTime) {
     // Default implementation does nothing
 }
