@@ -3,7 +3,7 @@
  <editorsettings>
   <export target="map-test.json" format="json"/>
  </editorsettings>
- <tileset firstgid="1" source="../sprites/pokemon-red.tsx"/>
+ <tileset firstgid="1" source="sprites/pokemon-red.tsx"/>
  <layer id="1" name="Ground" width="20" height="15">
   <data encoding="csv">
 207,208,208,208,208,208,208,208,208,208,208,208,208,208,208,208,208,208,208,209,

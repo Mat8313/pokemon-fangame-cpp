@@ -24,7 +24,7 @@ int main() {
     Map map(0, 0, 16.f);
     TiledMapLoader tiledLoader;
     try {
-        tiledLoader.loadFromTiledTmx("../assets/map/map-test.tmx", map);
+        tiledLoader.loadFromTiledTmx("../assets/map/Bourg-Palette.tmx", map);
         cout << "Map loaded: " << map.getWidth() << "x" << map.getHeight() << endl;
     } catch (const std::exception& e) {
         cerr << "Error loading map: " << e.what() << endl;
@@ -34,8 +34,8 @@ int main() {
     // Création du joueur
     Player player;
     player.setMap(&map);
-    player.setPositionX(57.f);
-    player.setPositionY(64.f);
+    player.setPositionX(345.f);
+    player.setPositionY(336.f);
     player.setMoveSpeed(64.0);  // 64 pixels par seconde
     cout << "Player created" << endl;
     

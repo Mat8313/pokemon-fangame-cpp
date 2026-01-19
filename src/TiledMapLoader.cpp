@@ -9,96 +9,94 @@ void TiledMapLoader::loadFromTiledTmx(const std::string& filepath, Map& map) {
     if (!file.is_open()) {
         throw std::runtime_error("Cannot open Tiled TMX file: " + filepath);
     }
-    
+
     std::string content((std::istreambuf_iterator<char>(file)),
                         std::istreambuf_iterator<char>());
     file.close();
-    
-    // Parse les attributs de la map
-    int width = extractIntAttribute(content, "map", "width");
-    int height = extractIntAttribute(content, "map", "height");
-    int tilewidth = extractIntAttribute(content, "map", "tilewidth");
+
+    // Attributs de la map
+    int width      = extractIntAttribute(content, "map", "width");
+    int height     = extractIntAttribute(content, "map", "height");
+    int tilewidth  = extractIntAttribute(content, "map", "tilewidth");
     int tileheight = extractIntAttribute(content, "map", "tileheight");
-    
+
     std::cout << "Loading TMX map: " << width << "x" << height << std::endl;
-    
-    // Configure la Map
+
     map.setDimensions(width, height);
-    map.setTileSize(static_cast<float>(tilewidth));
-    
-    // Parse le tileset externe pour récupérer les propriétés isObstacle
+    map.setTileSize(static_cast<int>(tilewidth));
+
+    // Tilesets (adapter les chemins / firstgid à ton TMX actuel)
     std::map<int, bool> obstacleMap;
-    
-    size_t tilesetPos = content.find("<tileset");
-    if (tilesetPos != std::string::npos) {
-        int firstgid = extractIntAttribute(content.substr(tilesetPos), "tileset", "firstgid");
-        
-        std::cout << "Found external tileset (firstgid=" << firstgid << ")" << std::endl;
-        
-        // Chemin vers le tileset
-        std::string tsxPath = "../assets/map/sprites/pokemon-red.tsx";
-        
-        std::cout << "Loading tileset from: " << tsxPath << std::endl;
-        
-        // Charge les propriétés isObstacle depuis le .tsx
+    std::vector<std::pair<int, std::string>> tilesets = {
+        {1,    "../assets/map/sprites/pokemon-red.tsx"},
+        {6213, "../assets/map/sprites/test.tsx"}
+    };
+
+    for (const auto& [firstgid, tsxPath] : tilesets) {
+        std::cout << "Loading tileset: " << tsxPath
+                  << " (firstgid=" << firstgid << ")" << std::endl;
+
         std::map<int, bool> localObstacles = loadTilesetObstacles(tsxPath);
-        
-        // Ajuste avec le firstgid
         for (const auto& [localId, isObstacle] : localObstacles) {
             int gid = firstgid + localId;
             obstacleMap[gid] = isObstacle;
         }
-        
-        std::cout << "Loaded " << localObstacles.size() << " tile properties" << std::endl;
+
+        std::cout << "Loaded " << localObstacles.size()
+                  << " tile properties" << std::endl;
     }
-    
-    // Parse les layers
+
+    // Parse des layers (chacun devient une MapLayer dans Map)
     size_t layerPos = 0;
     int layerCount = 0;
-    
+
     while ((layerPos = content.find("<layer", layerPos)) != std::string::npos) {
-        layerPos++;
-        
-        size_t nameStart = content.find("name=\"", layerPos) + 6;
-        size_t nameEnd = content.find("\"", nameStart);
-        std::string layerName = content.substr(nameStart, nameEnd - nameStart);
-        
-        std::cout << "Processing layer: " << layerName << std::endl;
-        
-        size_t dataStart = content.find("<data encoding=\"csv\">", layerPos);
-        if (dataStart == std::string::npos) continue;
-        
-        dataStart += 21;
+        size_t dataStart = content.find("<data", layerPos);
+        if (dataStart == std::string::npos) break;
+        dataStart = content.find(">", dataStart);
+        if (dataStart == std::string::npos) break;
+        dataStart += 1;
+
         size_t dataEnd = content.find("</data>", dataStart);
+        if (dataEnd == std::string::npos) break;
+
         std::string csvData = content.substr(dataStart, dataEnd - dataStart);
-        
         std::vector<int> tileData = parseCSV(csvData);
-        
-        // Applique les données à la Map
+
+        // On s'assure que la taille correspond
+        if ((int)tileData.size() < width * height) {
+            tileData.resize(width * height, 0);
+        }
+
+        // Ajoute la layer au Map
+        map.addLayer(tileData);
+
+        // Remplit en plus les infos d'obstacles sur la « couche logique » Tile
         for (int y = 0; y < height; ++y) {
             for (int x = 0; x < width; ++x) {
                 int idx = y * width + x;
-                if (idx >= tileData.size()) continue;
-                
                 int gid = tileData[idx];
                 if (gid == 0) continue;
-                
-                // Récupère la tile actuelle
+
                 Tile& tile = map.getTile(x, y);
+                // garde le plus haut GID pour la logique si tu veux
                 tile.setGid(gid);
-                
-                // Applique la propriété isObstacle depuis le .tsx
-                if (obstacleMap.find(gid) != obstacleMap.end()) {
-                    tile.setIsObstacle(obstacleMap[gid]);
+
+                auto it = obstacleMap.find(gid);
+                if (it != obstacleMap.end()) {
+                    tile.setIsObstacle(it->second);
                 }
             }
         }
-        
+
         layerCount++;
+        layerPos = dataEnd;
     }
-    
+    std::cout << "Map layers in Map: " << map.getLayerCount() << std::endl;
+
     std::cout << "Loaded " << layerCount << " layers successfully!" << std::endl;
 }
+
 
 
 

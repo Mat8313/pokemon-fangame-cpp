@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tileset version="1.10" tiledversion="1.11.2" name="pokemon-red" tilewidth="16" tileheight="16" spacing="1" margin="1" tilecount="1316" columns="28">
- <image source="../sprites/tiles.png" width="477" height="800"/>
+ <image source="../../sprites/tiles.png" width="477" height="800"/>
  <tile id="0">
   <properties>
    <property name="isObstacle" type="bool" value="false"/>
@@ -217,6 +217,18 @@
    <property name="tileType" value="right jump"/>
   </properties>
  </tile>
+ <tile id="122">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+   <property name="tileType" value="water_corner_upper_left"/>
+  </properties>
+ </tile>
+ <tile id="124">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+   <property name="tileType" value="water_corner_upper_right"/>
+  </properties>
+ </tile>
  <tile id="140">
   <properties>
    <property name="isObstacle" type="bool" value="false"/>
@@ -247,6 +259,12 @@
    <property name="tileType" value="grass_path_bottom_left_turn"/>
   </properties>
  </tile>
+ <tile id="151">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+   <property name="tileType" value="water_middle"/>
+  </properties>
+ </tile>
  <tile id="168">
   <properties>
    <property name="isObstacle" type="bool" value="false"/>
@@ -275,6 +293,18 @@
   <properties>
    <property name="isObstacle" type="bool" value="false"/>
    <property name="tileType" value="dirt_path_down"/>
+  </properties>
+ </tile>
+ <tile id="178">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+   <property name="tileType" value="water_corner_bottom_left"/>
+  </properties>
+ </tile>
+ <tile id="180">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+   <property name="tileType" value="water_corner_bottom_right"/>
   </properties>
  </tile>
  <tile id="196">
@@ -823,6 +853,30 @@
    <property name="tileType" value="wood_fence_bottom_right_corner"/>
   </properties>
  </tile>
+ <tile id="490">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+   <property name="tileType" value="alone_border_tree_6"/>
+  </properties>
+ </tile>
+ <tile id="491">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+   <property name="tileType" value="alone_border_tree_5"/>
+  </properties>
+ </tile>
+ <tile id="492">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+   <property name="tileType" value="border_tree_5"/>
+  </properties>
+ </tile>
+ <tile id="493">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+   <property name="tileType" value="border_tree_6"/>
+  </properties>
+ </tile>
  <tile id="504">
   <properties>
    <property name="isObstacle" type="bool" value="false"/>
@@ -859,6 +913,30 @@
    <property name="tileType" value="white_rock"/>
   </properties>
  </tile>
+ <tile id="518">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+   <property name="tileType" value="alone_border_tree_4"/>
+  </properties>
+ </tile>
+ <tile id="519">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+   <property name="tileType" value="alone_border_tree_3"/>
+  </properties>
+ </tile>
+ <tile id="520">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+   <property name="tileType" value="border_tree_3"/>
+  </properties>
+ </tile>
+ <tile id="521">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+   <property name="tileType" value="border_tree_4"/>
+  </properties>
+ </tile>
  <tile id="532">
   <properties>
    <property name="isObstacle" type="bool" value="true"/>
@@ -887,6 +965,30 @@
   <properties>
    <property name="isObstacle" type="bool" value="false"/>
    <property name="tileType" value="orange_brick_path_upper_right"/>
+  </properties>
+ </tile>
+ <tile id="546">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+   <property name="tileType" value="alone_border_tree_2"/>
+  </properties>
+ </tile>
+ <tile id="547">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+   <property name="tileType" value="alone_border_tree_1"/>
+  </properties>
+ </tile>
+ <tile id="548">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+   <property name="tileType" value="border_tree_2"/>
+  </properties>
+ </tile>
+ <tile id="549">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+   <property name="tileType" value="border_tree_1"/>
   </properties>
  </tile>
  <tile id="560">

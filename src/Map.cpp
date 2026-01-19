@@ -53,3 +53,22 @@ Tile& Map::getTile(int tileX, int tileY) {
     return mapData[tileY][tileX];
 }
 
+
+void Map::addLayer(const std::vector<int>& data) {
+    MapLayer layer;
+    layer.gids = data;
+    layers.push_back(layer);
+}
+
+int Map::getLayerCount() const {
+    return static_cast<int>(layers.size());
+}
+
+const MapLayer& Map::getLayer(int index) const {
+    return layers[index];
+}
+
+//void Map::initTiles() {
+//    tiles.clear();
+//    tiles.resize(tiles.width * tiles.height);
+//}
