@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/pokemon.dir/src/Character.cpp.o.d"
   "CMakeFiles/pokemon.dir/src/Entity.cpp.o"
   "CMakeFiles/pokemon.dir/src/Entity.cpp.o.d"
+  "CMakeFiles/pokemon.dir/src/Game.cpp.o"
+  "CMakeFiles/pokemon.dir/src/Game.cpp.o.d"
   "CMakeFiles/pokemon.dir/src/Map.cpp.o"
   "CMakeFiles/pokemon.dir/src/Map.cpp.o.d"
   "CMakeFiles/pokemon.dir/src/MapRenderer.cpp.o"

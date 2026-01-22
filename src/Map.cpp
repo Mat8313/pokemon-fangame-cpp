@@ -72,3 +72,22 @@ const MapLayer& Map::getLayer(int index) const {
 //    tiles.clear();
 //    tiles.resize(tiles.width * tiles.height);
 //}
+
+void Map::clearWarps() { m_warps.clear(); }
+
+const Warp* Map::getWarpAt(int x, int y) const {
+        for (const auto& w : m_warps) {
+            if (w.fromX == x && w.fromY == y)
+                return &w;
+        }
+        return nullptr;
+    }
+
+void Map::addWarp(const Warp& w) { m_warps.push_back(w); }
+
+void Map::clearTilesets() { tilesets.clear(); }
+
+void Map::addTileset(const TilesetInfo& ts) { tilesets.push_back(ts); }
+
+const std::vector<TilesetInfo>& Map::getTilesets() const { return tilesets; }
+

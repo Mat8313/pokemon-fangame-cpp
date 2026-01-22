@@ -35,33 +35,33 @@ Bag* Player::getBag() {
     return this->bag;
 }
 
-bool Player::canMove(float newX, float newY){
+bool Player::canMove(float newX, float newY) {
     if (!currentMap) return false;
-    
-    // Convertir les coordonnées pixel en indices de tuile
-    float checkX = newX + (currentMap->getTileSize());
-    float checkY = newY + (currentMap->getTileSize());
 
-    int tileX = static_cast<int>(checkX / currentMap->getTileSize());
-    int tileY = static_cast<int>(checkY / currentMap->getTileSize());
-    
-    // Vérifier les limites de la map
-    if (tileX < 0 || tileY < 0 || 
-        tileX >= currentMap->getWidth() || 
+    float tileSize = currentMap->getTileSize();
+
+    // Centre du joueur (ou bas du sprite) selon ta convention
+    float centerX = newX + tileSize / 2.0f;
+    float centerY = newY + tileSize;        // bas du sprite
+
+    int tileX = static_cast<int>(centerX / tileSize);
+    int tileY = static_cast<int>(centerY / tileSize);
+
+    // Limites de la map
+    if (tileX < 0 || tileY < 0 ||
+        tileX >= currentMap->getWidth() ||
         tileY >= currentMap->getHeight()) {
         return false;
     }
-    
-    // Récupérer la tuile de destination
+
     const Tile& tile = currentMap->getTile(tileX, tileY);
-    
-    // Vérifier si c'est un obstacle
     if (tile.getIsObstacle()) {
         return false;
     }
-    
+
     return true;
 }
+
 
 void Player::startMovement(Direction dir) {
     float currentX = getPositionX();
@@ -186,13 +186,31 @@ void Player::update(float deltaTime) {
             currentFrame = 1;
             leftFootNext = !leftFootNext;
             updateSpriteRect();
-            
+
             // Enchaîne le prochain mouvement
             if (hasNextMove) {
                 hasNextMove = false;
                 startMovement(nextDirection);
             }
+
+            // --- Détection d'un warp sur la case où on vient d'arriver ---
+            if (currentMap) {
+                float tileSize = currentMap->getTileSize();
+                int tileX = static_cast<int>(getPositionX() / tileSize);
+                int tileY = static_cast<int>(getPositionY() / tileSize);
+
+                std::cout << "Player tile: " << tileX << "," << tileY << std::endl;
+
+                const Warp* w = currentMap->getWarpAt(tileX, tileY);
+                if (w) {
+                    pendingWarp = *w;
+                    hasPendingWarp = true;
+                    std::cout << "Warp trouvé vers " << w->targetMap
+                              << " (" << w->targetX << "," << w->targetY << ")\n";
+                }
+            }
         }
+
         else {
             // Interpolation linéaire
             float startX, startY;
@@ -221,6 +239,8 @@ void Player::update(float deltaTime) {
             
             setPositionX(currentX);
             setPositionY(currentY);
+
+            
         }
     }
 }
@@ -259,3 +279,15 @@ void Player::loadPlayerTexture() {
     getSpriteRef().setTexture(playerTexture);
     getSpriteRef().setTextureRect(sf::IntRect(spriteWidth, 0, spriteWidth, spriteHeight));
 }
+
+bool Player::hasWarpRequest() const { return hasPendingWarp; }
+
+Warp Player::consumeWarpRequest() {
+    hasPendingWarp = false;
+    return pendingWarp;
+}
+
+//gerer le offset de (1;1)
+
+
+

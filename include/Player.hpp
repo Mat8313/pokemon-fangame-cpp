@@ -35,6 +35,9 @@ private :
 
     Direction nextDirection;
     bool hasNextMove;
+
+    bool hasPendingWarp = false;
+    Warp pendingWarp;
 public : 
     Player();
 
@@ -55,6 +58,9 @@ public :
 
     void updateSpriteRect();
     void startMovement(Direction dir);
+
+    bool hasWarpRequest() const;
+    Warp consumeWarpRequest() ;
     
 };
 #endif 

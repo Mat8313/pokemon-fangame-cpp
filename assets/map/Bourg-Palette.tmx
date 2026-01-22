@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="1">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="16" tileheight="16" infinite="0" nextlayerid="11" nextobjectid="7">
  <tileset firstgid="1" source="sprites/pokemon-red.tsx"/>
  <tileset firstgid="1317" source="sprites/test.tsx"/>
  <layer id="1" name="Tile Layer 1" width="32" height="32">
@@ -61,7 +61,7 @@
 0,0,0,0,0,0,343,1725,1726,1727,1728,1729,8,345,0,0,0,343,1731,1732,1733,1734,1735,8,344,345,0,0,0,0,0,0,
 0,0,0,0,0,0,371,1793,1794,1795,1796,1797,372,373,0,0,0,371,1799,1800,1801,1802,1803,372,372,373,0,0,0,0,0,0,
 0,0,0,0,0,0,0,1861,1862,1863,1864,1865,0,0,0,0,0,0,1867,1868,1869,1870,1871,90,90,90,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1935,1936,1937,1938,1939,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1935,1321,1937,1938,1939,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -74,4 +74,24 @@
 0,0,0,0,0,0,0,0,0,0,64,8,8,8,37,8,64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
+ <objectgroup id="10" name="warps">
+  <object id="2" x="128" y="336" width="16" height="16">
+   <properties>
+    <property name="Type" value="warp"/>
+    <property name="dir" value="up"/>
+    <property name="target-map" value="rivalHouse"/>
+    <property name="targetX" type="int" value="3"/>
+    <property name="targetY" type="int" value="9"/>
+   </properties>
+  </object>
+  <object id="5" x="304" y="336" width="16" height="16">
+   <properties>
+    <property name="Type" value="warp"/>
+    <property name="dir" value="up"/>
+    <property name="target-map" value="playerHouse"/>
+    <property name="targetX" type="int" value="3"/>
+    <property name="targetY" type="int" value="9"/>
+   </properties>
+  </object>
+ </objectgroup>
 </map>

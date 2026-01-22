@@ -10,6 +10,25 @@ public:
     std::vector<int> gids; 
 };
 
+struct Warp {
+    int fromX;
+    int fromY;
+    std::string targetMap;
+    int targetX;
+    int targetY;
+    std::string dir;
+};
+
+struct TilesetInfo {
+    int firstgid;
+    int columns;
+    int tileWidth;
+    int tileHeight;
+    int margin;
+    int spacing;
+    sf::Texture texture;
+};
+
 class Map {
 private :
     int mapWidth, mapHeight;
@@ -17,6 +36,11 @@ private :
     std::vector<std::vector<Tile>> mapData; 
     std::vector<MapLayer> layers;
     std::vector<Tile> tiles;
+
+    std::vector<Warp> m_warps;
+
+    std::vector<TilesetInfo> tilesets;
+
 public : 
     Map(int width, int height, float tileSize);
 
@@ -38,6 +62,15 @@ public :
     int getLayerCount() const;
     const MapLayer& getLayer(int index) const;
 
+    void addWarp(const Warp& w);
+
+    const Warp* getWarpAt(int x, int y) const;
+
+    void clearWarps();
+
+    void clearTilesets() ;
+    void addTileset(const TilesetInfo& ts);
+    const std::vector<TilesetInfo>& getTilesets() const;
 
 
 };
