@@ -1,34 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="10" height="10" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="1">
- <tileset firstgid="1" source="sprites/interior2.tsx"/>
- <tileset firstgid="521" source="sprites/interior3.tsx"/>
- <tileset firstgid="857" source="sprites/test.tsx"/>
- <layer id="1" name="Tile Layer 1" width="10" height="10">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="11" height="11" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="5">
+ <tileset firstgid="1" source="sprites/test.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="11" height="11">
   <data encoding="csv">
-153,123,123,123,123,123,123,123,123,154,
-161,131,131,131,131,131,131,131,131,162,
-161,16,24,24,24,24,24,24,24,162,
-161,16,8,8,8,8,8,8,8,162,
-161,16,8,8,8,8,8,8,8,162,
-161,16,8,8,8,8,8,8,8,162,
-161,16,8,8,8,8,8,8,8,162,
-161,16,8,8,8,8,8,8,8,162,
-161,16,8,8,8,8,8,8,8,162,
-161,16,8,8,8,8,8,8,8,162
+12,15,15,15,15,15,15,15,15,15,13,
+80,83,83,83,83,83,83,83,83,83,81,
+80,82,150,150,150,150,150,150,150,150,81,
+80,82,14,14,14,14,14,14,14,14,81,
+80,82,14,14,14,14,14,14,14,14,81,
+80,82,14,14,14,14,14,14,14,14,81,
+80,82,14,14,14,14,14,14,14,14,81,
+80,82,14,14,14,14,14,14,14,14,81,
+80,82,14,14,14,14,14,14,14,14,81,
+80,82,14,14,14,14,14,14,14,14,81,
+148,1610612816,1610612816,1610612816,1610612816,1610612816,1610612816,1610612816,1610612816,1610612816,149
 </data>
  </layer>
- <layer id="3" name="Tile Layer 2" width="10" height="10">
+ <layer id="2" name="Tile Layer 2" width="11" height="11">
   <data encoding="csv">
-861,0,0,0,0,1,1,0,0,861,
-861,336,862,863,861,861,1002,1000,1001,861,
-861,344,930,931,861,861,1070,1068,1069,861,
-861,0,0,0,0,0,0,0,0,861,
-861,0,0,0,268,269,270,868,866,861,
-861,0,0,0,284,285,286,868,934,861,
-861,0,0,0,0,1129,1129,1129,867,861,
-861,0,0,0,0,1129,1129,1071,935,861,
-861,0,0,0,0,1129,1129,1129,1003,861,
-861,0,1066,1067,0,0,0,0,1129,861
+0,0,0,0,0,0,0,0,0,0,0,
+0,5,6,7,0,0,0,146,144,145,0,
+0,73,74,75,0,0,0,214,212,213,0,
+0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,216,217,218,0,10,0,
+0,0,0,0,0,284,285,286,0,78,0,
+0,0,0,0,0,352,353,354,0,11,0,
+0,0,0,0,0,0,0,0,215,79,0,
+0,0,0,0,0,0,0,0,0,147,0,
+0,0,210,211,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
+ <objectgroup id="3" name="warps">
+  <object id="1" x="32" y="144" width="16" height="16">
+   <properties>
+    <property name="Type" value="warp"/>
+    <property name="dir" value="down"/>
+    <property name="target-map" value="Bourg-Palette"/>
+    <property name="targetX" type="int" value="19"/>
+    <property name="targetY" type="int" value="21"/>
+   </properties>
+  </object>
+  <object id="2" x="48" y="144" width="16" height="16">
+   <properties>
+    <property name="Type" value="warp"/>
+    <property name="dir" value="down"/>
+    <property name="target-map" value="Bourg-Palette"/>
+    <property name="targetX" type="int" value="19"/>
+    <property name="targetY" type="int" value="21"/>
+   </properties>
+  </object>
+  <object id="3" x="48" y="144" width="16" height="16">
+   <properties>
+    <property name="Type" value="warp"/>
+    <property name="dir" value="down"/>
+    <property name="target-map" value="Bourg-Palette"/>
+    <property name="targetX" type="int" value="19"/>
+    <property name="targetY" type="int" value="21"/>
+   </properties>
+  </object>
+  <object id="4" x="32" y="144" width="16" height="16">
+   <properties>
+    <property name="Type" value="warp"/>
+    <property name="dir" value="down"/>
+    <property name="target-map" value="Bourg-Palette"/>
+    <property name="targetX" type="int" value="19"/>
+    <property name="targetY" type="int" value="21"/>
+   </properties>
+  </object>
+ </objectgroup>
 </map>

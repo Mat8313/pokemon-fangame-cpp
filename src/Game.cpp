@@ -17,8 +17,8 @@ Game::Game()
 
     // Init joueur
     player.setMap(&map);
-    player.setPositionX(345.f);
-    player.setPositionY(336.f);
+    player.setPositionX(19*16.f);
+    player.setPositionY(22*16.f);
     player.setMoveSpeed(64.0);
     cout << "Player created" << endl;
 }

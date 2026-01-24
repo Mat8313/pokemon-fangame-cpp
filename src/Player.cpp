@@ -40,12 +40,9 @@ bool Player::canMove(float newX, float newY) {
 
     float tileSize = currentMap->getTileSize();
 
-    // Centre du joueur (ou bas du sprite) selon ta convention
-    float centerX = newX + tileSize / 2.0f;
-    float centerY = newY + tileSize;        // bas du sprite
 
-    int tileX = static_cast<int>(centerX / tileSize);
-    int tileY = static_cast<int>(centerY / tileSize);
+    int tileX = static_cast<int>(newX / tileSize);
+    int tileY = static_cast<int>(newY / tileSize);
 
     // Limites de la map
     if (tileX < 0 || tileY < 0 ||
@@ -278,6 +275,7 @@ void Player::loadPlayerTexture() {
     
     getSpriteRef().setTexture(playerTexture);
     getSpriteRef().setTextureRect(sf::IntRect(spriteWidth, 0, spriteWidth, spriteHeight));
+    getSpriteRef().setOrigin(8, 16);
 }
 
 bool Player::hasWarpRequest() const { return hasPendingWarp; }
@@ -287,7 +285,6 @@ Warp Player::consumeWarpRequest() {
     return pendingWarp;
 }
 
-//gerer le offset de (1;1)
 
 
 
