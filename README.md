@@ -25,7 +25,7 @@ Le projet est actuellement en phase de conception et de développement initial.
 
 ### Fonctionnalités prévues
 
-- [ ] Système de carte et déplacements du personnage
+- [x] Système de carte et déplacements du personnage
 - [ ] Système de combats au tour par tour
 - [ ] Gestion des créatures (statistiques, compétences, évolutions)
 - [ ] Interface utilisateur (menus, inventaire, équipe)
