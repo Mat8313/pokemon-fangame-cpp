@@ -29,7 +29,7 @@ Le projet est actuellement en phase de conception et de développement initial.
 - [ ] Système de combats au tour par tour
 - [ ] Gestion des créatures (statistiques, compétences, évolutions)
 - [ ] Interface utilisateur (menus, inventaire, équipe)
-- [ ] Système de sauvegarde
+- [x] Système de sauvegarde
 - [ ] Gestion des événements et dialogues
 
 ## 📂 Structure du projet
