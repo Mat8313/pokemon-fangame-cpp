@@ -69,192 +69,10 @@ include CMakeFiles/pokemon.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/pokemon.dir/flags.make
 
-CMakeFiles/pokemon.dir/src/Button.cpp.o: CMakeFiles/pokemon.dir/flags.make
-CMakeFiles/pokemon.dir/src/Button.cpp.o: /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Button.cpp
-CMakeFiles/pokemon.dir/src/Button.cpp.o: CMakeFiles/pokemon.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/pokemon.dir/src/Button.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pokemon.dir/src/Button.cpp.o -MF CMakeFiles/pokemon.dir/src/Button.cpp.o.d -o CMakeFiles/pokemon.dir/src/Button.cpp.o -c /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Button.cpp
-
-CMakeFiles/pokemon.dir/src/Button.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pokemon.dir/src/Button.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Button.cpp > CMakeFiles/pokemon.dir/src/Button.cpp.i
-
-CMakeFiles/pokemon.dir/src/Button.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pokemon.dir/src/Button.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Button.cpp -o CMakeFiles/pokemon.dir/src/Button.cpp.s
-
-CMakeFiles/pokemon.dir/src/Character.cpp.o: CMakeFiles/pokemon.dir/flags.make
-CMakeFiles/pokemon.dir/src/Character.cpp.o: /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Character.cpp
-CMakeFiles/pokemon.dir/src/Character.cpp.o: CMakeFiles/pokemon.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/pokemon.dir/src/Character.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pokemon.dir/src/Character.cpp.o -MF CMakeFiles/pokemon.dir/src/Character.cpp.o.d -o CMakeFiles/pokemon.dir/src/Character.cpp.o -c /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Character.cpp
-
-CMakeFiles/pokemon.dir/src/Character.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pokemon.dir/src/Character.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Character.cpp > CMakeFiles/pokemon.dir/src/Character.cpp.i
-
-CMakeFiles/pokemon.dir/src/Character.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pokemon.dir/src/Character.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Character.cpp -o CMakeFiles/pokemon.dir/src/Character.cpp.s
-
-CMakeFiles/pokemon.dir/src/Entity.cpp.o: CMakeFiles/pokemon.dir/flags.make
-CMakeFiles/pokemon.dir/src/Entity.cpp.o: /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Entity.cpp
-CMakeFiles/pokemon.dir/src/Entity.cpp.o: CMakeFiles/pokemon.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/pokemon.dir/src/Entity.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pokemon.dir/src/Entity.cpp.o -MF CMakeFiles/pokemon.dir/src/Entity.cpp.o.d -o CMakeFiles/pokemon.dir/src/Entity.cpp.o -c /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Entity.cpp
-
-CMakeFiles/pokemon.dir/src/Entity.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pokemon.dir/src/Entity.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Entity.cpp > CMakeFiles/pokemon.dir/src/Entity.cpp.i
-
-CMakeFiles/pokemon.dir/src/Entity.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pokemon.dir/src/Entity.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Entity.cpp -o CMakeFiles/pokemon.dir/src/Entity.cpp.s
-
-CMakeFiles/pokemon.dir/src/Game.cpp.o: CMakeFiles/pokemon.dir/flags.make
-CMakeFiles/pokemon.dir/src/Game.cpp.o: /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Game.cpp
-CMakeFiles/pokemon.dir/src/Game.cpp.o: CMakeFiles/pokemon.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/pokemon.dir/src/Game.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pokemon.dir/src/Game.cpp.o -MF CMakeFiles/pokemon.dir/src/Game.cpp.o.d -o CMakeFiles/pokemon.dir/src/Game.cpp.o -c /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Game.cpp
-
-CMakeFiles/pokemon.dir/src/Game.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pokemon.dir/src/Game.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Game.cpp > CMakeFiles/pokemon.dir/src/Game.cpp.i
-
-CMakeFiles/pokemon.dir/src/Game.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pokemon.dir/src/Game.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Game.cpp -o CMakeFiles/pokemon.dir/src/Game.cpp.s
-
-CMakeFiles/pokemon.dir/src/GameState.cpp.o: CMakeFiles/pokemon.dir/flags.make
-CMakeFiles/pokemon.dir/src/GameState.cpp.o: /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/GameState.cpp
-CMakeFiles/pokemon.dir/src/GameState.cpp.o: CMakeFiles/pokemon.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/pokemon.dir/src/GameState.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pokemon.dir/src/GameState.cpp.o -MF CMakeFiles/pokemon.dir/src/GameState.cpp.o.d -o CMakeFiles/pokemon.dir/src/GameState.cpp.o -c /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/GameState.cpp
-
-CMakeFiles/pokemon.dir/src/GameState.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pokemon.dir/src/GameState.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/GameState.cpp > CMakeFiles/pokemon.dir/src/GameState.cpp.i
-
-CMakeFiles/pokemon.dir/src/GameState.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pokemon.dir/src/GameState.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/GameState.cpp -o CMakeFiles/pokemon.dir/src/GameState.cpp.s
-
-CMakeFiles/pokemon.dir/src/MainMenuScene.cpp.o: CMakeFiles/pokemon.dir/flags.make
-CMakeFiles/pokemon.dir/src/MainMenuScene.cpp.o: /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/MainMenuScene.cpp
-CMakeFiles/pokemon.dir/src/MainMenuScene.cpp.o: CMakeFiles/pokemon.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/pokemon.dir/src/MainMenuScene.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pokemon.dir/src/MainMenuScene.cpp.o -MF CMakeFiles/pokemon.dir/src/MainMenuScene.cpp.o.d -o CMakeFiles/pokemon.dir/src/MainMenuScene.cpp.o -c /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/MainMenuScene.cpp
-
-CMakeFiles/pokemon.dir/src/MainMenuScene.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pokemon.dir/src/MainMenuScene.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/MainMenuScene.cpp > CMakeFiles/pokemon.dir/src/MainMenuScene.cpp.i
-
-CMakeFiles/pokemon.dir/src/MainMenuScene.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pokemon.dir/src/MainMenuScene.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/MainMenuScene.cpp -o CMakeFiles/pokemon.dir/src/MainMenuScene.cpp.s
-
-CMakeFiles/pokemon.dir/src/Map.cpp.o: CMakeFiles/pokemon.dir/flags.make
-CMakeFiles/pokemon.dir/src/Map.cpp.o: /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Map.cpp
-CMakeFiles/pokemon.dir/src/Map.cpp.o: CMakeFiles/pokemon.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/pokemon.dir/src/Map.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pokemon.dir/src/Map.cpp.o -MF CMakeFiles/pokemon.dir/src/Map.cpp.o.d -o CMakeFiles/pokemon.dir/src/Map.cpp.o -c /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Map.cpp
-
-CMakeFiles/pokemon.dir/src/Map.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pokemon.dir/src/Map.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Map.cpp > CMakeFiles/pokemon.dir/src/Map.cpp.i
-
-CMakeFiles/pokemon.dir/src/Map.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pokemon.dir/src/Map.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Map.cpp -o CMakeFiles/pokemon.dir/src/Map.cpp.s
-
-CMakeFiles/pokemon.dir/src/MapRenderer.cpp.o: CMakeFiles/pokemon.dir/flags.make
-CMakeFiles/pokemon.dir/src/MapRenderer.cpp.o: /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/MapRenderer.cpp
-CMakeFiles/pokemon.dir/src/MapRenderer.cpp.o: CMakeFiles/pokemon.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/pokemon.dir/src/MapRenderer.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pokemon.dir/src/MapRenderer.cpp.o -MF CMakeFiles/pokemon.dir/src/MapRenderer.cpp.o.d -o CMakeFiles/pokemon.dir/src/MapRenderer.cpp.o -c /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/MapRenderer.cpp
-
-CMakeFiles/pokemon.dir/src/MapRenderer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pokemon.dir/src/MapRenderer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/MapRenderer.cpp > CMakeFiles/pokemon.dir/src/MapRenderer.cpp.i
-
-CMakeFiles/pokemon.dir/src/MapRenderer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pokemon.dir/src/MapRenderer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/MapRenderer.cpp -o CMakeFiles/pokemon.dir/src/MapRenderer.cpp.s
-
-CMakeFiles/pokemon.dir/src/Player.cpp.o: CMakeFiles/pokemon.dir/flags.make
-CMakeFiles/pokemon.dir/src/Player.cpp.o: /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Player.cpp
-CMakeFiles/pokemon.dir/src/Player.cpp.o: CMakeFiles/pokemon.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/pokemon.dir/src/Player.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pokemon.dir/src/Player.cpp.o -MF CMakeFiles/pokemon.dir/src/Player.cpp.o.d -o CMakeFiles/pokemon.dir/src/Player.cpp.o -c /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Player.cpp
-
-CMakeFiles/pokemon.dir/src/Player.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pokemon.dir/src/Player.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Player.cpp > CMakeFiles/pokemon.dir/src/Player.cpp.i
-
-CMakeFiles/pokemon.dir/src/Player.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pokemon.dir/src/Player.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Player.cpp -o CMakeFiles/pokemon.dir/src/Player.cpp.s
-
-CMakeFiles/pokemon.dir/src/SaveManager.cpp.o: CMakeFiles/pokemon.dir/flags.make
-CMakeFiles/pokemon.dir/src/SaveManager.cpp.o: /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/SaveManager.cpp
-CMakeFiles/pokemon.dir/src/SaveManager.cpp.o: CMakeFiles/pokemon.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/pokemon.dir/src/SaveManager.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pokemon.dir/src/SaveManager.cpp.o -MF CMakeFiles/pokemon.dir/src/SaveManager.cpp.o.d -o CMakeFiles/pokemon.dir/src/SaveManager.cpp.o -c /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/SaveManager.cpp
-
-CMakeFiles/pokemon.dir/src/SaveManager.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pokemon.dir/src/SaveManager.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/SaveManager.cpp > CMakeFiles/pokemon.dir/src/SaveManager.cpp.i
-
-CMakeFiles/pokemon.dir/src/SaveManager.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pokemon.dir/src/SaveManager.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/SaveManager.cpp -o CMakeFiles/pokemon.dir/src/SaveManager.cpp.s
-
-CMakeFiles/pokemon.dir/src/SelectGameScene.cpp.o: CMakeFiles/pokemon.dir/flags.make
-CMakeFiles/pokemon.dir/src/SelectGameScene.cpp.o: /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/SelectGameScene.cpp
-CMakeFiles/pokemon.dir/src/SelectGameScene.cpp.o: CMakeFiles/pokemon.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/pokemon.dir/src/SelectGameScene.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pokemon.dir/src/SelectGameScene.cpp.o -MF CMakeFiles/pokemon.dir/src/SelectGameScene.cpp.o.d -o CMakeFiles/pokemon.dir/src/SelectGameScene.cpp.o -c /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/SelectGameScene.cpp
-
-CMakeFiles/pokemon.dir/src/SelectGameScene.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pokemon.dir/src/SelectGameScene.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/SelectGameScene.cpp > CMakeFiles/pokemon.dir/src/SelectGameScene.cpp.i
-
-CMakeFiles/pokemon.dir/src/SelectGameScene.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pokemon.dir/src/SelectGameScene.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/SelectGameScene.cpp -o CMakeFiles/pokemon.dir/src/SelectGameScene.cpp.s
-
-CMakeFiles/pokemon.dir/src/Tile.cpp.o: CMakeFiles/pokemon.dir/flags.make
-CMakeFiles/pokemon.dir/src/Tile.cpp.o: /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Tile.cpp
-CMakeFiles/pokemon.dir/src/Tile.cpp.o: CMakeFiles/pokemon.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/pokemon.dir/src/Tile.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pokemon.dir/src/Tile.cpp.o -MF CMakeFiles/pokemon.dir/src/Tile.cpp.o.d -o CMakeFiles/pokemon.dir/src/Tile.cpp.o -c /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Tile.cpp
-
-CMakeFiles/pokemon.dir/src/Tile.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pokemon.dir/src/Tile.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Tile.cpp > CMakeFiles/pokemon.dir/src/Tile.cpp.i
-
-CMakeFiles/pokemon.dir/src/Tile.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pokemon.dir/src/Tile.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Tile.cpp -o CMakeFiles/pokemon.dir/src/Tile.cpp.s
-
-CMakeFiles/pokemon.dir/src/TiledMapLoader.cpp.o: CMakeFiles/pokemon.dir/flags.make
-CMakeFiles/pokemon.dir/src/TiledMapLoader.cpp.o: /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/TiledMapLoader.cpp
-CMakeFiles/pokemon.dir/src/TiledMapLoader.cpp.o: CMakeFiles/pokemon.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/pokemon.dir/src/TiledMapLoader.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pokemon.dir/src/TiledMapLoader.cpp.o -MF CMakeFiles/pokemon.dir/src/TiledMapLoader.cpp.o.d -o CMakeFiles/pokemon.dir/src/TiledMapLoader.cpp.o -c /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/TiledMapLoader.cpp
-
-CMakeFiles/pokemon.dir/src/TiledMapLoader.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pokemon.dir/src/TiledMapLoader.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/TiledMapLoader.cpp > CMakeFiles/pokemon.dir/src/TiledMapLoader.cpp.i
-
-CMakeFiles/pokemon.dir/src/TiledMapLoader.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pokemon.dir/src/TiledMapLoader.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/TiledMapLoader.cpp -o CMakeFiles/pokemon.dir/src/TiledMapLoader.cpp.s
-
 CMakeFiles/pokemon.dir/src/main.cpp.o: CMakeFiles/pokemon.dir/flags.make
 CMakeFiles/pokemon.dir/src/main.cpp.o: /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/main.cpp
 CMakeFiles/pokemon.dir/src/main.cpp.o: CMakeFiles/pokemon.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/pokemon.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/pokemon.dir/src/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pokemon.dir/src/main.cpp.o -MF CMakeFiles/pokemon.dir/src/main.cpp.o.d -o CMakeFiles/pokemon.dir/src/main.cpp.o -c /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/main.cpp
 
 CMakeFiles/pokemon.dir/src/main.cpp.i: cmake_force
@@ -265,40 +83,222 @@ CMakeFiles/pokemon.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pokemon.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/main.cpp -o CMakeFiles/pokemon.dir/src/main.cpp.s
 
+CMakeFiles/pokemon.dir/src/Core/Game.cpp.o: CMakeFiles/pokemon.dir/flags.make
+CMakeFiles/pokemon.dir/src/Core/Game.cpp.o: /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Core/Game.cpp
+CMakeFiles/pokemon.dir/src/Core/Game.cpp.o: CMakeFiles/pokemon.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/pokemon.dir/src/Core/Game.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pokemon.dir/src/Core/Game.cpp.o -MF CMakeFiles/pokemon.dir/src/Core/Game.cpp.o.d -o CMakeFiles/pokemon.dir/src/Core/Game.cpp.o -c /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Core/Game.cpp
+
+CMakeFiles/pokemon.dir/src/Core/Game.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pokemon.dir/src/Core/Game.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Core/Game.cpp > CMakeFiles/pokemon.dir/src/Core/Game.cpp.i
+
+CMakeFiles/pokemon.dir/src/Core/Game.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pokemon.dir/src/Core/Game.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Core/Game.cpp -o CMakeFiles/pokemon.dir/src/Core/Game.cpp.s
+
+CMakeFiles/pokemon.dir/src/Core/GameState.cpp.o: CMakeFiles/pokemon.dir/flags.make
+CMakeFiles/pokemon.dir/src/Core/GameState.cpp.o: /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Core/GameState.cpp
+CMakeFiles/pokemon.dir/src/Core/GameState.cpp.o: CMakeFiles/pokemon.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/pokemon.dir/src/Core/GameState.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pokemon.dir/src/Core/GameState.cpp.o -MF CMakeFiles/pokemon.dir/src/Core/GameState.cpp.o.d -o CMakeFiles/pokemon.dir/src/Core/GameState.cpp.o -c /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Core/GameState.cpp
+
+CMakeFiles/pokemon.dir/src/Core/GameState.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pokemon.dir/src/Core/GameState.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Core/GameState.cpp > CMakeFiles/pokemon.dir/src/Core/GameState.cpp.i
+
+CMakeFiles/pokemon.dir/src/Core/GameState.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pokemon.dir/src/Core/GameState.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Core/GameState.cpp -o CMakeFiles/pokemon.dir/src/Core/GameState.cpp.s
+
+CMakeFiles/pokemon.dir/src/Entity/Entity.cpp.o: CMakeFiles/pokemon.dir/flags.make
+CMakeFiles/pokemon.dir/src/Entity/Entity.cpp.o: /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Entity/Entity.cpp
+CMakeFiles/pokemon.dir/src/Entity/Entity.cpp.o: CMakeFiles/pokemon.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/pokemon.dir/src/Entity/Entity.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pokemon.dir/src/Entity/Entity.cpp.o -MF CMakeFiles/pokemon.dir/src/Entity/Entity.cpp.o.d -o CMakeFiles/pokemon.dir/src/Entity/Entity.cpp.o -c /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Entity/Entity.cpp
+
+CMakeFiles/pokemon.dir/src/Entity/Entity.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pokemon.dir/src/Entity/Entity.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Entity/Entity.cpp > CMakeFiles/pokemon.dir/src/Entity/Entity.cpp.i
+
+CMakeFiles/pokemon.dir/src/Entity/Entity.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pokemon.dir/src/Entity/Entity.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Entity/Entity.cpp -o CMakeFiles/pokemon.dir/src/Entity/Entity.cpp.s
+
+CMakeFiles/pokemon.dir/src/Entity/Character.cpp.o: CMakeFiles/pokemon.dir/flags.make
+CMakeFiles/pokemon.dir/src/Entity/Character.cpp.o: /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Entity/Character.cpp
+CMakeFiles/pokemon.dir/src/Entity/Character.cpp.o: CMakeFiles/pokemon.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/pokemon.dir/src/Entity/Character.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pokemon.dir/src/Entity/Character.cpp.o -MF CMakeFiles/pokemon.dir/src/Entity/Character.cpp.o.d -o CMakeFiles/pokemon.dir/src/Entity/Character.cpp.o -c /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Entity/Character.cpp
+
+CMakeFiles/pokemon.dir/src/Entity/Character.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pokemon.dir/src/Entity/Character.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Entity/Character.cpp > CMakeFiles/pokemon.dir/src/Entity/Character.cpp.i
+
+CMakeFiles/pokemon.dir/src/Entity/Character.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pokemon.dir/src/Entity/Character.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Entity/Character.cpp -o CMakeFiles/pokemon.dir/src/Entity/Character.cpp.s
+
+CMakeFiles/pokemon.dir/src/Entity/Player.cpp.o: CMakeFiles/pokemon.dir/flags.make
+CMakeFiles/pokemon.dir/src/Entity/Player.cpp.o: /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Entity/Player.cpp
+CMakeFiles/pokemon.dir/src/Entity/Player.cpp.o: CMakeFiles/pokemon.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/pokemon.dir/src/Entity/Player.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pokemon.dir/src/Entity/Player.cpp.o -MF CMakeFiles/pokemon.dir/src/Entity/Player.cpp.o.d -o CMakeFiles/pokemon.dir/src/Entity/Player.cpp.o -c /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Entity/Player.cpp
+
+CMakeFiles/pokemon.dir/src/Entity/Player.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pokemon.dir/src/Entity/Player.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Entity/Player.cpp > CMakeFiles/pokemon.dir/src/Entity/Player.cpp.i
+
+CMakeFiles/pokemon.dir/src/Entity/Player.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pokemon.dir/src/Entity/Player.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Entity/Player.cpp -o CMakeFiles/pokemon.dir/src/Entity/Player.cpp.s
+
+CMakeFiles/pokemon.dir/src/World/Map.cpp.o: CMakeFiles/pokemon.dir/flags.make
+CMakeFiles/pokemon.dir/src/World/Map.cpp.o: /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/World/Map.cpp
+CMakeFiles/pokemon.dir/src/World/Map.cpp.o: CMakeFiles/pokemon.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/pokemon.dir/src/World/Map.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pokemon.dir/src/World/Map.cpp.o -MF CMakeFiles/pokemon.dir/src/World/Map.cpp.o.d -o CMakeFiles/pokemon.dir/src/World/Map.cpp.o -c /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/World/Map.cpp
+
+CMakeFiles/pokemon.dir/src/World/Map.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pokemon.dir/src/World/Map.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/World/Map.cpp > CMakeFiles/pokemon.dir/src/World/Map.cpp.i
+
+CMakeFiles/pokemon.dir/src/World/Map.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pokemon.dir/src/World/Map.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/World/Map.cpp -o CMakeFiles/pokemon.dir/src/World/Map.cpp.s
+
+CMakeFiles/pokemon.dir/src/World/MapRenderer.cpp.o: CMakeFiles/pokemon.dir/flags.make
+CMakeFiles/pokemon.dir/src/World/MapRenderer.cpp.o: /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/World/MapRenderer.cpp
+CMakeFiles/pokemon.dir/src/World/MapRenderer.cpp.o: CMakeFiles/pokemon.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/pokemon.dir/src/World/MapRenderer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pokemon.dir/src/World/MapRenderer.cpp.o -MF CMakeFiles/pokemon.dir/src/World/MapRenderer.cpp.o.d -o CMakeFiles/pokemon.dir/src/World/MapRenderer.cpp.o -c /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/World/MapRenderer.cpp
+
+CMakeFiles/pokemon.dir/src/World/MapRenderer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pokemon.dir/src/World/MapRenderer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/World/MapRenderer.cpp > CMakeFiles/pokemon.dir/src/World/MapRenderer.cpp.i
+
+CMakeFiles/pokemon.dir/src/World/MapRenderer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pokemon.dir/src/World/MapRenderer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/World/MapRenderer.cpp -o CMakeFiles/pokemon.dir/src/World/MapRenderer.cpp.s
+
+CMakeFiles/pokemon.dir/src/World/Tile.cpp.o: CMakeFiles/pokemon.dir/flags.make
+CMakeFiles/pokemon.dir/src/World/Tile.cpp.o: /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/World/Tile.cpp
+CMakeFiles/pokemon.dir/src/World/Tile.cpp.o: CMakeFiles/pokemon.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/pokemon.dir/src/World/Tile.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pokemon.dir/src/World/Tile.cpp.o -MF CMakeFiles/pokemon.dir/src/World/Tile.cpp.o.d -o CMakeFiles/pokemon.dir/src/World/Tile.cpp.o -c /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/World/Tile.cpp
+
+CMakeFiles/pokemon.dir/src/World/Tile.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pokemon.dir/src/World/Tile.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/World/Tile.cpp > CMakeFiles/pokemon.dir/src/World/Tile.cpp.i
+
+CMakeFiles/pokemon.dir/src/World/Tile.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pokemon.dir/src/World/Tile.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/World/Tile.cpp -o CMakeFiles/pokemon.dir/src/World/Tile.cpp.s
+
+CMakeFiles/pokemon.dir/src/World/TiledMapLoader.cpp.o: CMakeFiles/pokemon.dir/flags.make
+CMakeFiles/pokemon.dir/src/World/TiledMapLoader.cpp.o: /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/World/TiledMapLoader.cpp
+CMakeFiles/pokemon.dir/src/World/TiledMapLoader.cpp.o: CMakeFiles/pokemon.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/pokemon.dir/src/World/TiledMapLoader.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pokemon.dir/src/World/TiledMapLoader.cpp.o -MF CMakeFiles/pokemon.dir/src/World/TiledMapLoader.cpp.o.d -o CMakeFiles/pokemon.dir/src/World/TiledMapLoader.cpp.o -c /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/World/TiledMapLoader.cpp
+
+CMakeFiles/pokemon.dir/src/World/TiledMapLoader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pokemon.dir/src/World/TiledMapLoader.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/World/TiledMapLoader.cpp > CMakeFiles/pokemon.dir/src/World/TiledMapLoader.cpp.i
+
+CMakeFiles/pokemon.dir/src/World/TiledMapLoader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pokemon.dir/src/World/TiledMapLoader.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/World/TiledMapLoader.cpp -o CMakeFiles/pokemon.dir/src/World/TiledMapLoader.cpp.s
+
+CMakeFiles/pokemon.dir/src/UI/MainMenuScene.cpp.o: CMakeFiles/pokemon.dir/flags.make
+CMakeFiles/pokemon.dir/src/UI/MainMenuScene.cpp.o: /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/UI/MainMenuScene.cpp
+CMakeFiles/pokemon.dir/src/UI/MainMenuScene.cpp.o: CMakeFiles/pokemon.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/pokemon.dir/src/UI/MainMenuScene.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pokemon.dir/src/UI/MainMenuScene.cpp.o -MF CMakeFiles/pokemon.dir/src/UI/MainMenuScene.cpp.o.d -o CMakeFiles/pokemon.dir/src/UI/MainMenuScene.cpp.o -c /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/UI/MainMenuScene.cpp
+
+CMakeFiles/pokemon.dir/src/UI/MainMenuScene.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pokemon.dir/src/UI/MainMenuScene.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/UI/MainMenuScene.cpp > CMakeFiles/pokemon.dir/src/UI/MainMenuScene.cpp.i
+
+CMakeFiles/pokemon.dir/src/UI/MainMenuScene.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pokemon.dir/src/UI/MainMenuScene.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/UI/MainMenuScene.cpp -o CMakeFiles/pokemon.dir/src/UI/MainMenuScene.cpp.s
+
+CMakeFiles/pokemon.dir/src/UI/SelectGameScene.cpp.o: CMakeFiles/pokemon.dir/flags.make
+CMakeFiles/pokemon.dir/src/UI/SelectGameScene.cpp.o: /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/UI/SelectGameScene.cpp
+CMakeFiles/pokemon.dir/src/UI/SelectGameScene.cpp.o: CMakeFiles/pokemon.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/pokemon.dir/src/UI/SelectGameScene.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pokemon.dir/src/UI/SelectGameScene.cpp.o -MF CMakeFiles/pokemon.dir/src/UI/SelectGameScene.cpp.o.d -o CMakeFiles/pokemon.dir/src/UI/SelectGameScene.cpp.o -c /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/UI/SelectGameScene.cpp
+
+CMakeFiles/pokemon.dir/src/UI/SelectGameScene.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pokemon.dir/src/UI/SelectGameScene.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/UI/SelectGameScene.cpp > CMakeFiles/pokemon.dir/src/UI/SelectGameScene.cpp.i
+
+CMakeFiles/pokemon.dir/src/UI/SelectGameScene.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pokemon.dir/src/UI/SelectGameScene.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/UI/SelectGameScene.cpp -o CMakeFiles/pokemon.dir/src/UI/SelectGameScene.cpp.s
+
+CMakeFiles/pokemon.dir/src/UI/Button.cpp.o: CMakeFiles/pokemon.dir/flags.make
+CMakeFiles/pokemon.dir/src/UI/Button.cpp.o: /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/UI/Button.cpp
+CMakeFiles/pokemon.dir/src/UI/Button.cpp.o: CMakeFiles/pokemon.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/pokemon.dir/src/UI/Button.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pokemon.dir/src/UI/Button.cpp.o -MF CMakeFiles/pokemon.dir/src/UI/Button.cpp.o.d -o CMakeFiles/pokemon.dir/src/UI/Button.cpp.o -c /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/UI/Button.cpp
+
+CMakeFiles/pokemon.dir/src/UI/Button.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pokemon.dir/src/UI/Button.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/UI/Button.cpp > CMakeFiles/pokemon.dir/src/UI/Button.cpp.i
+
+CMakeFiles/pokemon.dir/src/UI/Button.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pokemon.dir/src/UI/Button.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/UI/Button.cpp -o CMakeFiles/pokemon.dir/src/UI/Button.cpp.s
+
+CMakeFiles/pokemon.dir/src/Utils/SaveManager.cpp.o: CMakeFiles/pokemon.dir/flags.make
+CMakeFiles/pokemon.dir/src/Utils/SaveManager.cpp.o: /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Utils/SaveManager.cpp
+CMakeFiles/pokemon.dir/src/Utils/SaveManager.cpp.o: CMakeFiles/pokemon.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/pokemon.dir/src/Utils/SaveManager.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pokemon.dir/src/Utils/SaveManager.cpp.o -MF CMakeFiles/pokemon.dir/src/Utils/SaveManager.cpp.o.d -o CMakeFiles/pokemon.dir/src/Utils/SaveManager.cpp.o -c /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Utils/SaveManager.cpp
+
+CMakeFiles/pokemon.dir/src/Utils/SaveManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pokemon.dir/src/Utils/SaveManager.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Utils/SaveManager.cpp > CMakeFiles/pokemon.dir/src/Utils/SaveManager.cpp.i
+
+CMakeFiles/pokemon.dir/src/Utils/SaveManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pokemon.dir/src/Utils/SaveManager.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/matis/Desktop/Perso/pokemon-fangame-cpp/src/Utils/SaveManager.cpp -o CMakeFiles/pokemon.dir/src/Utils/SaveManager.cpp.s
+
 # Object files for target pokemon
 pokemon_OBJECTS = \
-"CMakeFiles/pokemon.dir/src/Button.cpp.o" \
-"CMakeFiles/pokemon.dir/src/Character.cpp.o" \
-"CMakeFiles/pokemon.dir/src/Entity.cpp.o" \
-"CMakeFiles/pokemon.dir/src/Game.cpp.o" \
-"CMakeFiles/pokemon.dir/src/GameState.cpp.o" \
-"CMakeFiles/pokemon.dir/src/MainMenuScene.cpp.o" \
-"CMakeFiles/pokemon.dir/src/Map.cpp.o" \
-"CMakeFiles/pokemon.dir/src/MapRenderer.cpp.o" \
-"CMakeFiles/pokemon.dir/src/Player.cpp.o" \
-"CMakeFiles/pokemon.dir/src/SaveManager.cpp.o" \
-"CMakeFiles/pokemon.dir/src/SelectGameScene.cpp.o" \
-"CMakeFiles/pokemon.dir/src/Tile.cpp.o" \
-"CMakeFiles/pokemon.dir/src/TiledMapLoader.cpp.o" \
-"CMakeFiles/pokemon.dir/src/main.cpp.o"
+"CMakeFiles/pokemon.dir/src/main.cpp.o" \
+"CMakeFiles/pokemon.dir/src/Core/Game.cpp.o" \
+"CMakeFiles/pokemon.dir/src/Core/GameState.cpp.o" \
+"CMakeFiles/pokemon.dir/src/Entity/Entity.cpp.o" \
+"CMakeFiles/pokemon.dir/src/Entity/Character.cpp.o" \
+"CMakeFiles/pokemon.dir/src/Entity/Player.cpp.o" \
+"CMakeFiles/pokemon.dir/src/World/Map.cpp.o" \
+"CMakeFiles/pokemon.dir/src/World/MapRenderer.cpp.o" \
+"CMakeFiles/pokemon.dir/src/World/Tile.cpp.o" \
+"CMakeFiles/pokemon.dir/src/World/TiledMapLoader.cpp.o" \
+"CMakeFiles/pokemon.dir/src/UI/MainMenuScene.cpp.o" \
+"CMakeFiles/pokemon.dir/src/UI/SelectGameScene.cpp.o" \
+"CMakeFiles/pokemon.dir/src/UI/Button.cpp.o" \
+"CMakeFiles/pokemon.dir/src/Utils/SaveManager.cpp.o"
 
 # External object files for target pokemon
 pokemon_EXTERNAL_OBJECTS =
 
-pokemon: CMakeFiles/pokemon.dir/src/Button.cpp.o
-pokemon: CMakeFiles/pokemon.dir/src/Character.cpp.o
-pokemon: CMakeFiles/pokemon.dir/src/Entity.cpp.o
-pokemon: CMakeFiles/pokemon.dir/src/Game.cpp.o
-pokemon: CMakeFiles/pokemon.dir/src/GameState.cpp.o
-pokemon: CMakeFiles/pokemon.dir/src/MainMenuScene.cpp.o
-pokemon: CMakeFiles/pokemon.dir/src/Map.cpp.o
-pokemon: CMakeFiles/pokemon.dir/src/MapRenderer.cpp.o
-pokemon: CMakeFiles/pokemon.dir/src/Player.cpp.o
-pokemon: CMakeFiles/pokemon.dir/src/SaveManager.cpp.o
-pokemon: CMakeFiles/pokemon.dir/src/SelectGameScene.cpp.o
-pokemon: CMakeFiles/pokemon.dir/src/Tile.cpp.o
-pokemon: CMakeFiles/pokemon.dir/src/TiledMapLoader.cpp.o
 pokemon: CMakeFiles/pokemon.dir/src/main.cpp.o
+pokemon: CMakeFiles/pokemon.dir/src/Core/Game.cpp.o
+pokemon: CMakeFiles/pokemon.dir/src/Core/GameState.cpp.o
+pokemon: CMakeFiles/pokemon.dir/src/Entity/Entity.cpp.o
+pokemon: CMakeFiles/pokemon.dir/src/Entity/Character.cpp.o
+pokemon: CMakeFiles/pokemon.dir/src/Entity/Player.cpp.o
+pokemon: CMakeFiles/pokemon.dir/src/World/Map.cpp.o
+pokemon: CMakeFiles/pokemon.dir/src/World/MapRenderer.cpp.o
+pokemon: CMakeFiles/pokemon.dir/src/World/Tile.cpp.o
+pokemon: CMakeFiles/pokemon.dir/src/World/TiledMapLoader.cpp.o
+pokemon: CMakeFiles/pokemon.dir/src/UI/MainMenuScene.cpp.o
+pokemon: CMakeFiles/pokemon.dir/src/UI/SelectGameScene.cpp.o
+pokemon: CMakeFiles/pokemon.dir/src/UI/Button.cpp.o
+pokemon: CMakeFiles/pokemon.dir/src/Utils/SaveManager.cpp.o
 pokemon: CMakeFiles/pokemon.dir/build.make
 pokemon: /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.6.1
 pokemon: /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.6.1

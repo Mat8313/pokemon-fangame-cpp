@@ -129,317 +129,317 @@ pokemon/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/build
 .PHONY : pokemon/fast
 
-src/Button.o: src/Button.cpp.o
-.PHONY : src/Button.o
+src/Core/Game.o: src/Core/Game.cpp.o
+.PHONY : src/Core/Game.o
 
 # target to build an object file
-src/Button.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Button.cpp.o
-.PHONY : src/Button.cpp.o
+src/Core/Game.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Core/Game.cpp.o
+.PHONY : src/Core/Game.cpp.o
 
-src/Button.i: src/Button.cpp.i
-.PHONY : src/Button.i
+src/Core/Game.i: src/Core/Game.cpp.i
+.PHONY : src/Core/Game.i
 
 # target to preprocess a source file
-src/Button.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Button.cpp.i
-.PHONY : src/Button.cpp.i
+src/Core/Game.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Core/Game.cpp.i
+.PHONY : src/Core/Game.cpp.i
 
-src/Button.s: src/Button.cpp.s
-.PHONY : src/Button.s
+src/Core/Game.s: src/Core/Game.cpp.s
+.PHONY : src/Core/Game.s
 
 # target to generate assembly for a file
-src/Button.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Button.cpp.s
-.PHONY : src/Button.cpp.s
+src/Core/Game.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Core/Game.cpp.s
+.PHONY : src/Core/Game.cpp.s
 
-src/Character.o: src/Character.cpp.o
-.PHONY : src/Character.o
+src/Core/GameState.o: src/Core/GameState.cpp.o
+.PHONY : src/Core/GameState.o
 
 # target to build an object file
-src/Character.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Character.cpp.o
-.PHONY : src/Character.cpp.o
+src/Core/GameState.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Core/GameState.cpp.o
+.PHONY : src/Core/GameState.cpp.o
 
-src/Character.i: src/Character.cpp.i
-.PHONY : src/Character.i
+src/Core/GameState.i: src/Core/GameState.cpp.i
+.PHONY : src/Core/GameState.i
 
 # target to preprocess a source file
-src/Character.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Character.cpp.i
-.PHONY : src/Character.cpp.i
+src/Core/GameState.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Core/GameState.cpp.i
+.PHONY : src/Core/GameState.cpp.i
 
-src/Character.s: src/Character.cpp.s
-.PHONY : src/Character.s
+src/Core/GameState.s: src/Core/GameState.cpp.s
+.PHONY : src/Core/GameState.s
 
 # target to generate assembly for a file
-src/Character.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Character.cpp.s
-.PHONY : src/Character.cpp.s
+src/Core/GameState.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Core/GameState.cpp.s
+.PHONY : src/Core/GameState.cpp.s
 
-src/Entity.o: src/Entity.cpp.o
-.PHONY : src/Entity.o
+src/Entity/Character.o: src/Entity/Character.cpp.o
+.PHONY : src/Entity/Character.o
 
 # target to build an object file
-src/Entity.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Entity.cpp.o
-.PHONY : src/Entity.cpp.o
+src/Entity/Character.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Entity/Character.cpp.o
+.PHONY : src/Entity/Character.cpp.o
 
-src/Entity.i: src/Entity.cpp.i
-.PHONY : src/Entity.i
+src/Entity/Character.i: src/Entity/Character.cpp.i
+.PHONY : src/Entity/Character.i
 
 # target to preprocess a source file
-src/Entity.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Entity.cpp.i
-.PHONY : src/Entity.cpp.i
+src/Entity/Character.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Entity/Character.cpp.i
+.PHONY : src/Entity/Character.cpp.i
 
-src/Entity.s: src/Entity.cpp.s
-.PHONY : src/Entity.s
+src/Entity/Character.s: src/Entity/Character.cpp.s
+.PHONY : src/Entity/Character.s
 
 # target to generate assembly for a file
-src/Entity.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Entity.cpp.s
-.PHONY : src/Entity.cpp.s
+src/Entity/Character.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Entity/Character.cpp.s
+.PHONY : src/Entity/Character.cpp.s
 
-src/Game.o: src/Game.cpp.o
-.PHONY : src/Game.o
+src/Entity/Entity.o: src/Entity/Entity.cpp.o
+.PHONY : src/Entity/Entity.o
 
 # target to build an object file
-src/Game.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Game.cpp.o
-.PHONY : src/Game.cpp.o
+src/Entity/Entity.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Entity/Entity.cpp.o
+.PHONY : src/Entity/Entity.cpp.o
 
-src/Game.i: src/Game.cpp.i
-.PHONY : src/Game.i
+src/Entity/Entity.i: src/Entity/Entity.cpp.i
+.PHONY : src/Entity/Entity.i
 
 # target to preprocess a source file
-src/Game.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Game.cpp.i
-.PHONY : src/Game.cpp.i
+src/Entity/Entity.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Entity/Entity.cpp.i
+.PHONY : src/Entity/Entity.cpp.i
 
-src/Game.s: src/Game.cpp.s
-.PHONY : src/Game.s
+src/Entity/Entity.s: src/Entity/Entity.cpp.s
+.PHONY : src/Entity/Entity.s
 
 # target to generate assembly for a file
-src/Game.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Game.cpp.s
-.PHONY : src/Game.cpp.s
+src/Entity/Entity.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Entity/Entity.cpp.s
+.PHONY : src/Entity/Entity.cpp.s
 
-src/GameState.o: src/GameState.cpp.o
-.PHONY : src/GameState.o
+src/Entity/Player.o: src/Entity/Player.cpp.o
+.PHONY : src/Entity/Player.o
 
 # target to build an object file
-src/GameState.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/GameState.cpp.o
-.PHONY : src/GameState.cpp.o
+src/Entity/Player.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Entity/Player.cpp.o
+.PHONY : src/Entity/Player.cpp.o
 
-src/GameState.i: src/GameState.cpp.i
-.PHONY : src/GameState.i
+src/Entity/Player.i: src/Entity/Player.cpp.i
+.PHONY : src/Entity/Player.i
 
 # target to preprocess a source file
-src/GameState.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/GameState.cpp.i
-.PHONY : src/GameState.cpp.i
+src/Entity/Player.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Entity/Player.cpp.i
+.PHONY : src/Entity/Player.cpp.i
 
-src/GameState.s: src/GameState.cpp.s
-.PHONY : src/GameState.s
+src/Entity/Player.s: src/Entity/Player.cpp.s
+.PHONY : src/Entity/Player.s
 
 # target to generate assembly for a file
-src/GameState.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/GameState.cpp.s
-.PHONY : src/GameState.cpp.s
+src/Entity/Player.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Entity/Player.cpp.s
+.PHONY : src/Entity/Player.cpp.s
 
-src/MainMenuScene.o: src/MainMenuScene.cpp.o
-.PHONY : src/MainMenuScene.o
+src/UI/Button.o: src/UI/Button.cpp.o
+.PHONY : src/UI/Button.o
 
 # target to build an object file
-src/MainMenuScene.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/MainMenuScene.cpp.o
-.PHONY : src/MainMenuScene.cpp.o
+src/UI/Button.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/UI/Button.cpp.o
+.PHONY : src/UI/Button.cpp.o
 
-src/MainMenuScene.i: src/MainMenuScene.cpp.i
-.PHONY : src/MainMenuScene.i
+src/UI/Button.i: src/UI/Button.cpp.i
+.PHONY : src/UI/Button.i
 
 # target to preprocess a source file
-src/MainMenuScene.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/MainMenuScene.cpp.i
-.PHONY : src/MainMenuScene.cpp.i
+src/UI/Button.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/UI/Button.cpp.i
+.PHONY : src/UI/Button.cpp.i
 
-src/MainMenuScene.s: src/MainMenuScene.cpp.s
-.PHONY : src/MainMenuScene.s
+src/UI/Button.s: src/UI/Button.cpp.s
+.PHONY : src/UI/Button.s
 
 # target to generate assembly for a file
-src/MainMenuScene.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/MainMenuScene.cpp.s
-.PHONY : src/MainMenuScene.cpp.s
+src/UI/Button.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/UI/Button.cpp.s
+.PHONY : src/UI/Button.cpp.s
 
-src/Map.o: src/Map.cpp.o
-.PHONY : src/Map.o
+src/UI/MainMenuScene.o: src/UI/MainMenuScene.cpp.o
+.PHONY : src/UI/MainMenuScene.o
 
 # target to build an object file
-src/Map.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Map.cpp.o
-.PHONY : src/Map.cpp.o
+src/UI/MainMenuScene.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/UI/MainMenuScene.cpp.o
+.PHONY : src/UI/MainMenuScene.cpp.o
 
-src/Map.i: src/Map.cpp.i
-.PHONY : src/Map.i
+src/UI/MainMenuScene.i: src/UI/MainMenuScene.cpp.i
+.PHONY : src/UI/MainMenuScene.i
 
 # target to preprocess a source file
-src/Map.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Map.cpp.i
-.PHONY : src/Map.cpp.i
+src/UI/MainMenuScene.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/UI/MainMenuScene.cpp.i
+.PHONY : src/UI/MainMenuScene.cpp.i
 
-src/Map.s: src/Map.cpp.s
-.PHONY : src/Map.s
+src/UI/MainMenuScene.s: src/UI/MainMenuScene.cpp.s
+.PHONY : src/UI/MainMenuScene.s
 
 # target to generate assembly for a file
-src/Map.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Map.cpp.s
-.PHONY : src/Map.cpp.s
+src/UI/MainMenuScene.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/UI/MainMenuScene.cpp.s
+.PHONY : src/UI/MainMenuScene.cpp.s
 
-src/MapRenderer.o: src/MapRenderer.cpp.o
-.PHONY : src/MapRenderer.o
+src/UI/SelectGameScene.o: src/UI/SelectGameScene.cpp.o
+.PHONY : src/UI/SelectGameScene.o
 
 # target to build an object file
-src/MapRenderer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/MapRenderer.cpp.o
-.PHONY : src/MapRenderer.cpp.o
+src/UI/SelectGameScene.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/UI/SelectGameScene.cpp.o
+.PHONY : src/UI/SelectGameScene.cpp.o
 
-src/MapRenderer.i: src/MapRenderer.cpp.i
-.PHONY : src/MapRenderer.i
+src/UI/SelectGameScene.i: src/UI/SelectGameScene.cpp.i
+.PHONY : src/UI/SelectGameScene.i
 
 # target to preprocess a source file
-src/MapRenderer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/MapRenderer.cpp.i
-.PHONY : src/MapRenderer.cpp.i
+src/UI/SelectGameScene.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/UI/SelectGameScene.cpp.i
+.PHONY : src/UI/SelectGameScene.cpp.i
 
-src/MapRenderer.s: src/MapRenderer.cpp.s
-.PHONY : src/MapRenderer.s
+src/UI/SelectGameScene.s: src/UI/SelectGameScene.cpp.s
+.PHONY : src/UI/SelectGameScene.s
 
 # target to generate assembly for a file
-src/MapRenderer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/MapRenderer.cpp.s
-.PHONY : src/MapRenderer.cpp.s
+src/UI/SelectGameScene.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/UI/SelectGameScene.cpp.s
+.PHONY : src/UI/SelectGameScene.cpp.s
 
-src/Player.o: src/Player.cpp.o
-.PHONY : src/Player.o
+src/Utils/SaveManager.o: src/Utils/SaveManager.cpp.o
+.PHONY : src/Utils/SaveManager.o
 
 # target to build an object file
-src/Player.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Player.cpp.o
-.PHONY : src/Player.cpp.o
+src/Utils/SaveManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Utils/SaveManager.cpp.o
+.PHONY : src/Utils/SaveManager.cpp.o
 
-src/Player.i: src/Player.cpp.i
-.PHONY : src/Player.i
+src/Utils/SaveManager.i: src/Utils/SaveManager.cpp.i
+.PHONY : src/Utils/SaveManager.i
 
 # target to preprocess a source file
-src/Player.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Player.cpp.i
-.PHONY : src/Player.cpp.i
+src/Utils/SaveManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Utils/SaveManager.cpp.i
+.PHONY : src/Utils/SaveManager.cpp.i
 
-src/Player.s: src/Player.cpp.s
-.PHONY : src/Player.s
+src/Utils/SaveManager.s: src/Utils/SaveManager.cpp.s
+.PHONY : src/Utils/SaveManager.s
 
 # target to generate assembly for a file
-src/Player.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Player.cpp.s
-.PHONY : src/Player.cpp.s
+src/Utils/SaveManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Utils/SaveManager.cpp.s
+.PHONY : src/Utils/SaveManager.cpp.s
 
-src/SaveManager.o: src/SaveManager.cpp.o
-.PHONY : src/SaveManager.o
+src/World/Map.o: src/World/Map.cpp.o
+.PHONY : src/World/Map.o
 
 # target to build an object file
-src/SaveManager.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/SaveManager.cpp.o
-.PHONY : src/SaveManager.cpp.o
+src/World/Map.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/World/Map.cpp.o
+.PHONY : src/World/Map.cpp.o
 
-src/SaveManager.i: src/SaveManager.cpp.i
-.PHONY : src/SaveManager.i
+src/World/Map.i: src/World/Map.cpp.i
+.PHONY : src/World/Map.i
 
 # target to preprocess a source file
-src/SaveManager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/SaveManager.cpp.i
-.PHONY : src/SaveManager.cpp.i
+src/World/Map.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/World/Map.cpp.i
+.PHONY : src/World/Map.cpp.i
 
-src/SaveManager.s: src/SaveManager.cpp.s
-.PHONY : src/SaveManager.s
+src/World/Map.s: src/World/Map.cpp.s
+.PHONY : src/World/Map.s
 
 # target to generate assembly for a file
-src/SaveManager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/SaveManager.cpp.s
-.PHONY : src/SaveManager.cpp.s
+src/World/Map.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/World/Map.cpp.s
+.PHONY : src/World/Map.cpp.s
 
-src/SelectGameScene.o: src/SelectGameScene.cpp.o
-.PHONY : src/SelectGameScene.o
+src/World/MapRenderer.o: src/World/MapRenderer.cpp.o
+.PHONY : src/World/MapRenderer.o
 
 # target to build an object file
-src/SelectGameScene.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/SelectGameScene.cpp.o
-.PHONY : src/SelectGameScene.cpp.o
+src/World/MapRenderer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/World/MapRenderer.cpp.o
+.PHONY : src/World/MapRenderer.cpp.o
 
-src/SelectGameScene.i: src/SelectGameScene.cpp.i
-.PHONY : src/SelectGameScene.i
+src/World/MapRenderer.i: src/World/MapRenderer.cpp.i
+.PHONY : src/World/MapRenderer.i
 
 # target to preprocess a source file
-src/SelectGameScene.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/SelectGameScene.cpp.i
-.PHONY : src/SelectGameScene.cpp.i
+src/World/MapRenderer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/World/MapRenderer.cpp.i
+.PHONY : src/World/MapRenderer.cpp.i
 
-src/SelectGameScene.s: src/SelectGameScene.cpp.s
-.PHONY : src/SelectGameScene.s
+src/World/MapRenderer.s: src/World/MapRenderer.cpp.s
+.PHONY : src/World/MapRenderer.s
 
 # target to generate assembly for a file
-src/SelectGameScene.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/SelectGameScene.cpp.s
-.PHONY : src/SelectGameScene.cpp.s
+src/World/MapRenderer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/World/MapRenderer.cpp.s
+.PHONY : src/World/MapRenderer.cpp.s
 
-src/Tile.o: src/Tile.cpp.o
-.PHONY : src/Tile.o
+src/World/Tile.o: src/World/Tile.cpp.o
+.PHONY : src/World/Tile.o
 
 # target to build an object file
-src/Tile.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Tile.cpp.o
-.PHONY : src/Tile.cpp.o
+src/World/Tile.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/World/Tile.cpp.o
+.PHONY : src/World/Tile.cpp.o
 
-src/Tile.i: src/Tile.cpp.i
-.PHONY : src/Tile.i
+src/World/Tile.i: src/World/Tile.cpp.i
+.PHONY : src/World/Tile.i
 
 # target to preprocess a source file
-src/Tile.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Tile.cpp.i
-.PHONY : src/Tile.cpp.i
+src/World/Tile.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/World/Tile.cpp.i
+.PHONY : src/World/Tile.cpp.i
 
-src/Tile.s: src/Tile.cpp.s
-.PHONY : src/Tile.s
+src/World/Tile.s: src/World/Tile.cpp.s
+.PHONY : src/World/Tile.s
 
 # target to generate assembly for a file
-src/Tile.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Tile.cpp.s
-.PHONY : src/Tile.cpp.s
+src/World/Tile.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/World/Tile.cpp.s
+.PHONY : src/World/Tile.cpp.s
 
-src/TiledMapLoader.o: src/TiledMapLoader.cpp.o
-.PHONY : src/TiledMapLoader.o
+src/World/TiledMapLoader.o: src/World/TiledMapLoader.cpp.o
+.PHONY : src/World/TiledMapLoader.o
 
 # target to build an object file
-src/TiledMapLoader.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/TiledMapLoader.cpp.o
-.PHONY : src/TiledMapLoader.cpp.o
+src/World/TiledMapLoader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/World/TiledMapLoader.cpp.o
+.PHONY : src/World/TiledMapLoader.cpp.o
 
-src/TiledMapLoader.i: src/TiledMapLoader.cpp.i
-.PHONY : src/TiledMapLoader.i
+src/World/TiledMapLoader.i: src/World/TiledMapLoader.cpp.i
+.PHONY : src/World/TiledMapLoader.i
 
 # target to preprocess a source file
-src/TiledMapLoader.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/TiledMapLoader.cpp.i
-.PHONY : src/TiledMapLoader.cpp.i
+src/World/TiledMapLoader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/World/TiledMapLoader.cpp.i
+.PHONY : src/World/TiledMapLoader.cpp.i
 
-src/TiledMapLoader.s: src/TiledMapLoader.cpp.s
-.PHONY : src/TiledMapLoader.s
+src/World/TiledMapLoader.s: src/World/TiledMapLoader.cpp.s
+.PHONY : src/World/TiledMapLoader.s
 
 # target to generate assembly for a file
-src/TiledMapLoader.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/TiledMapLoader.cpp.s
-.PHONY : src/TiledMapLoader.cpp.s
+src/World/TiledMapLoader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/World/TiledMapLoader.cpp.s
+.PHONY : src/World/TiledMapLoader.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -474,45 +474,45 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... pokemon"
-	@echo "... src/Button.o"
-	@echo "... src/Button.i"
-	@echo "... src/Button.s"
-	@echo "... src/Character.o"
-	@echo "... src/Character.i"
-	@echo "... src/Character.s"
-	@echo "... src/Entity.o"
-	@echo "... src/Entity.i"
-	@echo "... src/Entity.s"
-	@echo "... src/Game.o"
-	@echo "... src/Game.i"
-	@echo "... src/Game.s"
-	@echo "... src/GameState.o"
-	@echo "... src/GameState.i"
-	@echo "... src/GameState.s"
-	@echo "... src/MainMenuScene.o"
-	@echo "... src/MainMenuScene.i"
-	@echo "... src/MainMenuScene.s"
-	@echo "... src/Map.o"
-	@echo "... src/Map.i"
-	@echo "... src/Map.s"
-	@echo "... src/MapRenderer.o"
-	@echo "... src/MapRenderer.i"
-	@echo "... src/MapRenderer.s"
-	@echo "... src/Player.o"
-	@echo "... src/Player.i"
-	@echo "... src/Player.s"
-	@echo "... src/SaveManager.o"
-	@echo "... src/SaveManager.i"
-	@echo "... src/SaveManager.s"
-	@echo "... src/SelectGameScene.o"
-	@echo "... src/SelectGameScene.i"
-	@echo "... src/SelectGameScene.s"
-	@echo "... src/Tile.o"
-	@echo "... src/Tile.i"
-	@echo "... src/Tile.s"
-	@echo "... src/TiledMapLoader.o"
-	@echo "... src/TiledMapLoader.i"
-	@echo "... src/TiledMapLoader.s"
+	@echo "... src/Core/Game.o"
+	@echo "... src/Core/Game.i"
+	@echo "... src/Core/Game.s"
+	@echo "... src/Core/GameState.o"
+	@echo "... src/Core/GameState.i"
+	@echo "... src/Core/GameState.s"
+	@echo "... src/Entity/Character.o"
+	@echo "... src/Entity/Character.i"
+	@echo "... src/Entity/Character.s"
+	@echo "... src/Entity/Entity.o"
+	@echo "... src/Entity/Entity.i"
+	@echo "... src/Entity/Entity.s"
+	@echo "... src/Entity/Player.o"
+	@echo "... src/Entity/Player.i"
+	@echo "... src/Entity/Player.s"
+	@echo "... src/UI/Button.o"
+	@echo "... src/UI/Button.i"
+	@echo "... src/UI/Button.s"
+	@echo "... src/UI/MainMenuScene.o"
+	@echo "... src/UI/MainMenuScene.i"
+	@echo "... src/UI/MainMenuScene.s"
+	@echo "... src/UI/SelectGameScene.o"
+	@echo "... src/UI/SelectGameScene.i"
+	@echo "... src/UI/SelectGameScene.s"
+	@echo "... src/Utils/SaveManager.o"
+	@echo "... src/Utils/SaveManager.i"
+	@echo "... src/Utils/SaveManager.s"
+	@echo "... src/World/Map.o"
+	@echo "... src/World/Map.i"
+	@echo "... src/World/Map.s"
+	@echo "... src/World/MapRenderer.o"
+	@echo "... src/World/MapRenderer.i"
+	@echo "... src/World/MapRenderer.s"
+	@echo "... src/World/Tile.o"
+	@echo "... src/World/Tile.i"
+	@echo "... src/World/Tile.s"
+	@echo "... src/World/TiledMapLoader.o"
+	@echo "... src/World/TiledMapLoader.i"
+	@echo "... src/World/TiledMapLoader.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

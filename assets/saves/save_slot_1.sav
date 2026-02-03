@@ -1,12 +1,12 @@
 {
-    "lastSaveTime": "01-02-2026 01:27:49",
+    "lastSaveTime": "03-02-2026 12:58:23",
     "player": {
         "currentMap": "Bourg-Palette",
         "name": "Player",
-        "playtime": 9,
-        "positionX": 384.0,
-        "positionY": 112.0
+        "playtime": 17,
+        "positionX": 240.0,
+        "positionY": 240.0
     },
-    "playtime": 9,
+    "playtime": 17,
     "slotNumber": 1
 }
