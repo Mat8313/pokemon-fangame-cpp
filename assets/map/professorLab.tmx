@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="16" height="10" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="5">
+ <tileset firstgid="1" source="sprites/test.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="16" height="10">
+  <data encoding="csv">
+12,84,84,84,84,84,84,84,84,84,84,84,84,84,84,13,
+80,152,152,152,152,152,152,152,152,152,152,152,152,152,152,81,
+80,17,18,18,18,18,18,18,18,18,18,18,18,18,18,81,
+80,17,16,16,16,16,16,16,16,16,16,16,16,16,16,81,
+80,17,16,16,16,16,16,16,16,16,16,16,16,16,16,81,
+80,17,16,16,16,16,16,16,16,16,16,16,16,16,16,81,
+80,17,16,16,16,16,16,16,16,16,16,16,16,16,16,81,
+80,17,16,16,16,16,16,16,16,16,16,16,16,16,16,81,
+80,17,16,16,16,16,16,16,16,16,16,16,16,16,16,81,
+148,151,151,151,151,151,151,151,151,151,151,151,151,151,151,149
+</data>
+ </layer>
+ <layer id="2" name="Tile Layer 2" width="16" height="10">
+  <data encoding="csv">
+0,219,220,0,0,0,0,0,0,223,223,420,421,219,220,0,
+0,287,288,0,0,0,0,0,89,88,224,488,489,287,288,0,
+0,355,356,0,0,85,86,87,157,156,292,556,557,355,356,0,
+0,22,0,0,0,153,154,155,0,0,0,0,0,0,0,0,
+0,90,0,0,0,0,0,0,0,0,0,0,0,0,11,0,
+0,158,0,0,0,0,0,0,0,0,0,0,0,215,79,0,
+0,24,25,0,0,0,0,0,0,0,0,0,0,892,147,0,
+0,92,93,0,0,0,289,0,0,289,0,0,0,892,892,0,
+0,215,0,0,0,0,357,210,211,357,0,0,0,892,892,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="3" name="warps">
+  <object id="1" x="112" y="128" width="16" height="16">
+   <properties>
+    <property name="Type" value="warp"/>
+    <property name="dir" value="down"/>
+    <property name="target-map" value="Bourg-Palette"/>
+    <property name="targetX" type="int" value="9"/>
+    <property name="targetY" type="int" value="12"/>
+   </properties>
+  </object>
+  <object id="2" x="112" y="128" width="16" height="16">
+   <properties>
+    <property name="Type" value="warp"/>
+    <property name="dir" value="down"/>
+    <property name="target-map" value="Bourg-Palette"/>
+    <property name="targetX" type="int" value="9"/>
+    <property name="targetY" type="int" value="12"/>
+   </properties>
+  </object>
+  <object id="3" x="128" y="128" width="16" height="16">
+   <properties>
+    <property name="Type" value="warp"/>
+    <property name="dir" value="down"/>
+    <property name="target-map" value="Bourg-Palette"/>
+    <property name="targetX" type="int" value="9"/>
+    <property name="targetY" type="int" value="12"/>
+   </properties>
+  </object>
+  <object id="4" x="128" y="128" width="16" height="16">
+   <properties>
+    <property name="Type" value="warp"/>
+    <property name="dir" value="down"/>
+    <property name="target-map" value="Bourg-Palette"/>
+    <property name="targetX" type="int" value="9"/>
+    <property name="targetY" type="int" value="12"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

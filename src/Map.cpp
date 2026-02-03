@@ -16,8 +16,6 @@ Map::Map(int width, int height, float tileSize)
     }
     }
 
-  
-
 
 int Map::getWidth() const {
     return mapWidth;

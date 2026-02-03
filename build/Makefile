@@ -129,6 +129,30 @@ pokemon/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/build
 .PHONY : pokemon/fast
 
+src/Button.o: src/Button.cpp.o
+.PHONY : src/Button.o
+
+# target to build an object file
+src/Button.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Button.cpp.o
+.PHONY : src/Button.cpp.o
+
+src/Button.i: src/Button.cpp.i
+.PHONY : src/Button.i
+
+# target to preprocess a source file
+src/Button.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Button.cpp.i
+.PHONY : src/Button.cpp.i
+
+src/Button.s: src/Button.cpp.s
+.PHONY : src/Button.s
+
+# target to generate assembly for a file
+src/Button.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Button.cpp.s
+.PHONY : src/Button.cpp.s
+
 src/Character.o: src/Character.cpp.o
 .PHONY : src/Character.o
 
@@ -201,6 +225,54 @@ src/Game.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Game.cpp.s
 .PHONY : src/Game.cpp.s
 
+src/GameState.o: src/GameState.cpp.o
+.PHONY : src/GameState.o
+
+# target to build an object file
+src/GameState.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/GameState.cpp.o
+.PHONY : src/GameState.cpp.o
+
+src/GameState.i: src/GameState.cpp.i
+.PHONY : src/GameState.i
+
+# target to preprocess a source file
+src/GameState.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/GameState.cpp.i
+.PHONY : src/GameState.cpp.i
+
+src/GameState.s: src/GameState.cpp.s
+.PHONY : src/GameState.s
+
+# target to generate assembly for a file
+src/GameState.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/GameState.cpp.s
+.PHONY : src/GameState.cpp.s
+
+src/MainMenuScene.o: src/MainMenuScene.cpp.o
+.PHONY : src/MainMenuScene.o
+
+# target to build an object file
+src/MainMenuScene.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/MainMenuScene.cpp.o
+.PHONY : src/MainMenuScene.cpp.o
+
+src/MainMenuScene.i: src/MainMenuScene.cpp.i
+.PHONY : src/MainMenuScene.i
+
+# target to preprocess a source file
+src/MainMenuScene.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/MainMenuScene.cpp.i
+.PHONY : src/MainMenuScene.cpp.i
+
+src/MainMenuScene.s: src/MainMenuScene.cpp.s
+.PHONY : src/MainMenuScene.s
+
+# target to generate assembly for a file
+src/MainMenuScene.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/MainMenuScene.cpp.s
+.PHONY : src/MainMenuScene.cpp.s
+
 src/Map.o: src/Map.cpp.o
 .PHONY : src/Map.o
 
@@ -272,6 +344,54 @@ src/Player.s: src/Player.cpp.s
 src/Player.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/Player.cpp.s
 .PHONY : src/Player.cpp.s
+
+src/SaveManager.o: src/SaveManager.cpp.o
+.PHONY : src/SaveManager.o
+
+# target to build an object file
+src/SaveManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/SaveManager.cpp.o
+.PHONY : src/SaveManager.cpp.o
+
+src/SaveManager.i: src/SaveManager.cpp.i
+.PHONY : src/SaveManager.i
+
+# target to preprocess a source file
+src/SaveManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/SaveManager.cpp.i
+.PHONY : src/SaveManager.cpp.i
+
+src/SaveManager.s: src/SaveManager.cpp.s
+.PHONY : src/SaveManager.s
+
+# target to generate assembly for a file
+src/SaveManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/SaveManager.cpp.s
+.PHONY : src/SaveManager.cpp.s
+
+src/SelectGameScene.o: src/SelectGameScene.cpp.o
+.PHONY : src/SelectGameScene.o
+
+# target to build an object file
+src/SelectGameScene.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/SelectGameScene.cpp.o
+.PHONY : src/SelectGameScene.cpp.o
+
+src/SelectGameScene.i: src/SelectGameScene.cpp.i
+.PHONY : src/SelectGameScene.i
+
+# target to preprocess a source file
+src/SelectGameScene.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/SelectGameScene.cpp.i
+.PHONY : src/SelectGameScene.cpp.i
+
+src/SelectGameScene.s: src/SelectGameScene.cpp.s
+.PHONY : src/SelectGameScene.s
+
+# target to generate assembly for a file
+src/SelectGameScene.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/src/SelectGameScene.cpp.s
+.PHONY : src/SelectGameScene.cpp.s
 
 src/Tile.o: src/Tile.cpp.o
 .PHONY : src/Tile.o
@@ -354,6 +474,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... pokemon"
+	@echo "... src/Button.o"
+	@echo "... src/Button.i"
+	@echo "... src/Button.s"
 	@echo "... src/Character.o"
 	@echo "... src/Character.i"
 	@echo "... src/Character.s"
@@ -363,6 +486,12 @@ help:
 	@echo "... src/Game.o"
 	@echo "... src/Game.i"
 	@echo "... src/Game.s"
+	@echo "... src/GameState.o"
+	@echo "... src/GameState.i"
+	@echo "... src/GameState.s"
+	@echo "... src/MainMenuScene.o"
+	@echo "... src/MainMenuScene.i"
+	@echo "... src/MainMenuScene.s"
 	@echo "... src/Map.o"
 	@echo "... src/Map.i"
 	@echo "... src/Map.s"
@@ -372,6 +501,12 @@ help:
 	@echo "... src/Player.o"
 	@echo "... src/Player.i"
 	@echo "... src/Player.s"
+	@echo "... src/SaveManager.o"
+	@echo "... src/SaveManager.i"
+	@echo "... src/SaveManager.s"
+	@echo "... src/SelectGameScene.o"
+	@echo "... src/SelectGameScene.i"
+	@echo "... src/SelectGameScene.s"
 	@echo "... src/Tile.o"
 	@echo "... src/Tile.i"
 	@echo "... src/Tile.s"

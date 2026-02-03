@@ -6,6 +6,10 @@
 #include "TiledMapLoader.hpp"
 #include "MapRenderer.hpp"
 #include "Player.hpp"
+#include "SaveManager.hpp"
+#include "MainMenuScene.hpp"
+#include "SelectGameScene.hpp"
+#include <iostream>
 
 class Game {
 public:
@@ -18,8 +22,12 @@ private:
     void render();
     void loadMap(const std::string& mapName);
     void handleWarp(); // gestion des warps
+    SaveManager saveManager;
+    GameState currentGameState;
+    float totalPlaytime;
 
-private:
+    void resetViewToDefault();
+    
     sf::RenderWindow window;
     float zoomFactor;
 
@@ -30,4 +38,13 @@ private:
 
     std::string currentMapName;
     sf::Clock clock;
+
+    void saveGame();
+    void loadGame();
+
+    void transitionScene();
+    std::unique_ptr<Scene> currentScene;
+    SceneType currentSceneType;
+    bool isRunning;
+
 };
