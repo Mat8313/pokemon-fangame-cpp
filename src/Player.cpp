@@ -196,14 +196,10 @@ void Player::update(float deltaTime) {
                 int tileX = static_cast<int>(getPositionX() / tileSize);
                 int tileY = static_cast<int>(getPositionY() / tileSize);
 
-                std::cout << "Player tile: " << tileX << "," << tileY << std::endl;
-
                 const Warp* w = currentMap->getWarpAt(tileX, tileY);
                 if (w) {
                     pendingWarp = *w;
                     hasPendingWarp = true;
-                    std::cout << "Warp trouvé vers " << w->targetMap
-                              << " (" << w->targetX << "," << w->targetY << ")\n";
                 }
             }
         }

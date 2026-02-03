@@ -66,6 +66,26 @@
    <property name="isObstacle" type="bool" value="true"/>
   </properties>
  </tile>
+ <tile id="21">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+  </properties>
+ </tile>
+ <tile id="22">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+  </properties>
+ </tile>
+ <tile id="23">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+  </properties>
+ </tile>
+ <tile id="24">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+  </properties>
+ </tile>
  <tile id="68">
   <properties>
    <property name="isObstacle" type="bool" value="true"/>
@@ -131,6 +151,56 @@
    <property name="isObstacle" type="bool" value="true"/>
   </properties>
  </tile>
+ <tile id="83">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+  </properties>
+ </tile>
+ <tile id="84">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+  </properties>
+ </tile>
+ <tile id="85">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+  </properties>
+ </tile>
+ <tile id="86">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+  </properties>
+ </tile>
+ <tile id="87">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+  </properties>
+ </tile>
+ <tile id="88">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+  </properties>
+ </tile>
+ <tile id="89">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+  </properties>
+ </tile>
+ <tile id="90">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+  </properties>
+ </tile>
+ <tile id="91">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+  </properties>
+ </tile>
+ <tile id="92">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+  </properties>
+ </tile>
  <tile id="136">
   <properties>
    <property name="isObstacle" type="bool" value="true"/>
@@ -177,6 +247,51 @@
   </properties>
  </tile>
  <tile id="148">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+  </properties>
+ </tile>
+ <tile id="150">
+  <properties>
+   <property name="isObstacle " type="bool" value="true"/>
+  </properties>
+ </tile>
+ <tile id="151">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+  </properties>
+ </tile>
+ <tile id="152">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+  </properties>
+ </tile>
+ <tile id="153">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+  </properties>
+ </tile>
+ <tile id="154">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+  </properties>
+ </tile>
+ <tile id="155">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+  </properties>
+ </tile>
+ <tile id="156">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+  </properties>
+ </tile>
+ <tile id="157">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+  </properties>
+ </tile>
+ <tile id="158">
   <properties>
    <property name="isObstacle" type="bool" value="true"/>
   </properties>
@@ -231,6 +346,46 @@
    <property name="isObstacle" type="bool" value="true"/>
   </properties>
  </tile>
+ <tile id="218">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+  </properties>
+ </tile>
+ <tile id="219">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+  </properties>
+ </tile>
+ <tile id="223">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+  </properties>
+ </tile>
+ <tile id="282">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+  </properties>
+ </tile>
+ <tile id="286">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+  </properties>
+ </tile>
+ <tile id="287">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+  </properties>
+ </tile>
+ <tile id="288">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+  </properties>
+ </tile>
+ <tile id="291">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+  </properties>
+ </tile>
  <tile id="340">
   <properties>
    <property name="isObstacle" type="bool" value="true"/>
@@ -277,6 +432,21 @@
   </properties>
  </tile>
  <tile id="350">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+  </properties>
+ </tile>
+ <tile id="354">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+  </properties>
+ </tile>
+ <tile id="355">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+  </properties>
+ </tile>
+ <tile id="356">
   <properties>
    <property name="isObstacle" type="bool" value="true"/>
   </properties>
@@ -331,6 +501,16 @@
    <property name="isObstacle" type="bool" value="true"/>
   </properties>
  </tile>
+ <tile id="419">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+  </properties>
+ </tile>
+ <tile id="420">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+  </properties>
+ </tile>
  <tile id="476">
   <properties>
    <property name="isObstacle" type="bool" value="true"/>
@@ -381,6 +561,16 @@
    <property name="isObstacle" type="bool" value="true"/>
   </properties>
  </tile>
+ <tile id="487">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+  </properties>
+ </tile>
+ <tile id="488">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+  </properties>
+ </tile>
  <tile id="544">
   <properties>
    <property name="isObstacle" type="bool" value="true"/>
@@ -427,6 +617,16 @@
   </properties>
  </tile>
  <tile id="554">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+  </properties>
+ </tile>
+ <tile id="555">
+  <properties>
+   <property name="isObstacle" type="bool" value="true"/>
+  </properties>
+ </tile>
+ <tile id="556">
   <properties>
    <property name="isObstacle" type="bool" value="true"/>
   </properties>
