@@ -42,10 +42,3 @@ target_link_libraries(pokemon_tests PRIVATE
 # Déclare les tests pour CTest
 include(GoogleTest)
 gtest_discover_tests(pokemon_tests)
-
-
-# Tests unitaires (optionnel, désactivable avec -DBUILD_TESTS=OFF)
-option(BUILD_TESTS "Build unit tests" ON)
-if(BUILD_TESTS)
-    add_subdirectory(tests)
-endif()
