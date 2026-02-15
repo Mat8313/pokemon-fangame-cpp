@@ -4,6 +4,28 @@
 using namespace Pokemon;
 
 
+PokemonInstance::PokemonInstance(
+    Pokemon::PokemonSpecies* speciesPtr,
+    int level,
+    Pokemon::Nature nat,
+    const std::array<int, 6>& ivValues,
+    const std::array<int, 6>& evValues
+) : species(speciesPtr),
+    lvl(level),
+    xp(0),  // XP commence à 0 pour ce niveau
+    ivs(ivValues),
+    evs(evValues),
+    nature(nat),
+    status(Status::None),
+    statusVolatile(),
+    moves()  // Array vide pour l'instant
+{
+    // Calcule et initialise les HP au max
+    hp = getMaxHP();
+    
+    // TODO : Apprendre les attaques par défaut selon le niveau
+}
+
 // Ajoute de l'XP, puis vérifie si on level up
 void PokemonInstance::gainExp(int xpGained) {
     xp += xpGained;
@@ -34,7 +56,7 @@ int PokemonInstance::getExpForNextLevel() const {
     return nextLevel * nextLevel * nextLevel;  // Formule Medium Fast
 }
 
-int PokemonInstance::calculateStat(Stat stat){
+int PokemonInstance::calculateStat(Stat stat) const{
     if (stat == Stat::HP){
         return floor(((2.0 * species->baseStats[static_cast<int>(stat)] + getIV(stat) + floor(getEV(stat) / 4.0)) * lvl) / 100.0) + lvl + 10 ;
     }
@@ -71,6 +93,9 @@ bool PokemonInstance::isFainted(){
     return hp == 0;
 }
 
+PokemonSpecies* PokemonInstance::getSpecies() const{
+    return species; 
+}
 
 float PokemonInstance::getNatureMultiplier(Stat stat) const {
     // Les 25 natures et leurs effets sur les stats

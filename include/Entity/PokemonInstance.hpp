@@ -15,17 +15,19 @@ private :
     Pokemon::Nature nature; 
     Pokemon::Status status; 
     Pokemon::StatusVolatile statusVolatile; 
-    std::array<Pokemon::LearnedMove, 4> moves;//
+    std::array<Pokemon::LearnedMove, 4> moves;
+    void checkLevelUp();
+    void levelUp();
+
+
 public : 
-    int calculateStat(Pokemon::Stat stat); 
+    int calculateStat(Pokemon::Stat stat) const; 
     int getMaxHP();
     void takeDamage(int dmg);
     void heal(int heal);
     bool isFainted(); 
     void gainExp(int xpGained); 
-    void checkLevelUp();
     int getExpForNextLevel() const;
-    void levelUp();
 
 
     // Getters
@@ -40,4 +42,12 @@ public :
     Pokemon::StatusVolatile getStatusVolatile() const;
     Pokemon::LearnedMove getLearnedMove(int index ) const;
     float getNatureMultiplier(Pokemon::Stat stat) const; 
+
+    PokemonInstance(
+        Pokemon::PokemonSpecies* speciesPtr,
+        int level,
+        Pokemon::Nature nat,
+        const std::array<int, 6>& ivValues = {31, 31, 31, 31, 31, 31},
+        const std::array<int, 6>& evValues = {0, 0, 0, 0, 0, 0}
+    );
 };

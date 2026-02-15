@@ -45,8 +45,10 @@ enum class Status {
 };
 
 // Status volatiles 
-enum class StatusVolatile {
-
+struct StatusVolatile {
+    bool confused = false;
+    int confusionTurns = 0;
+    // TODO: autres conditions volatiles
 };
 
 // Catégorie de dégâts d'une attaque
