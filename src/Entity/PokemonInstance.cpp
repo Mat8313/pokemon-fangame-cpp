@@ -1,6 +1,8 @@
 #include "Entity/PokemonInstance.hpp"
 #include <cmath>
 
+///////////////////////////////////////////////////
+
 using namespace Pokemon;
 
 
