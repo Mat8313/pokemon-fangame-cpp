@@ -34,7 +34,7 @@ int PokemonInstance::getExpForNextLevel() const {
     return nextLevel * nextLevel * nextLevel;  // Formule Medium Fast
 }
 
-int PokemonInstance::calculateStat(Stat stat){
+int PokemonInstance::calculateStat(Stat stat) const{
     if (stat == Stat::HP){
         return floor(((2.0 * species->baseStats[static_cast<int>(stat)] + getIV(stat) + floor(getEV(stat) / 4.0)) * lvl) / 100.0) + lvl + 10 ;
     }
@@ -71,6 +71,9 @@ bool PokemonInstance::isFainted(){
     return hp == 0;
 }
 
+PokemonSpecies* PokemonInstance::getSpecies() const{
+    return species; 
+}
 
 float PokemonInstance::getNatureMultiplier(Stat stat) const {
     // Les 25 natures et leurs effets sur les stats

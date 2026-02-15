@@ -21,7 +21,7 @@ private :
 
 
 public : 
-    int calculateStat(Pokemon::Stat stat); 
+    int calculateStat(Pokemon::Stat stat) const; 
     int getMaxHP();
     void takeDamage(int dmg);
     void heal(int heal);
