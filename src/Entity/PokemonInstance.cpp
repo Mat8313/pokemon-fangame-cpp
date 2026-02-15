@@ -1,20 +1,45 @@
-#pragma once 
-
 #include "PokemonInstance.hpp"
 #include <cmath>
 
 using namespace Pokemon;
 
 
+// Ajoute de l'XP, puis vérifie si on level up
+void PokemonInstance::gainExp(int xpGained) {
+    xp += xpGained;
+    checkLevelUp();
+}
 
+// Vérifie et applique les level ups
+void PokemonInstance::checkLevelUp() {
+    while (lvl < 100 && xp >= getExpForNextLevel()) {
+        levelUp();
+    }
+}
 
+// Effectue UN level up
+void PokemonInstance::levelUp() {
+    lvl++;
+    hp = getMaxHP();  // Heal complet au level up
+    
+    // TODO plus tard:
+    // - Vérifier évolution
+    // - Apprendre nouvelles attaques
+    // - Afficher message/animation
+}
+
+// Helper: XP requis pour le niveau suivant
+int PokemonInstance::getExpForNextLevel() const {
+    int nextLevel = lvl + 1;
+    return nextLevel * nextLevel * nextLevel;  // Formule Medium Fast
+}
 
 int PokemonInstance::calculateStat(Stat stat){
     if (stat == Stat::HP){
-        return floor(((2 * species->baseStats[static_cast<int>(stat)] + getIV(stat) + floor(getEV(stat) / 4)) * lvl) / 100) + lvl + 10 ;
+        return floor(((2.0 * species->baseStats[static_cast<int>(stat)] + getIV(stat) + floor(getEV(stat) / 4.0)) * lvl) / 100.0) + lvl + 10 ;
     }
     else {
-        return floor((floor(((2 * species->baseStats[static_cast<int>(stat)] + getIV(stat) + floor(getEV(stat) / 4)) * lvl) / 100) + 5) * getNatureMultiplier(stat));
+        return floor((floor(((2.0 * species->baseStats[static_cast<int>(stat)] + getIV(stat) + floor(getEV(stat) / 4.0)) * lvl) / 100.0) + 5) * getNatureMultiplier(stat));
     }
 }
 
@@ -43,12 +68,9 @@ void PokemonInstance::heal(int heal) {
 }
 
 bool PokemonInstance::isFainted(){
-    if (!hp) return true;
+    return hp == 0;
 }
 
-void PokemonInstance::gainExp(int xpGained){
-    xp += xpGained;
-}
 
 float PokemonInstance::getNatureMultiplier(Stat stat) const {
     // Les 25 natures et leurs effets sur les stats

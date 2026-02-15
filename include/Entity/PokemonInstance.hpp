@@ -23,6 +23,10 @@ public :
     void heal(int heal);
     bool isFainted(); 
     void gainExp(int xpGained); 
+    void checkLevelUp();
+    int getExpForNextLevel() const;
+    void levelUp();
+
 
     // Getters
     Pokemon::PokemonSpecies* getSpecies() const;
