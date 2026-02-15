@@ -36,4 +36,12 @@ struct Move {
     }
 };
 
+struct LearnedMove {
+    Move move;           // L'attaque elle-même
+    int currentPP;       // PP restants
+    
+    LearnedMove() : currentPP(0) {}
+    LearnedMove(const Move& m) : move(m), currentPP(m.maxPP) {}
+};
+
 } // namespace Pokemon

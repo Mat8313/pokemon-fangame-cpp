@@ -34,7 +34,7 @@ enum class Stat {
     Speed
 };
 
-// Statuts alternatifs persistants
+// Statuts persistants
 enum class Status {
     None,       // Aucun statut
     Poisoned,
@@ -44,11 +44,25 @@ enum class Status {
     Frozen
 };
 
+// Status volatiles 
+enum class StatusVolatile {
+
+};
+
 // Catégorie de dégâts d'une attaque
 enum class DamageCategory {
     Physical,
     Special,
     Status     // Attaque sans dégâts directs
+};
+
+// Nature du pokemon  
+enum class Nature {
+    Hardy, Lonely, Brave, Adamant, Naughty,    // Atk-focused
+    Bold, Docile, Relaxed, Impish, Lax,        // Def-focused
+    Timid, Hasty, Serious, Jolly, Naive,       // Speed-focused
+    Modest, Mild, Quiet, Bashful, Rash,        // SpAtk-focused
+    Calm, Gentle, Sassy, Careful, Quirky       // SpDef-focused
 };
 
 } // namespace Pokemon
