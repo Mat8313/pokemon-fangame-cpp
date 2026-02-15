@@ -15,7 +15,11 @@ private :
     Pokemon::Nature nature; 
     Pokemon::Status status; 
     Pokemon::StatusVolatile statusVolatile; 
-    std::array<Pokemon::LearnedMove, 4> moves;//
+    std::array<Pokemon::LearnedMove, 4> moves;
+    void checkLevelUp();
+    void levelUp();
+
+
 public : 
     int calculateStat(Pokemon::Stat stat); 
     int getMaxHP();
@@ -23,9 +27,7 @@ public :
     void heal(int heal);
     bool isFainted(); 
     void gainExp(int xpGained); 
-    void checkLevelUp();
     int getExpForNextLevel() const;
-    void levelUp();
 
 
     // Getters
