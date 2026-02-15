@@ -4,6 +4,28 @@
 using namespace Pokemon;
 
 
+PokemonInstance::PokemonInstance(
+    Pokemon::PokemonSpecies* speciesPtr,
+    int level,
+    Pokemon::Nature nat,
+    const std::array<int, 6>& ivValues,
+    const std::array<int, 6>& evValues
+) : species(speciesPtr),
+    lvl(level),
+    xp(0),  // XP commence à 0 pour ce niveau
+    ivs(ivValues),
+    evs(evValues),
+    nature(nat),
+    status(Status::None),
+    statusVolatile(),
+    moves()  // Array vide pour l'instant
+{
+    // Calcule et initialise les HP au max
+    hp = getMaxHP();
+    
+    // TODO : Apprendre les attaques par défaut selon le niveau
+}
+
 // Ajoute de l'XP, puis vérifie si on level up
 void PokemonInstance::gainExp(int xpGained) {
     xp += xpGained;

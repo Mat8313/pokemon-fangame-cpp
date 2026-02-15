@@ -42,4 +42,12 @@ public :
     Pokemon::StatusVolatile getStatusVolatile() const;
     Pokemon::LearnedMove getLearnedMove(int index ) const;
     float getNatureMultiplier(Pokemon::Stat stat) const; 
+
+    PokemonInstance(
+        Pokemon::PokemonSpecies* speciesPtr,
+        int level,
+        Pokemon::Nature nat,
+        const std::array<int, 6>& ivValues = {31, 31, 31, 31, 31, 31},
+        const std::array<int, 6>& evValues = {0, 0, 0, 0, 0, 0}
+    );
 };
