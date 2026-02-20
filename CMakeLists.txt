@@ -1,6 +1,25 @@
 cmake_minimum_required(VERSION 3.16)
 project(PokemonFangame VERSION 1.0.0 LANGUAGES CXX)
 
+# GoogleTest nécessite C++14 minimum, mais C++17 c'est mieux
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+include(FetchContent)
+FetchContent_Declare(
+  googletest
+  URL https://github.com/google/googletest/archive/03597a01ee50ed33e9dfd640b249b4be3799d395.zip
+)
+set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)  # Pour Windows/WSL
+FetchContent_MakeAvailable(googletest)
+
+
+include(CTest)
+if(BUILD_TESTING)
+  enable_testing()
+endif()
+
+
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
@@ -19,6 +38,7 @@ set(SOURCES
     src/Entity/Entity.cpp
     src/Entity/Character.cpp
     src/Entity/Player.cpp
+    src/Entity/PokemonInstance.cpp
     
     # World
     src/World/Map.cpp
@@ -56,3 +76,13 @@ if(MSVC)
 else()
     target_compile_options(pokemon PRIVATE -Wall -Wextra -pedantic)
 endif()
+
+if(BUILD_TESTING)
+  include(GoogleTest)  # Module spécial pour découvrir les tests auto
+
+  add_executable(test_basic tests/test_basic.cpp)
+  target_link_libraries(test_basic GTest::gtest GTest::gtest_main)
+  
+  gtest_discover_tests(test_basic)  # Découvre tous les tests automatiquement
+endif()
+
