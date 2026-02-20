@@ -77,12 +77,10 @@ else()
     target_compile_options(pokemon PRIVATE -Wall -Wextra -pedantic)
 endif()
 
-if(BUILD_TESTING)
-  include(GoogleTest)  # Module spécial pour découvrir les tests auto
+option(BUILD_TESTS "Build unit tests" ON)
 
-  add_executable(test_basic tests/test_basic.cpp)
-  target_link_libraries(test_basic GTest::gtest GTest::gtest_main)
-  
-  gtest_discover_tests(test_basic)  # Découvre tous les tests automatiquement
+if(BUILD_TESTS)
+    add_subdirectory(tests)
 endif()
+
 

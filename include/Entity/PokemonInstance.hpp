@@ -3,6 +3,8 @@
 #include "PokemonSpecies.hpp"
 #include "Types.hpp"
 #include "Move.hpp"
+#include <array>
+
 
 
 

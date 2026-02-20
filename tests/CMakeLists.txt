@@ -1,44 +1,38 @@
-# Configuration Google Test
 include(FetchContent)
+
 FetchContent_Declare(
   googletest
   GIT_REPOSITORY https://github.com/google/googletest.git
   GIT_TAG v1.14.0
 )
 
-# Pour Windows : empêche gtest de forcer le runtime MT
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
-# Active les tests CMake
 enable_testing()
 
-# Crée une bibliothèque avec ton code Entity (sans main.cpp)
 add_library(pokemon_lib STATIC
     ../src/Entity/PokemonInstance.cpp
-    # Ajoute ici les autres .cpp dont tu as besoin pour les tests
+    # ajoute ici les autres .cpp nécessaires si besoin
 )
 
 target_include_directories(pokemon_lib PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/../include
 )
 
-target_link_libraries(pokemon_lib PUBLIC
-    # Pas besoin de SFML pour les tests Entity
+add_executable(test_basic
+    test_basic.cpp
 )
 
-# Exécutable de test
-add_executable(pokemon_tests
-    test_PokemonInstance.cpp
-    # Ajoute d'autres fichiers de test ici
+target_include_directories(test_basic PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/../include
 )
 
-target_link_libraries(pokemon_tests PRIVATE
+target_link_libraries(test_basic PRIVATE
     pokemon_lib
     gtest_main
     gtest
 )
 
-# Déclare les tests pour CTest
 include(GoogleTest)
-gtest_discover_tests(pokemon_tests)
+gtest_discover_tests(test_basic)
