@@ -39,3 +39,13 @@
 
 # debug information files
 *.dwo
+
+/build/
+/cmake-build-*/
+/_deps/
+/*.o
+/*.exe
+/*.log
+
+
+assets/pokemon/data/pokedex_gen1_8_full.json
