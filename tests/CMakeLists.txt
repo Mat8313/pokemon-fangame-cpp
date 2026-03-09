@@ -13,6 +13,7 @@ enable_testing()
 
 add_library(pokemon_lib STATIC
     ../src/Entity/PokemonInstance.cpp
+    ../src/Entity/PokemonDB.cpp
     # ajoute ici les autres .cpp nécessaires si besoin
 )
 

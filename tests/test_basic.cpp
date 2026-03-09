@@ -4,6 +4,8 @@
 #include "../include/Entity/PokemonSpecies.hpp"
 #include "../include/Entity/PokemonInstance.hpp"
 #include "../include/Entity/Types.hpp"
+#include "../include/Entity/PokemonDB.hpp" 
+
 
 // Helpers simples pour les stats
 static Pokemon::PokemonSpecies makeTestSpecies() {
@@ -175,3 +177,58 @@ TEST(PokemonInstanceTest, GainExpAndLevelUp) {
     EXPECT_GT(p.getMaxHP(), initialMaxHp); // stats augmentent avec le niveau
 }
 
+// ---------- Tests sur PokemonDB / pokedex_slim.json ----------
+
+TEST(PokemonDBTest, LoadAndSize) {
+    PokemonDB db;
+    db.loadFromFile("../../assets/pokemon/data/pokedex_slim.json"); // chemin relatif à ton binaire de test
+
+    // La BD doit contenir au moins tous les Pokémon de la Gen 1 (151)
+    EXPECT_GE(db.size(), 151u);
+}
+
+TEST(PokemonDBTest, GetBulbasaurById) {
+    PokemonDB db;
+    db.loadFromFile("../../assets/pokemon/data/pokedex_slim.json");
+
+    ASSERT_TRUE(db.hasSpecies(1)); // Bulbizarre
+    const auto& bulb = db.getSpecies(1);
+
+    EXPECT_EQ(bulb.id, 1);
+    EXPECT_EQ(bulb.name, "bulbasaur");
+
+    // Types Grass / Poison
+    EXPECT_TRUE(bulb.isType(Pokemon::Type::Grass));
+    EXPECT_TRUE(bulb.isType(Pokemon::Type::Poison));
+
+    // Stats de base connues de Bulbasaur
+    EXPECT_EQ(bulb.baseStats[static_cast<int>(Pokemon::Stat::HP)],    45);
+    EXPECT_EQ(bulb.baseStats[static_cast<int>(Pokemon::Stat::Atk)],   49);
+    EXPECT_EQ(bulb.baseStats[static_cast<int>(Pokemon::Stat::Def)],   49);
+    EXPECT_EQ(bulb.baseStats[static_cast<int>(Pokemon::Stat::SpAtk)], 65);
+    EXPECT_EQ(bulb.baseStats[static_cast<int>(Pokemon::Stat::SpDef)], 65);
+    EXPECT_EQ(bulb.baseStats[static_cast<int>(Pokemon::Stat::Speed)], 45);
+}
+
+TEST(PokemonDBTest, GetSpeciesByNameEnglishAndFrench) {
+    PokemonDB db;
+    db.loadFromFile("../../assets/pokemon/data/pokedex_slim.json");
+
+    // Nom anglais
+    const auto& bulbEn = db.getSpeciesByName("bulbasaur");
+    EXPECT_EQ(bulbEn.id, 1);
+
+    // Nom français (si tu as bien indexé name_fr dans loadFromFile)
+    const auto& bulbFr = db.getSpeciesByName("Bulbizarre");
+    EXPECT_EQ(bulbFr.id, 1);
+}
+
+TEST(PokemonDBTest, UnknownSpeciesThrows) {
+    PokemonDB db;
+    db.loadFromFile("../../assets/pokemon/data/pokedex_slim.json");
+
+    EXPECT_FALSE(db.hasSpecies(9999));
+
+    EXPECT_THROW(db.getSpecies(9999), std::out_of_range);
+    EXPECT_THROW(db.getSpeciesByName("Missingno"), std::out_of_range);
+}

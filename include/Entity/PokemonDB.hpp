@@ -8,7 +8,7 @@
 
 class PokemonDB {
 private : 
-    std::unordered_map<int, Pokemon::PokemonSpecies&> speciesById; 
+    std::unordered_map<int, Pokemon::PokemonSpecies> speciesById; 
     std::unordered_map<std::string, int> idByName; 
 
 public :

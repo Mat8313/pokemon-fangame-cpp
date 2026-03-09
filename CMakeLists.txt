@@ -39,6 +39,7 @@ set(SOURCES
     src/Entity/Character.cpp
     src/Entity/Player.cpp
     src/Entity/PokemonInstance.cpp
+    src/Entity/PokemonDB.cpp
     
     # World
     src/World/Map.cpp
