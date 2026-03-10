@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Types.hpp"
+#include "XPCurves.hpp"
 #include <string>
 #include <array>
 
@@ -16,10 +17,9 @@ struct PokemonSpecies {
     int catchRate;                             // Taux de capture (0-255, plus c'est haut plus c'est facile)
     int baseExpYield;                          // XP donnée quand vaincu
     
-    // TODO: Courbe d'XP (Erratic, Fast, Medium Fast, etc.)
-    // TODO: Liste des attaques apprises par niveau
+    XPCurve xpCurve;                           // Courbe d'volution d'XP     
+    
     // TODO: Conditions et cibles d'évolution
-    // TODO: Talents (abilities)
     
     // Vérifie si l'espèce possède un type donné
     bool isType(Type t) const {

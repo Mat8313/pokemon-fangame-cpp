@@ -52,10 +52,9 @@ void PokemonInstance::levelUp() {
     // - Afficher message/animation
 }
 
-// Helper: XP requis pour le niveau suivant
+// XP requis pour le niveau suivant
 int PokemonInstance::getExpForNextLevel() const {
-    int nextLevel = lvl + 1;
-    return nextLevel * nextLevel * nextLevel;  // Formule Medium Fast
+    return species->xpCurve.xpToNextLevel(lvl);
 }
 
 int PokemonInstance::calculateStat(Stat stat) const{
