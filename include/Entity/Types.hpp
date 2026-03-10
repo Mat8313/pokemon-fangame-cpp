@@ -19,9 +19,9 @@ enum class Type {
     Rock,
     Ghost,
     Dragon,
-    Dark,      // Gen 2
-    Steel,     // Gen 2
-    Fairy      // Gen 6
+    Dark,      
+    Steel,     
+    Fairy      
 };
 
 // Statistiques de base d'un Pokémon
@@ -66,5 +66,16 @@ enum class Nature {
     Modest, Mild, Quiet, Bashful, Rash,        // SpAtk-focused
     Calm, Gentle, Sassy, Careful, Quirky       // SpDef-focused
 };
+
+enum class XPGroup{
+    Erratic, 
+    Fast, 
+    MediumFast, 
+    MediumSlow, 
+    Slow, 
+    Fluctuating
+};
+
+
 
 } // namespace Pokemon
